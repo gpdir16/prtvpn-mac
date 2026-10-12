@@ -35,8 +35,8 @@ final class FlowHandlingManager: Sendable {
 
     private static let openFlowTimeoutDelay: DispatchTimeInterval = .seconds(2)
 
-    private let queue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.flowHandlingManager", attributes: .concurrent)
-    private let monitorQueue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.pathMonitor")
+    private let queue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.flowHandlingManager", attributes: .concurrent)
+    private let monitorQueue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.pathMonitor")
 
     private let appIDs: Set<String>
 

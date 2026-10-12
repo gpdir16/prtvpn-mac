@@ -37,7 +37,7 @@ public class ConcurrentReaders<T> {
 
     public init(_ value: T, queue: DispatchQueue? = nil) {
         self.value = value
-        let label = "ch.protonvpn.rwsync.\(String(describing: T.self)).\(UUID().uuidString)"
+        let label = "app.prtvpn.rwsync.\(String(describing: T.self)).\(UUID().uuidString)"
         self.queue = queue ?? DispatchQueue(label: label, attributes: .concurrent)
 
         self.sync = { [unowned self] in

@@ -40,7 +40,7 @@ public class LogFilesTemporaryStorage {
     public func prepareLogs(responseHandler: @escaping ([URL]) -> Void) {
         assert(savedFiles.isEmpty, "Do not call prepareLogs on a non-clean state")
         let dispatchGroup = DispatchGroup()
-        let queue = DispatchQueue(label: "ch.protonvpn.prepare-logs", qos: .userInitiated) // For writing to array without race conditions
+        let queue = DispatchQueue(label: "app.prtvpn.prepare-logs", qos: .userInitiated) // For writing to array without race conditions
 
         for source in logSources {
             dispatchGroup.enter()

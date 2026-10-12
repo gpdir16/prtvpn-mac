@@ -68,7 +68,7 @@ class ExtensionAPIServiceTestCase: XCTestCase, ExtensionAPIServiceDelegate {
     var timerFactory: TimerFactoryMock = .init()
     var apiService: ExtensionAPIService!
 
-    let testQueue = DispatchQueue(label: "ch.protonvpn.tests.certificaterefresh")
+    let testQueue = DispatchQueue(label: "app.prtvpn.tests.certificaterefresh")
 
     // ExtensionAPIServiceDelegate
     let transport: WireGuardTransport? = .udp

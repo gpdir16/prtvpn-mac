@@ -32,7 +32,7 @@ import IssueReporting
 ///
 /// ```
 /// struct StatsChanged: TypedNotification {
-///     static let name = Notification.Name("ch.protonvpn.feature.statschanged")
+///     static let name = Notification.Name("app.prtvpn.feature.statschanged")
 ///     let data: Stats
 /// }
 ///
@@ -50,7 +50,7 @@ public protocol TypedNotification<T> {
 }
 
 extension TypedNotification {
-    static var dataKey: String { "ch.protonvpn.notificationcenter.notificationdata" }
+    static var dataKey: String { "app.prtvpn.notificationcenter.notificationdata" }
 }
 
 protocol EmptyTypedNotification: TypedNotification<Void> {}

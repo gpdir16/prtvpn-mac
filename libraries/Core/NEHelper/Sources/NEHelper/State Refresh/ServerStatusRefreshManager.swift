@@ -41,7 +41,7 @@ public final class ServerStatusRefreshManager: RefreshManager {
         apiService: ExtensionAPIService,
         timerFactory: TimerFactory
     ) {
-        let workQueue = DispatchQueue(label: "ch.protonvpn.extension.wireguard.server-status-refresh")
+        let workQueue = DispatchQueue(label: "app.prtvpn.extension.wireguard.server-status-refresh")
 
         self.apiService = apiService
         super.init(timerFactory: timerFactory, workQueue: workQueue)

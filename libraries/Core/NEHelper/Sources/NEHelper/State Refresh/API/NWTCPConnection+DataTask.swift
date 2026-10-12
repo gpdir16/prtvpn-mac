@@ -203,7 +203,7 @@ public class ConnectionTunnelDataTaskFactory: DataTaskFactory {
     let timeoutInterval: TimeInterval
 
     private var tasks: [UUID: NWTCPDataTask] = [:]
-    private let tasksQueue = DispatchQueue(label: "ch.protonvpn.wireguard.connection_factory.tasks_queue")
+    private let tasksQueue = DispatchQueue(label: "app.prtvpn.wireguard.connection_factory.tasks_queue")
 
     public init(provider: ConnectionTunnelFactory, timerFactory: TimerFactory, connectionTimeoutInterval: TimeInterval = 10) {
         self.provider = provider
@@ -314,7 +314,7 @@ class NWTCPDataTask: DataTaskProtocol {
 
         let host = request.url?.host ?? "unknown-host"
         let path = request.url?.path ?? "/"
-        self.queue = DispatchQueue(label: "ch.protonvpn.tunneled-request:\(host)\(path):\(taskId)")
+        self.queue = DispatchQueue(label: "app.prtvpn.tunneled-request:\(host)\(path):\(taskId)")
     }
 
     deinit {

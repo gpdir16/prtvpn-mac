@@ -41,8 +41,8 @@ final class UDPFlowHandler: FlowHandler, Sendable {
     private static let socketRecvTimeout: timeval = .init(tv_sec: 0, tv_usec: 100_000)
     private static let flowOperationDataTimeout: DispatchTimeInterval = .seconds(3)
 
-    private let socketQueue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.udp.socket", qos: .userInitiated)
-    private let flowQueue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.udp.flow", qos: .userInitiated)
+    private let socketQueue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.udp.socket", qos: .userInitiated)
+    private let flowQueue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.udp.flow", qos: .userInitiated)
 
     private let isRunning = OSAllocatedUnfairLock(initialState: false)
 

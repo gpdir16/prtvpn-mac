@@ -32,7 +32,7 @@ public struct DefaultsProvider: TestDependencyKey {
     public static var testValue: DefaultsProvider {
         #if DEBUG
             return DefaultsProvider(
-                getDefaults: { UserDefaults(suiteName: "ch.protonvpn.userdefaults.test")! }
+                getDefaults: { UserDefaults(suiteName: "app.prtvpn.userdefaults.test")! }
             )
         #else
             fatalError("No live value is set for defaults")

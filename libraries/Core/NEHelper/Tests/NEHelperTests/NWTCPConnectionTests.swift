@@ -26,7 +26,7 @@ import TimerMock
 import XCTest
 
 class NWTCPConnectionTests: XCTestCase {
-    let networkQueue = DispatchQueue(label: "ch.protonvpn.fake-network-request")
+    let networkQueue = DispatchQueue(label: "app.prtvpn.fake-network-request")
 
     var stateObservingCallback: MockConnectionTunnelFactory.StateObservingCallback!
     var dataReadCallback: MockConnectionTunnelFactory.DataReadCallback!

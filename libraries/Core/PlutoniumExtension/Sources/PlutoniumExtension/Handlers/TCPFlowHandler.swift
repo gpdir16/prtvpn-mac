@@ -41,8 +41,8 @@ final class TCPFlowHandler: FlowHandler, Sendable {
     private static let socketRecvSendTimeout: timeval = .init(tv_sec: 5, tv_usec: 0)
     private static let flowReadDataTimeout: DispatchTimeInterval = .seconds(3)
 
-    private let socketQueue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.tcp.socket", qos: .userInitiated)
-    private let flowQueue = DispatchQueue(label: "ch.protonvpn.mac.transparent-proxy.tcp.flow", qos: .userInitiated)
+    private let socketQueue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.tcp.socket", qos: .userInitiated)
+    private let flowQueue = DispatchQueue(label: "app.prtvpn.mac.transparent-proxy.tcp.flow", qos: .userInitiated)
 
     private let isRunning = OSAllocatedUnfairLock(initialState: false)
 

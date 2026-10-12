@@ -22,7 +22,7 @@ extension Logger {
     #if os(macOS)
         private static let subsystem = "ch.protonmail.vpn.ProTUN-Extension"
     #elseif os(iOS)
-        private static let subsystem = "ch.protonvpn.mac.ProTUN-Extension"
+        private static let subsystem = "app.prtvpn.mac.ProTUN-Extension"
     #endif
 
     static let provider = Logger(subsystem: subsystem, category: "Provider")

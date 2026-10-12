@@ -20,7 +20,7 @@
     import OSLog
 
     extension Logger {
-        private static let subsystem = "ch.protonvpn.mac.Transparent-Proxy"
+        private static let subsystem = "app.prtvpn.mac.Transparent-Proxy"
 
         static let provider = Logger(subsystem: subsystem, category: "Provider")
 

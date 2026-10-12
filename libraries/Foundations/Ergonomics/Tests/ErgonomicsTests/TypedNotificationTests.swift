@@ -223,14 +223,14 @@ final class TypedNotificationTests: XCTestCase {
                 userInfo: [TestNotification.dataKey: 123] // Provide Int instead of the expected String
             )
         }, issueMatcher: { issue in
-            issue.compactDescription == "Expected object of type String stored under key: ch.protonvpn.notificationcenter.notificationdata, got 123"
+            issue.compactDescription == "Expected object of type String stored under key: app.prtvpn.notificationcenter.notificationdata, got 123"
         })
 
         XCTExpectFailure("Post should fail with missing data", enabled: true, strict: true, failingBlock: {
             // post notification with missing data
             NotificationCenter.default.post(name: TestNotification.name, object: self, userInfo: [:])
         }, issueMatcher: { issue in
-            issue.compactDescription == "Expected object of type String stored under key: ch.protonvpn.notificationcenter.notificationdata, got nil"
+            issue.compactDescription == "Expected object of type String stored under key: app.prtvpn.notificationcenter.notificationdata, got nil"
         })
     }
 }

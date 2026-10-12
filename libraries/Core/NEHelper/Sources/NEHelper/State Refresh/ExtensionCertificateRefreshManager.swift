@@ -60,7 +60,7 @@ public final class ExtensionCertificateRefreshManager: RefreshManager {
         apiService: ExtensionAPIService,
         timerFactory: TimerFactory
     ) {
-        let workQueue = DispatchQueue(label: "ch.protonvpn.extension.wireguard.certificate-refresh")
+        let workQueue = DispatchQueue(label: "app.prtvpn.extension.wireguard.certificate-refresh")
 
         self.apiService = apiService
 

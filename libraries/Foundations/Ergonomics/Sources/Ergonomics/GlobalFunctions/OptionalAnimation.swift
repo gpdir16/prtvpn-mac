@@ -48,4 +48,24 @@
         }
     }
 
+#elseif canImport(AppKit)
+
+    import AppKit
+    import SwiftUI
+
+    /// A helper for non-crucial or distracting animations that should be disabled if the user has toggled Reduce Motion
+    /// in system accessibility settings.
+    public func withOptionalAnimation<Result>(
+        _ animation: Animation = .default,
+        shouldAnimate animationCondition: @autoclosure () -> Bool = true,
+        body: () throws -> Result
+    ) rethrows -> Result {
+        let isReduceMotionEnabled = NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        if animationCondition(), !isReduceMotionEnabled {
+            return try withAnimation(animation, body)
+        }
+        // 중요: nil 애니메이션을 넘기면 리듀서 안에서 UI 변경이 지연되므로 `body`를 직접 실행함
+        return try body()
+    }
+
 #endif

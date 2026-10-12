@@ -175,7 +175,7 @@ public final class ExtensionAPIService {
     var dataTaskFactory: DataTaskFactory { delegate!.dataTaskFactory }
     var transport: WireGuardTransport? { delegate!.transport }
 
-    private let requestQueue = DispatchQueue(label: "ch.protonvpn.wireguard-extension.requests")
+    private let requestQueue = DispatchQueue(label: "app.prtvpn.wireguard-extension.requests")
 
     // MARK: - Private helper functions
 
