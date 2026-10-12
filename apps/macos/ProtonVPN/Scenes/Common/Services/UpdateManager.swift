@@ -103,7 +103,11 @@ final class UpdateManager: NSObject {
 
         suDateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss ZZ"
 
-        self.updater = SPUStandardUpdaterController(updaterDelegate: self, userDriverDelegate: nil)
+        // 이 포크는 업데이트 피드가 없음. 원본 피드를 쓰면 공식 Proton VPN 앱이 이 앱 위에 설치되므로,
+        // Info.plist에 SUFeedURL을 직접 지정한 경우에만 업데이터를 만듦.
+        if feedURLString != nil {
+            self.updater = SPUStandardUpdaterController(updaterDelegate: self, userDriverDelegate: nil)
+        }
     }
 
     @objc

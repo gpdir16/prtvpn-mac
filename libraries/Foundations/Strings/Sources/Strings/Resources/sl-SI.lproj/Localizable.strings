@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Država";
 
-"_show_protonvpn" = "Pokaži Proton VPN";
+"_show_protonvpn" = "Pokaži prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Počisti podatke o aplikaciji";
@@ -290,7 +290,7 @@
 "_technical_details" = "Tehnične podrobnosti";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Pokaži Proton VPN za prijavo ...";
+"_open_app_to_log_in" = "Pokaži prtvpn za prijavo ...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Nadgradite na Plus";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Posodobi";
 
-"_invalid_refresh_token_please_login" = "Minilo je že nekaj časa, odkar ste nazadnje uporabljali aplikacijo Proton VPN. Prijavite se znova.";
+"_invalid_refresh_token_please_login" = "Minilo je že nekaj časa, odkar ste nazadnje uporabljali aplikacijo prtvpn. Prijavite se znova.";
 
 "_error_mitm_title" = "Ne-varna povezava.";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Počisti podatke o aplikaciji";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Vsi podatki Proton VPN bodo izbrisani in aplikacija se bo zaprla. Želite nadaljevati?";
+"_delete_application_data_popup_body" = "Vsi podatki prtvpn bodo izbrisani in aplikacija se bo zaprla. Želite nadaljevati?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Onemogoči stikalo za izklop";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Obvesti o nezaščitenih omrežjih";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Prejmite obvestilo, ko Proton VPN zazna, da ste povezani v nezaščiteno omrežje.";
+"_unprotected_network_tooltip" = "Prejmite obvestilo, ko prtvpn zazna, da ste povezani v nezaščiteno omrežje.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Zaščita pred uhajanjem DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Vključite dnevnike aplikacij in podrobnosti o sistemu";
 
 /* Main mac app menu item */
-"_menu_about" = "O Proton VPN";
+"_menu_about" = "O prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Preveri za posodobitve …";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Nastavitve";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Skrij Proton VPN";
+"_menu_hide_self" = "Skrij prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Skrij druge";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Odjava";
 
 /* Main mac app menu item */
-"_menu_quit" = "Zaprite Proton VPN";
+"_menu_quit" = "Zaprite prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Okno";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Stikalo za izklop ščiti vaš IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Vaša internetna povezava se bo nadaljevala takoj, ko bo Proton VPN znova vzpostavil povezavo s strežnikom.\nČe želite uporabljati internet brez VPN in zaščite stikala za izklop prekličite ponovno povezavo s strežnikom.";
+"_kill_switch_reconnection" = "Vaša internetna povezava se bo nadaljevala takoj, ko bo prtvpn znova vzpostavil povezavo s strežnikom.\nČe želite uporabljati internet brez VPN in zaščite stikala za izklop prekličite ponovno povezavo s strežnikom.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "brez";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Povezava se bo znova zagnala, da se spremeni način pametnega protokola.";
 
-"_sysex_tutorial_title_setup" = "Pripravi Proton VPN";
+"_sysex_tutorial_title_setup" = "Pripravi prtvpn";
 
 "_sysex_tutorial_title_enable" = "Enable system extensions to continue";
 
-"_sysex_tutorial_title_enable_proton" = "Enable Proton VPN system extensions";
+"_sysex_tutorial_title_enable_proton" = "Enable prtvpn system extensions";
 
 "_sysex_tutorial_how_to_enable" = "How to enable extensions";
 
-"_sysex_tutorial_subtitle_app" = "To use Proton VPN, you need to enable the following system extensions on your Mac:";
+"_sysex_tutorial_subtitle_app" = "To use prtvpn, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_st" = "To use split tunneling, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "To use WireGuard, you need to enable the following system extensions on your Mac:";
 
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Click **Open Network Extensions.**";
 
 "_sysex_tutorial_step_click_security" = "Click **Open System Settings**, then go to **Privacy & Security → Security.**";
 
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Turn on the **WireGuard** and **split tunneling** switches, then click **Done**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Potrebujete pomoč?";
 
-"_sysex_settings_description" = "Proton VPN zahteva nalaganje sistemske razširitve za uporabo Smart Protocol, OpenVPN in WireGuard.";
+"_sysex_settings_description" = "prtvpn zahteva nalaganje sistemske razširitve za uporabo Smart Protocol, OpenVPN in WireGuard.";
 
 "_sysex_enabled_title" = "Konfiguracija končana";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Potrebna je nadgradnja aplikacije";
 
-"_force_upgrade_message" = "Različica aplikacije Proton VPN, ki jo trenutno uporabljate, ni več podprta. Posodobite na najnovejšo različico.";
+"_force_upgrade_message" = "Različica aplikacije prtvpn, ki jo trenutno uporabljate, ni več podprta. Posodobite na najnovejšo različico.";
 
 "login_fetch_vpn_data" = "Nastavite vaš dostop VPN";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Odpravljanje težav";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Posodobi Proton VPN";
+"_update_view_title" = "Posodobi prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Verjetneje boste imeli težave na starejših različicah Proton VPN.";
+"_update_view_description" = "Verjetneje boste imeli težave na starejših različicah prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Posodobi";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Posodobite programsko opremo";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "A new version of Proton VPN is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
+"_operating_system_out_of_date_alert_description" = "A new version of prtvpn is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Pokritost po vsem svetu";

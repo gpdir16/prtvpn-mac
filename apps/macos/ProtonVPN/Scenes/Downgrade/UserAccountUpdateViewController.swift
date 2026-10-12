@@ -83,7 +83,7 @@ class UserAccountUpdateViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Proton VPN"
+        title = "prtvpn"
         view.wantsLayer = true
         serversView.wantsLayer = true
         DarkAppearance {

@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "کشور";
 
-"_show_protonvpn" = "نمایش Proton VPN";
+"_show_protonvpn" = "نمایش prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "پاک کردن اطلاعات برنامه";
@@ -290,7 +290,7 @@
 "_technical_details" = "جزئیات فنی";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Show Proton VPN to sign in...";
+"_open_app_to_log_in" = "Show prtvpn to sign in...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "ارتقا به Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "بروزرسانی ضروری است";
 
-"_update_required_no_longer_supported" = "این نسخه از Proton VPN دیگر پشتیبانی نمی‌شود، لطفا برای ادامه استفاده از برنامه، آن را به‌روزرسانی کنید.";
+"_update_required_no_longer_supported" = "این نسخه از prtvpn دیگر پشتیبانی نمی‌شود، لطفا برای ادامه استفاده از برنامه، آن را به‌روزرسانی کنید.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "تماس با پشتیبانی";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "بروزرسانی";
 
-"_invalid_refresh_token_please_login" = "از آخرین باری که از Proton VPN استفاده کرده‌اید مدتی گذشته است. لطفا دوباره وارد شوید.";
+"_invalid_refresh_token_please_login" = "از آخرین باری که از prtvpn استفاده کرده‌اید مدتی گذشته است. لطفا دوباره وارد شوید.";
 
 "_error_mitm_title" = "اتصال نا امن";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "پاک کردن اطلاعات برنامه";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "همه‌ی اطلاعات Proton VPN از بین می‌رود و برنامه بسته می‌شود. آیا برای ادامه مطمئن هستید؟";
+"_delete_application_data_popup_body" = "همه‌ی اطلاعات prtvpn از بین می‌رود و برنامه بسته می‌شود. آیا برای ادامه مطمئن هستید؟";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "غیرفعال کردن Kill Switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "اعلام کردن شبکه‌های محافظت نشده";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "دریافت یک اخطار هنگامیکه Proton VPN می‌یابد که شما به یک شبکه محافظت نشده متصل شده اید.";
+"_unprotected_network_tooltip" = "دریافت یک اخطار هنگامیکه prtvpn می‌یابد که شما به یک شبکه محافظت نشده متصل شده اید.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "محافظت از نشت DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "شامل لاگ برنامه و جزئیات سیستم";
 
 /* Main mac app menu item */
-"_menu_about" = "درباره Proton VPN";
+"_menu_about" = "درباره prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "بررسي بروزرسانی...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "تنظیمات";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "پنهان‌سازی Proton VPN";
+"_menu_hide_self" = "پنهان‌سازی prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "پنهان‌سازی بقیه";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "خروج";
 
 /* Main mac app menu item */
-"_menu_quit" = "خروج از Proton VPN";
+"_menu_quit" = "خروج از prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "پنجره";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch از IP شما حفاظت می‌کند";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "ارتباط اینترنت شما به محض اتصال مجدد ProtonVPN به یک سرور دوباره از سر گرفته خواهد شد.\nبرای استفاده از اینترنت بدون VPN و Kill Switch, اتصال دوباره به سرور را لغو کنید.";
+"_kill_switch_reconnection" = "ارتباط اینترنت شما به محض اتصال مجدد prtvpn به یک سرور دوباره از سر گرفته خواهد شد.\nبرای استفاده از اینترنت بدون VPN و Kill Switch, اتصال دوباره به سرور را لغو کنید.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "بدون";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "اتصال شما برای تغییر حالت پروتکل هوشمند دوباره راه‌اندازی خواهد شد.";
 
-"_sysex_tutorial_title_setup" = "Set up Proton VPN";
+"_sysex_tutorial_title_setup" = "Set up prtvpn";
 
 "_sysex_tutorial_title_enable" = "Enable system extensions to continue";
 
-"_sysex_tutorial_title_enable_proton" = "Enable Proton VPN system extensions";
+"_sysex_tutorial_title_enable_proton" = "Enable prtvpn system extensions";
 
 "_sysex_tutorial_how_to_enable" = "How to enable extensions";
 
-"_sysex_tutorial_subtitle_app" = "To use Proton VPN, you need to enable the following system extensions on your Mac:";
+"_sysex_tutorial_subtitle_app" = "To use prtvpn, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_st" = "To use split tunneling, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "To use WireGuard, you need to enable the following system extensions on your Mac:";
 
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Click **Open Network Extensions.**";
 
 "_sysex_tutorial_step_click_security" = "Click **Open System Settings**, then go to **Privacy & Security → Security.**";
 
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Turn on the **WireGuard** and **split tunneling** switches, then click **Done**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "کمک می‌خواهید?";
 
-"_sysex_settings_description" = "ProtonVPN برای استفاده از پروتکل هوشمند، OpenVPN و WireGuard نیاز به بارگذاری System Extension دارد.";
+"_sysex_settings_description" = "prtvpn برای استفاده از پروتکل هوشمند، OpenVPN و WireGuard نیاز به بارگذاری System Extension دارد.";
 
 "_sysex_enabled_title" = "پیکربندی کامل شد";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "ارتقاء برنامه لازم است";
 
-"_force_upgrade_message" = "این نسخه‌ برنامه Proton VPN که شما استفاده می‌کنید دیگر پشتیبانی نمی‌شود. لطفا به‌ آخرین نسخه به روزرسانی کنید.";
+"_force_upgrade_message" = "این نسخه‌ برنامه prtvpn که شما استفاده می‌کنید دیگر پشتیبانی نمی‌شود. لطفا به‌ آخرین نسخه به روزرسانی کنید.";
 
 "login_fetch_vpn_data" = "دسترسی VPN خود را تنظیم کنید";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "عیب‌یابی";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "به‌روزرسانی Proton VPN";
+"_update_view_title" = "به‌روزرسانی prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "اگر از نسخه‌های قدیمی‌تر Proton VPN استفاده می‌کنید احتمال برخورد با اشکال برای شما بالاتر است.";
+"_update_view_description" = "اگر از نسخه‌های قدیمی‌تر prtvpn استفاده می‌کنید احتمال برخورد با اشکال برای شما بالاتر است.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "بروزرسانی";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Update your software";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "A new version of Proton VPN is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
+"_operating_system_out_of_date_alert_description" = "A new version of prtvpn is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "پوشش جهانی";

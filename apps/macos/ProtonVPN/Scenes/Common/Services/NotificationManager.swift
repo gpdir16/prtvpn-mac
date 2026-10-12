@@ -101,7 +101,7 @@ class NotificationManager: NSObject, NotificationManagerProtocol {
 
     private func connectedNotification(for server: ServerModel) -> NSUserNotification {
         let notification = NSUserNotification()
-        notification.title = "Proton VPN " + Localizable.connected
+        notification.title = "prtvpn " + Localizable.connected
         notification.subtitle = connectSubtitle(forServer: server)
         notification.informativeText = connectInformativeText(forServer: server)
         notification.hasActionButton = false
@@ -151,7 +151,7 @@ extension NotificationManager {
     func displayPFChange(portNumber: UInt16) {
         let portString = String(portNumber)
         let content = UNMutableNotificationContent()
-        content.title = "ProtonVPN"
+        content.title = "prtvpn"
         content.subtitle = Localizable.portForwardingInfoSubtitle(portString)
         content.body = Localizable.portForwardingInfoBody
         content.userInfo = [NotificationConstants.PortForwarding.portNumberUserInfoKey: portString]
@@ -162,7 +162,7 @@ extension NotificationManager {
 
     func displayPFError() {
         let content = UNMutableNotificationContent()
-        content.title = "ProtonVPN"
+        content.title = "prtvpn"
         content.subtitle = Localizable.portForwardingErrorSubtitle
         content.body = Localizable.portForwardingErrorBody
         let request = UNNotificationRequest(identifier: Localizable.portForwardingErrorBody, content: content, trigger: nil)

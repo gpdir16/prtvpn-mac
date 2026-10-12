@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E17DE0FA21FB4DF3008CCC13"
-               BuildableName = "ch.protonvpn.ProtonVPNNetworkHelper"
-               BlueprintName = "ch.protonvpn.ProtonVPNNetworkHelper"
+               BuildableName = "app.prtvpn.ProtonVPNNetworkHelper"
+               BlueprintName = "app.prtvpn.ProtonVPNNetworkHelper"
                ReferencedContainer = "container:macOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E17DE0FA21FB4DF3008CCC13"
-            BuildableName = "ch.protonvpn.ProtonVPNNetworkHelper"
-            BlueprintName = "ch.protonvpn.ProtonVPNNetworkHelper"
+            BuildableName = "app.prtvpn.ProtonVPNNetworkHelper"
+            BlueprintName = "app.prtvpn.ProtonVPNNetworkHelper"
             ReferencedContainer = "container:macOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -54,8 +54,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E17DE0FA21FB4DF3008CCC13"
-            BuildableName = "ch.protonvpn.ProtonVPNNetworkHelper"
-            BlueprintName = "ch.protonvpn.ProtonVPNNetworkHelper"
+            BuildableName = "app.prtvpn.ProtonVPNNetworkHelper"
+            BlueprintName = "app.prtvpn.ProtonVPNNetworkHelper"
             ReferencedContainer = "container:macOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,8 +71,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E17DE0FA21FB4DF3008CCC13"
-            BuildableName = "ch.protonvpn.ProtonVPNNetworkHelper"
-            BlueprintName = "ch.protonvpn.ProtonVPNNetworkHelper"
+            BuildableName = "app.prtvpn.ProtonVPNNetworkHelper"
+            BlueprintName = "app.prtvpn.ProtonVPNNetworkHelper"
             ReferencedContainer = "container:macOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

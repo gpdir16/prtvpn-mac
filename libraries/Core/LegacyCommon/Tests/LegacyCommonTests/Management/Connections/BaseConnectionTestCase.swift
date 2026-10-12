@@ -31,7 +31,7 @@ import XCTest
 /// This class has no test cases, it's meant to be subclassed as it contains all of the
 /// base dependencies required for fully mocking business logic & connection flows.
 class BaseConnectionTestCase: TestIsolatedDatabaseTestCase {
-    public static let wireguardProviderBundleId = "ch.protonvpn.test.wireguard"
+    public static let wireguardProviderBundleId = "app.prtvpn.test.wireguard"
 
     let expectationTimeout: TimeInterval = 10
     let neVpnEvents = [

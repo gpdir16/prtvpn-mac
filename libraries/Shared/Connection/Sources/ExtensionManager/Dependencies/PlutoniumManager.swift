@@ -34,7 +34,7 @@
         public internal(set) var start: () async throws -> Void
         public internal(set) var stop: () async throws -> Void
 
-        private static let bundleId = "ch.protonvpn.mac.Transparent-Proxy"
+        private static let bundleId = "app.prtvpn.mac.Transparent-Proxy"
         private static let descriptionText = "Proton VPN Split tunneling"
 
         @PlutoniumActor

@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "ქვეყანა";
 
-"_show_protonvpn" = "Proton VPN-ის ჩვენება";
+"_show_protonvpn" = "prtvpn-ის ჩვენება";
 
 /* Main mac app menu item */
 "_clear_application_data" = "აპლიკაციის მონაცემების გასუფთავება";
@@ -290,7 +290,7 @@
 "_technical_details" = "ტექნიკური დეტალები";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Proton VPN-ის ჩვენება, შესვლისთვის...";
+"_open_app_to_log_in" = "prtvpn-ის ჩვენება, შესვლისთვის...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Plus-მდე აწევა";
@@ -850,7 +850,7 @@
 
 "_update_required" = "აუცილებელია განახლება";
 
-"_update_required_no_longer_supported" = "Proton VPN-ის ეს ვერსია უკვე მხარდაჭერილი აღარაა. იმისათვის, რომ გამოიყენოთ, განაახლეთ ის აპლიკაციების მაღაზიიდან.";
+"_update_required_no_longer_supported" = "prtvpn-ის ეს ვერსია უკვე მხარდაჭერილი აღარაა. იმისათვის, რომ გამოიყენოთ, განაახლეთ ის აპლიკაციების მაღაზიიდან.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "კონტაქტი მხარდაჭერის გუნდთან";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "განახლება";
 
-"_invalid_refresh_token_please_login" = "კარგა ხანია, Proton VPN არ გამოგიყენებიათ. საჭიროა, შეხვიდეთ.";
+"_invalid_refresh_token_please_login" = "კარგა ხანია, prtvpn არ გამოგიყენებიათ. საჭიროა, შეხვიდეთ.";
 
 "_error_mitm_title" = "დაუცველი კავშირი";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "აპლიკაციის მონაცემების გასუფთავება";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Proton VPN-ის ყველა მონაცემი წაიშლება და აპლიკაცია დაასრულებს მუშაობას. გნებავთ, გააგრძელოთ?";
+"_delete_application_data_popup_body" = "prtvpn-ის ყველა მონაცემი წაიშლება და აპლიკაცია დაასრულებს მუშაობას. გნებავთ, გააგრძელოთ?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Kill Switch-ის გამორთვა";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "გაფრთხლება დაუცველ ქსელში მუშაობისას";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "შეტყობინების მიღება, როცა Proton VPN აღმოაჩენს, რომ დაუცველ ქსელთან ხართ მიერთებული.";
+"_unprotected_network_tooltip" = "შეტყობინების მიღება, როცა prtvpn აღმოაჩენს, რომ დაუცველ ქსელთან ხართ მიერთებული.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "DNS გაპარებისგან დაცვა";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "აპის ჟურნალისა და სისტემის დეტალების ჩასმა";
 
 /* Main mac app menu item */
-"_menu_about" = "Proton VPN-ის შესახებ";
+"_menu_about" = "prtvpn-ის შესახებ";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "განახლების შემოწმება...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "მორგება";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Proton VPN-ის დამალვა";
+"_menu_hide_self" = "prtvpn-ის დამალვა";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "სხვების დამალვა";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "გასვლა";
 
 /* Main mac app menu item */
-"_menu_quit" = "Proton VPN-დან გასვლა";
+"_menu_quit" = "prtvpn-დან გასვლა";
 
 /* Main mac app menu item */
 "_menu_window" = "ფანჯარა";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch იცავს თქვენს IP-ს";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "ინტერნეტთან შეერთება განახლდება მაშინვე, როცა Proton VPN თავიდან მიუერთდება სერვერს.\nინტერნეტის VPN-ის და Kill Switch-ის გარეშე გამოსაყენებლად გამორთეთ სერვერთან თავიდან დაკავშირება.";
+"_kill_switch_reconnection" = "ინტერნეტთან შეერთება განახლდება მაშინვე, როცა prtvpn თავიდან მიუერთდება სერვერს.\nინტერნეტის VPN-ის და Kill Switch-ის გარეშე გამოსაყენებლად გამორთეთ სერვერთან თავიდან დაკავშირება.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "გარეშე";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "ჭკვიანი პროტოკოლის რეჟიმის შესაცვლელად შეერთება თავიდან დამყარდება.";
 
-"_sysex_tutorial_title_setup" = "Proton VPN-ის მორგება";
+"_sysex_tutorial_title_setup" = "prtvpn-ის მორგება";
 
 "_sysex_tutorial_title_enable" = "გასაგრძელებლად ჩართეთ სისტემური გაფართოებები";
 
-"_sysex_tutorial_title_enable_proton" = "Proton VPN-ის სისტემის გაფართოებების ჩართვა";
+"_sysex_tutorial_title_enable_proton" = "prtvpn-ის სისტემის გაფართოებების ჩართვა";
 
 "_sysex_tutorial_how_to_enable" = "როგორ ჩავრთოთ გაფართოებები";
 
-"_sysex_tutorial_subtitle_app" = "Proton VPN-ის გამოსაყენებლად თქვენ უნდა ჩართოთ შემდეგი სისტემური გაფართოებები თქვენს Mac-ზე:";
+"_sysex_tutorial_subtitle_app" = "prtvpn-ის გამოსაყენებლად თქვენ უნდა ჩართოთ შემდეგი სისტემური გაფართოებები თქვენს Mac-ზე:";
 
 "_sysex_tutorial_subtitle_st" = "Split tunneling-ის გამოსაყენებლად თქვენ უნდა ჩართოთ შემდეგი სისტემური გაფართოებები თქვენს Mac-ზე:";
 
 "_sysex_tutorial_subtitle_wg" = "WireGuard-ის გამოსაყენებლად თქვენ უნდა ჩართოთ შემდეგი სისტემური გაფართოებები თქვენს Mac-ზე:";
 
-"_sysex_tutorial_subtitle_features" = "ზოგიერთი VPN ფუნქციის (და პროტოკოლების უმეტესობის) გამოსაყენებლად თქვენს Mac-ზე Proton VPN-ის სისტემური გაფართოებები უნდა იყოს ჩართული.";
+"_sysex_tutorial_subtitle_features" = "ზოგიერთი VPN ფუნქციის (და პროტოკოლების უმეტესობის) გამოსაყენებლად თქვენს Mac-ზე prtvpn-ის სისტემური გაფართოებები უნდა იყოს ჩართული.";
 
 "_sysex_tutorial_step_click_open" = "დააწკაპუნეთ **ქსელის გაფართოებების გახსნაზე.**";
 
 "_sysex_tutorial_step_click_security" = "დააჭირეთ **სისტემის პარამეტრების გახსნაზე**, შემდეგ გადადით **კონფიდენციალობა და უსაფრთხოება → უსაფრთხოება**.";
 
-"_sysex_tutorial_step_click_allow" = "უნდა დაინახოთ შეტყობინება \"სისტემური პროგრამა აპლიკაციიდან ProtonVPN დაიბლოკა\". დააწკაპუნეთ ღილაკზე **დაშვება**.";
+"_sysex_tutorial_step_click_allow" = "უნდა დაინახოთ შეტყობინება \"სისტემური პროგრამა აპლიკაციიდან prtvpn დაიბლოკა\". დააწკაპუნეთ ღილაკზე **დაშვება**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "ჩართეთ **WireGuard** და **Split tunneling** გადამრთველები, შემდეგ კი დააწკაპუნეთ ღილაკზე **მზადაა**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "დახმარება გჭირდებათ?";
 
-"_sysex_settings_description" = "ჭკვიანი პროტოკოლის, OpenVPN-ის და WireGuard-ის გამოსაყენებლად Proton VPN-ს სისტემური გაფართოების ჩატვირთვა სჭირდება.";
+"_sysex_settings_description" = "ჭკვიანი პროტოკოლის, OpenVPN-ის და WireGuard-ის გამოსაყენებლად prtvpn-ს სისტემური გაფართოების ჩატვირთვა სჭირდება.";
 
 "_sysex_enabled_title" = "მორგება დასრულდა";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "საჭიროა აპლიკაციის განახლება";
 
-"_force_upgrade_message" = "Proton VPN-ის ვერსია რომელსაც ამჟამად იყენებთ, მხარდაჭერილი აღარაა. გთხოვთ განაახლოთ.";
+"_force_upgrade_message" = "prtvpn-ის ვერსია რომელსაც ამჟამად იყენებთ, მხარდაჭერილი აღარაა. გთხოვთ განაახლოთ.";
 
 "login_fetch_vpn_data" = "თქვენი VPN წვდომის მორგება";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "შეცდომების გასწორება";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Proton VPN-ის განახლება";
+"_update_view_title" = "prtvpn-ის განახლება";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Proton VPN-ის ძველ ვერსიებზე პრობლემები გექნებათ.";
+"_update_view_description" = "prtvpn-ის ძველ ვერსიებზე პრობლემები გექნებათ.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "განახლება";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "განაახლეთ თქვენი პროგრამები";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "ხელმისაწვდომია Proton VPN-ის ახალი ვერსია. განახლების ხელმისაწვდომად, ჯერ თქვენი მოწყობილობა %1$@ %2$@-ზე, ან უფრო ახალზე უნდა განაახლოთ.";
+"_operating_system_out_of_date_alert_description" = "ხელმისაწვდომია prtvpn-ის ახალი ვერსია. განახლების ხელმისაწვდომად, ჯერ თქვენი მოწყობილობა %1$@ %2$@-ზე, ან უფრო ახალზე უნდა განაახლოთ.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "მთელი დედამიწის დაფარვა";

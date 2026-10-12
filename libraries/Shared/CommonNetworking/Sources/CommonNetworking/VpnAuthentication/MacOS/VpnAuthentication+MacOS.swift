@@ -26,7 +26,7 @@ import VPNShared
     /// MacOS implementation of Certificate Refresh management
     public final class VpnAuthenticationManager: VpnAuthentication {
         private let operationDispatchQueue = DispatchQueue(
-            label: "ch.protonvpn.mac.async_cert_refresh",
+            label: "app.prtvpn.mac.async_cert_refresh",
             qos: .userInitiated
         )
         private let queue = OperationQueue()

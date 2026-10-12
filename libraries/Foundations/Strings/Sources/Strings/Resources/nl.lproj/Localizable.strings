@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Land";
 
-"_show_protonvpn" = "Toon Proton VPN";
+"_show_protonvpn" = "Toon prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Verwijder applicatiegegevens";
@@ -290,7 +290,7 @@
 "_technical_details" = "Technische gegevens";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Toon Proton VPN om in te loggen...";
+"_open_app_to_log_in" = "Toon prtvpn om in te loggen...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Upgraden naar Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Update vereist";
 
-"_update_required_no_longer_supported" = "Deze versie van Proton VPN wordt niet langer ondersteund, update de app om deze te blijven gebruiken.";
+"_update_required_no_longer_supported" = "Deze versie van prtvpn wordt niet langer ondersteund, update de app om deze te blijven gebruiken.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Neem contact op met ondersteuning";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Bijwerken";
 
-"_invalid_refresh_token_please_login" = "Het is een tijdje geleden sinds u de Proton VPN-app voor het laatst hebt gebruikt. Log opnieuw in.";
+"_invalid_refresh_token_please_login" = "Het is een tijdje geleden sinds u de prtvpn-app voor het laatst hebt gebruikt. Log opnieuw in.";
 
 "_error_mitm_title" = "Onveilige verbinding";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Verwijder applicatiegegevens";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Alle Proton VPN-gegevens worden verwijderd en de applicatie wordt afgesloten. Wilt u doorgaan?";
+"_delete_application_data_popup_body" = "Alle prtvpn-gegevens worden verwijderd en de applicatie wordt afgesloten. Wilt u doorgaan?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Schakel IP-beveiliging uit";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Onbeschermde netwerken informeren";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Ontvang een melding wanneer Proton VPN detecteert dat u verbonden bent met een onbeveiligd netwerk.";
+"_unprotected_network_tooltip" = "Ontvang een melding wanneer prtvpn detecteert dat u verbonden bent met een onbeveiligd netwerk.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "DNS-lekbescherming";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Inclusief app logs en systeemdetails";
 
 /* Main mac app menu item */
-"_menu_about" = "Over Proton VPN";
+"_menu_about" = "Over prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Op updates controleren...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Voorkeuren";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Verberg Proton VPN";
+"_menu_hide_self" = "Verberg prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Andere verbergen";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Afmelden";
 
 /* Main mac app menu item */
-"_menu_quit" = "Stop Proton VPN";
+"_menu_quit" = "Stop prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Venster";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "IP-beveiliging beschermt uw IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Uw internetverbinding wordt hervat zodra Proton VPN opnieuw verbinding maakt met een server.\nOm het internet zonder VPN en bescherming van de IP-beveiliging te gebruiken, moet u het herverbinden met de server verbreken.";
+"_kill_switch_reconnection" = "Uw internetverbinding wordt hervat zodra prtvpn opnieuw verbinding maakt met een server.\nOm het internet zonder VPN en bescherming van de IP-beveiliging te gebruiken, moet u het herverbinden met de server verbreken.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "zonder";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Uw verbinding wordt opnieuw gestart om de Smart Protocol modus te wijzigen.";
 
-"_sysex_tutorial_title_setup" = "Configureer Proton VPN";
+"_sysex_tutorial_title_setup" = "Configureer prtvpn";
 
 "_sysex_tutorial_title_enable" = "Systeemextensies inschakelen om door te gaan";
 
-"_sysex_tutorial_title_enable_proton" = "Proton VPN-systeemextensies inschakelen";
+"_sysex_tutorial_title_enable_proton" = "prtvpn-systeemextensies inschakelen";
 
 "_sysex_tutorial_how_to_enable" = "Hoe extensies in te schakelen";
 
-"_sysex_tutorial_subtitle_app" = "Om Proton VPN te gebruiken, moet u de volgende systeemextensies inschakelen op uw Mac:";
+"_sysex_tutorial_subtitle_app" = "Om prtvpn te gebruiken, moet u de volgende systeemextensies inschakelen op uw Mac:";
 
 "_sysex_tutorial_subtitle_st" = "Om split tunneling te gebruiken, dient u de volgende systeemextensies op uw Mac in te schakelen:";
 
 "_sysex_tutorial_subtitle_wg" = "Om WireGuard te gebruiken, moet u de volgende systeemextensies op uw Mac inschakelen:";
 
-"_sysex_tutorial_subtitle_features" = "Om bepaalde VPN-functies (en de meeste protocollen) te gebruiken, moet u Proton VPN-systeemextensies op uw Mac ingeschakeld hebben.";
+"_sysex_tutorial_subtitle_features" = "Om bepaalde VPN-functies (en de meeste protocollen) te gebruiken, moet u prtvpn-systeemextensies op uw Mac ingeschakeld hebben.";
 
 "_sysex_tutorial_step_click_open" = "Klik **Open Netwerkextensies.**";
 
 "_sysex_tutorial_step_click_security" = "Klik op **Open Systeeminstellingen**, ga dan naar **Privacy & beveiliging → Beveiliging.**";
 
-"_sysex_tutorial_step_click_allow" = "U zou een bericht moeten zien dat zegt \"Systeemsoftware van toepassing ProtonVPN is geblokkeerd.\". Klik op **Toestaan**.";
+"_sysex_tutorial_step_click_allow" = "U zou een bericht moeten zien dat zegt \"Systeemsoftware van toepassing prtvpn is geblokkeerd.\". Klik op **Toestaan**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Schakel de **WireGuard**- en **split tunneling**-schakelaars in en klik vervolgens op **Gereed**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Heeft u hulp nodig?";
 
-"_sysex_settings_description" = "Proton VPN vereist het laden van een Systeem Extensie om gebruik te maken van Smart Protocol, OpenVPN en WireGuard.";
+"_sysex_settings_description" = "prtvpn vereist het laden van een Systeem Extensie om gebruik te maken van Smart Protocol, OpenVPN en WireGuard.";
 
 "_sysex_enabled_title" = "Configuratie voltooid";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Applicatie upgrade vereist";
 
-"_force_upgrade_message" = "De versie van de Proton VPN-app die u momenteel gebruikt, wordt niet langer ondersteund. Werk bij naar de meest recente versie.";
+"_force_upgrade_message" = "De versie van de prtvpn-app die u momenteel gebruikt, wordt niet langer ondersteund. Werk bij naar de meest recente versie.";
 
 "login_fetch_vpn_data" = "VPN-toegang aan het configureren";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Probleemoplossing";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Proton VPN bijwerken";
+"_update_view_title" = "prtvpn bijwerken";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "U heeft meer kans op problemen op oudere versies van Proton VPN.";
+"_update_view_description" = "U heeft meer kans op problemen op oudere versies van prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Bijwerken";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Update uw software";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Er is een nieuwe versie van Proton VPN beschikbaar. Om een update te krijgen moet u eerst uw apparaat bijwerken naar %1$@ %2$@ of hoger.";
+"_operating_system_out_of_date_alert_description" = "Er is een nieuwe versie van prtvpn beschikbaar. Om een update te krijgen moet u eerst uw apparaat bijwerken naar %1$@ %2$@ of hoger.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Wereldwijde dekking";

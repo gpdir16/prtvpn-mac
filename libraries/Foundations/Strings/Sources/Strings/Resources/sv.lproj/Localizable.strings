@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Land";
 
-"_show_protonvpn" = "Visa Proton VPN";
+"_show_protonvpn" = "Visa prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Rensa applikationsdata";
@@ -290,7 +290,7 @@
 "_technical_details" = "Tekniska detaljer";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Visa Proton VPN för att logga in...";
+"_open_app_to_log_in" = "Visa prtvpn för att logga in...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Uppgradera till Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Uppdatering krävs";
 
-"_update_required_no_longer_supported" = "Denna version av Proton VPN stöds inte längre, uppdatera appen för att fortsätta använda den.";
+"_update_required_no_longer_supported" = "Denna version av prtvpn stöds inte längre, uppdatera appen för att fortsätta använda den.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Kontakta support";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Uppdatera";
 
-"_invalid_refresh_token_please_login" = "Det har gått ett tag sedan du sist använde Proton VPN-appen. Logga in igen.";
+"_invalid_refresh_token_please_login" = "Det har gått ett tag sedan du sist använde prtvpn-appen. Logga in igen.";
 
 "_error_mitm_title" = "Osäker anslutning";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Rensa applikationsdata";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "All Proton VPN-data kommer att tas bort och applikationen kommer avslutas. Vill du fortsätta?";
+"_delete_application_data_popup_body" = "All prtvpn-data kommer att tas bort och applikationen kommer avslutas. Vill du fortsätta?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Inaktivera kill switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Avisera oskyddade nätverk";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Få en avisering när Proton VPN upptäcker att du är ansluten till ett oskyddat nätverk.";
+"_unprotected_network_tooltip" = "Få en avisering när prtvpn upptäcker att du är ansluten till ett oskyddat nätverk.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Skydd mot DNS-läckage";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Inkludera apploggar och systemdetaljer";
 
 /* Main mac app menu item */
-"_menu_about" = "Om Proton VPN";
+"_menu_about" = "Om prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Sök efter uppdateringar …";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Preferenser";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Dölj Proton VPN";
+"_menu_hide_self" = "Dölj prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Dölj andra";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Logga ut";
 
 /* Main mac app menu item */
-"_menu_quit" = "Avsluta Proton VPN";
+"_menu_quit" = "Avsluta prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Fönster";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch skyddar ditt IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Din internetanslutning kommer återupptas så snart Proton VPN återansluter till en server.\nFör att använda Internet utan VPN och kill switch-skydd, avbryt återanslutningen till servern.";
+"_kill_switch_reconnection" = "Din internetanslutning kommer återupptas så snart prtvpn återansluter till en server.\nFör att använda Internet utan VPN och kill switch-skydd, avbryt återanslutningen till servern.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "utan";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Din anslutning kommer att startas om för att ändra Smart Protocol-läget.";
 
-"_sysex_tutorial_title_setup" = "Ställ in Proton VPN";
+"_sysex_tutorial_title_setup" = "Ställ in prtvpn";
 
 "_sysex_tutorial_title_enable" = "Aktivera systemtillägg för att fortsätta";
 
-"_sysex_tutorial_title_enable_proton" = "Aktivera Proton VPN systemtillägg";
+"_sysex_tutorial_title_enable_proton" = "Aktivera prtvpn systemtillägg";
 
 "_sysex_tutorial_how_to_enable" = "Hur man aktiverar tillägg";
 
-"_sysex_tutorial_subtitle_app" = "För att använda Proton VPN behöver du aktivera följande systemtillägg på din Mac:";
+"_sysex_tutorial_subtitle_app" = "För att använda prtvpn behöver du aktivera följande systemtillägg på din Mac:";
 
 "_sysex_tutorial_subtitle_st" = "För att kunna använda split tunneling måste du aktivera följande systemtillägg på din Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "För att använda WireGuard måste du aktivera följande systemtillägg på din Mac:";
 
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Klicka på **Öppna nätverkstillägg.**";
 
 "_sysex_tutorial_step_click_security" = "Klicka **Öppna Systeminställningar**, gå sedan till **Integritet och Säkerhet → Säkerhet.**";
 
-"_sysex_tutorial_step_click_allow" = "Du bör se ett meddelande som säger ”Systemmjukvara från applikationen Proton VPN blockerades.”. Klicka på **Tillåt**.";
+"_sysex_tutorial_step_click_allow" = "Du bör se ett meddelande som säger ”Systemmjukvara från applikationen prtvpn blockerades.”. Klicka på **Tillåt**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Slå på brytarna **WireGuard** och **split tunneling** och klicka sedan på **Klar**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Behöver du hjälp?";
 
-"_sysex_settings_description" = "Proton VPN kräver att ett systemtillägg laddas för att utnyttja Smart Protocol, OpenVPN och WireGuard.";
+"_sysex_settings_description" = "prtvpn kräver att ett systemtillägg laddas för att utnyttja Smart Protocol, OpenVPN och WireGuard.";
 
 "_sysex_enabled_title" = "Konfiguration slutförd";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Applikationsuppgradering behövs";
 
-"_force_upgrade_message" = "Den version av Proton VPN-applikationen du använder för närvarande stöds inte längre. Uppdatera till den senaste versionen.";
+"_force_upgrade_message" = "Den version av prtvpn-applikationen du använder för närvarande stöds inte längre. Uppdatera till den senaste versionen.";
 
 "login_fetch_vpn_data" = "Konfigurerar din VPN-åtkomst";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Felsök";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Uppdatera Proton VPN";
+"_update_view_title" = "Uppdatera prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Det är mer sannolikt att du har problem med äldre versioner av Proton VPN.";
+"_update_view_description" = "Det är mer sannolikt att du har problem med äldre versioner av prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Uppdatera";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Uppdatera din programvara";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "En ny version av Proton VPN är tillgänglig. För att skaffa uppdateringen måste du först uppdatera din enhet till %1$@ %2$@ eller senare.";
+"_operating_system_out_of_date_alert_description" = "En ny version av prtvpn är tillgänglig. För att skaffa uppdateringen måste du först uppdatera din enhet till %1$@ %2$@ eller senare.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Världsomspännande täckning";

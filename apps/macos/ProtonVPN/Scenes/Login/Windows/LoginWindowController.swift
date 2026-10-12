@@ -42,7 +42,7 @@ class LoginWindowController: WindowController {
         }
 
         window.styleMask.remove(NSWindow.StyleMask.resizable)
-        window.title = "Proton VPN"
+        window.title = "prtvpn"
         window.titlebarAppearsTransparent = true
         window.appearance = NSAppearance(named: .darkAqua)
         window.backgroundColor = .color(.background)

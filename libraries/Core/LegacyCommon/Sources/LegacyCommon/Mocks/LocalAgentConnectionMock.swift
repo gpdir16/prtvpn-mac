@@ -37,7 +37,7 @@
 
         public var didSendGetStatus: (() -> Void)? = nil
 
-        private let setterQueue = DispatchQueue(label: "ch.protonvpn.test.local-agent-connection.setter-queue")
+        private let setterQueue = DispatchQueue(label: "app.prtvpn.test.local-agent-connection.setter-queue")
 
         init(
             clientCertPEM: String,

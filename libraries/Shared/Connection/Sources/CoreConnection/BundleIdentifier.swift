@@ -64,7 +64,7 @@ extension BundleIDClient: DependencyKey {
                 return "ch.protonmail.vpn.WireGuardiOS-Extension"
             }
         #elseif os(macOS)
-            return "ch.protonvpn.mac.WireGuard-Extension"
+            return "app.prtvpn.mac.WireGuard-Extension"
         #elseif os(tvOS)
             return "ch.protonmail.vpn.WireGuard-tvOS"
         #else

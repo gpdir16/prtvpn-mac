@@ -25,7 +25,7 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_: Notification) {
-        let mainAppIdentifier = "ch.protonvpn.mac"
+        let mainAppIdentifier = "app.prtvpn.mac"
         let running = NSWorkspace.shared.runningApplications
         var alreadyRunning = false
 
@@ -45,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             components.removeLast()
             components.removeLast()
             components.append("MacOS")
-            components.append("ProtonVPN")
+            components.append("prtvpn")
 
             let newPath = NSString.path(withComponents: components)
 

@@ -1,2 +1,6 @@
 // Current version of macOS.
-MARKETING_VERSION = 6.5.99
+MARKETING_VERSION = 1.0.0
+
+// 이 포크가 갈라져 나온 원본 앱의 버전. Proton API 에는 이 값을 보냄.
+// API 는 오래된 클라이언트 버전을 거부하므로 포크의 버전을 보내면 로그인할 수 없음.
+UPSTREAM_VERSION = 6.5.99

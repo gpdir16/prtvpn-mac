@@ -57,7 +57,12 @@ public struct AppInfo: Sendable {
 
 public extension AppInfo {
     var appVersion: String {
-        clientId + "@" + bundleShortVersion + prereleaseIdentifiers + "+" + bundleVersion
+        clientId + "@" + apiVersion + prereleaseIdentifiers + "+" + bundleVersion
+    }
+
+    /// API 에 보내는 버전. 포크는 Info.plist 의 UpstreamVersion 에 원본 앱의 버전을 적어 두고 그 값을 보냄.
+    private var apiVersion: String {
+        bundleInfoDictionary()["UpstreamVersion"] as? String ?? bundleShortVersion
     }
 
     func clientId(forContext specificContext: AppContext) -> String {

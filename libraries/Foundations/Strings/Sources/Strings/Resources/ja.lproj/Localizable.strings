@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "国";
 
-"_show_protonvpn" = "Proton VPN を表示";
+"_show_protonvpn" = "prtvpn を表示";
 
 /* Main mac app menu item */
 "_clear_application_data" = "アプリケーションデータを削除";
@@ -290,7 +290,7 @@
 "_technical_details" = "技術的な詳細";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "サインインするには Proton VPN を表示...";
+"_open_app_to_log_in" = "サインインするには prtvpn を表示...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Plus にアップグレード";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "更新";
 
-"_invalid_refresh_token_please_login" = "Proton VPN アプリをしばらく起動していないため、再ログインする必要があります。";
+"_invalid_refresh_token_please_login" = "prtvpn アプリをしばらく起動していないため、再ログインする必要があります。";
 
 "_error_mitm_title" = "安全ではない接続";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "アプリケーションデータの削除";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "すべての Proton VPN データを削除してアプリを終了します。続行しますか?";
+"_delete_application_data_popup_body" = "すべての prtvpn データを削除してアプリを終了します。続行しますか?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "キルスイッチを無効化";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "アプリのログとシステムの詳細を含める";
 
 /* Main mac app menu item */
-"_menu_about" = "Proton VPN について";
+"_menu_about" = "prtvpn について";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "更新を確認...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "設定";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Proton VPN を隠す";
+"_menu_hide_self" = "prtvpn を隠す";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "他を隠す";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "サインアウト";
 
 /* Main mac app menu item */
-"_menu_quit" = "Proton VPN を閉じる";
+"_menu_quit" = "prtvpn を閉じる";
 
 /* Main mac app menu item */
 "_menu_window" = "ウィンドウ";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "キルスイッチがあなたの IP を保護しています";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Proton VPN がサーバーに再接続すると、インターネット接続がすぐに再開されます。\nVPN とキルスイッチの保護なしでインターネットを使用するには、サーバーへの再接続をキャンセルします。";
+"_kill_switch_reconnection" = "prtvpn がサーバーに再接続すると、インターネット接続がすぐに再開されます。\nVPN とキルスイッチの保護なしでインターネットを使用するには、サーバーへの再接続をキャンセルします。";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "なし";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Smart Protocolモードを変更するために接続が再起動されます。";
 
-"_sysex_tutorial_title_setup" = "Proton VPN をセットアップ";
+"_sysex_tutorial_title_setup" = "prtvpn をセットアップ";
 
 "_sysex_tutorial_title_enable" = "続行するにはシステム機能拡張を有効にしてください";
 
-"_sysex_tutorial_title_enable_proton" = "Proton VPN システム機能拡張を有効にする";
+"_sysex_tutorial_title_enable_proton" = "prtvpn システム機能拡張を有効にする";
 
 "_sysex_tutorial_how_to_enable" = "システム機能拡張を有効にする方法";
 
-"_sysex_tutorial_subtitle_app" = "Proton VPN を使用するには、お使いのMacで次のシステム機能拡張を有効にする必要があります。";
+"_sysex_tutorial_subtitle_app" = "prtvpn を使用するには、お使いのMacで次のシステム機能拡張を有効にする必要があります。";
 
 "_sysex_tutorial_subtitle_st" = "スプリットトンネルを使用するには、お使いのMacで以下のシステム機能拡張を有効にする必要があります。";
 
 "_sysex_tutorial_subtitle_wg" = "WireGuardを使用するには、お使いのMacで以下のシステム機能拡張を有効にする必要があります:";
 
-"_sysex_tutorial_subtitle_features" = "特定のVPN機能（およびほとんどのプロトコル）を使用するには、お使いのMacでProton VPNのシステム機能拡張を有効にする必要があります。";
+"_sysex_tutorial_subtitle_features" = "特定のVPN機能（およびほとんどのプロトコル）を使用するには、お使いのMacでprtvpnのシステム機能拡張を有効にする必要があります。";
 
 "_sysex_tutorial_step_click_open" = "**ネットワーク拡張機能を開く**をクリック";
 
 "_sysex_tutorial_step_click_security" = "**システム設定を開く**をクリックし、次に**プライバシーとセキュリティ→セキュリティ**に移動してください。";
 
-"_sysex_tutorial_step_click_allow" = "「アプリProtonVPNからのシステムソフトウェアがブロックされました。」というメッセージが表示されます。**許可** をクリックしてください。";
+"_sysex_tutorial_step_click_allow" = "「アプリprtvpnからのシステムソフトウェアがブロックされました。」というメッセージが表示されます。**許可** をクリックしてください。";
 
 "_sysex_tutorial_step_turn_on_both_done" = "**WireGuard** と **スプリットトンネル** スイッチをオンにし、**完了**をクリックします。";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "お困りですか？";
 
-"_sysex_settings_description" = "Proton VPN は、スマートプロトコル、OpenVPN、WireGuard を活用するためにシステム機能拡張を読み込む必要があります。";
+"_sysex_settings_description" = "prtvpn は、スマートプロトコル、OpenVPN、WireGuard を活用するためにシステム機能拡張を読み込む必要があります。";
 
 "_sysex_enabled_title" = "構成完了";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "アプリケーションのアップグレードが必要です";
 
-"_force_upgrade_message" = "このバージョンの Proton VPN アプリケーションはサポートされなくなりました。最新バージョンにアップデートしてください。";
+"_force_upgrade_message" = "このバージョンの prtvpn アプリケーションはサポートされなくなりました。最新バージョンにアップデートしてください。";
 
 "login_fetch_vpn_data" = "VPN アクセスを構成中";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "トラブルシューティング";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Proton VPN をアップデート";
+"_update_view_title" = "prtvpn をアップデート";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "古い Proton VPN には問題がある可能性があります。";
+"_update_view_description" = "古い prtvpn には問題がある可能性があります。";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "更新";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "ソフトウェアをアップデート";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "新しいバージョンのProton VPNが利用可能です。アップデートするには、まずデバイスを%1$@ %2$@以降に更新する必要があります。";
+"_operating_system_out_of_date_alert_description" = "新しいバージョンのprtvpnが利用可能です。アップデートするには、まずデバイスを%1$@ %2$@以降に更新する必要があります。";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "世界中をカバー";

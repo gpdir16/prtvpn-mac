@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Quốc gia";
 
-"_show_protonvpn" = "Hiển thị Proton VPN";
+"_show_protonvpn" = "Hiển thị prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Dọn Dữ Liệu Ứng Dụng";
@@ -290,7 +290,7 @@
 "_technical_details" = "Chi tiết kỹ thuật";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Hiển thị Proton VPN để đăng nhập...";
+"_open_app_to_log_in" = "Hiển thị prtvpn để đăng nhập...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Nâng cấp lên Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Yêu cầu cập nhật";
 
-"_update_required_no_longer_supported" = "Phiên bản Proton VPN này không còn được hỗ trợ, vui lòng cập nhật ứng dụng để tiếp tục sử dụng.";
+"_update_required_no_longer_supported" = "Phiên bản prtvpn này không còn được hỗ trợ, vui lòng cập nhật ứng dụng để tiếp tục sử dụng.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Liên hệ bộ phận hỗ trợ";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Cập nhật";
 
-"_invalid_refresh_token_please_login" = "Đã lâu không sử dụng ứng dụng Proton VPN. Vui lòng đăng nhập lại.";
+"_invalid_refresh_token_please_login" = "Đã lâu không sử dụng ứng dụng prtvpn. Vui lòng đăng nhập lại.";
 
 "_error_mitm_title" = "Kết nối không an toàn";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Xóa dữ liệu ứng dụng";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Mọi dữ liệu Proton VPN sẽ bị xóa và ứng dụng sẽ thoát. Bạn có muốn tiếp tục không?";
+"_delete_application_data_popup_body" = "Mọi dữ liệu prtvpn sẽ bị xóa và ứng dụng sẽ thoát. Bạn có muốn tiếp tục không?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Vô hiệu hóa công tắc ngắt";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Thông báo mạng không được bảo vệ";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Nhận thông báo khi Proton VPN phát hiện đang kết nối với mạng không được bảo vệ.";
+"_unprotected_network_tooltip" = "Nhận thông báo khi prtvpn phát hiện đang kết nối với mạng không được bảo vệ.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Bảo vệ chống rò rỉ DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Đính kèm nhật ký ứng dụng và chi tiết hệ thống";
 
 /* Main mac app menu item */
-"_menu_about" = "Giới thiệu Proton VPN";
+"_menu_about" = "Giới thiệu prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Kiểm tra cập nhật...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Tùy chọn";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Ẩn Proton VPN";
+"_menu_hide_self" = "Ẩn prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Ẩn mục khác";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Đăng xuất";
 
 /* Main mac app menu item */
-"_menu_quit" = "Thoát Proton VPN";
+"_menu_quit" = "Thoát prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Cửa sổ";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Công tắc ngắt đang bảo vệ IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Kết nối Internet sẽ tiếp tục ngay khi Proton VPN kết nối lại với máy chủ.\nĐể sử dụng Internet mà không có VPN và bảo vệ của công tắc ngắt, hãy hủy kết nối lại với máy chủ.";
+"_kill_switch_reconnection" = "Kết nối Internet sẽ tiếp tục ngay khi prtvpn kết nối lại với máy chủ.\nĐể sử dụng Internet mà không có VPN và bảo vệ của công tắc ngắt, hãy hủy kết nối lại với máy chủ.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "không có";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Kết nối sẽ khởi động lại để thay đổi chế độ Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "Thiết lập Proton VPN";
+"_sysex_tutorial_title_setup" = "Thiết lập prtvpn";
 
 "_sysex_tutorial_title_enable" = "Kích hoạt phần mở rộng hệ thống để tiếp tục";
 
-"_sysex_tutorial_title_enable_proton" = "Kích hoạt phần mở rộng hệ thống Proton VPN";
+"_sysex_tutorial_title_enable_proton" = "Kích hoạt phần mở rộng hệ thống prtvpn";
 
 "_sysex_tutorial_how_to_enable" = "Cách kích hoạt phần mở rộng";
 
-"_sysex_tutorial_subtitle_app" = "Để sử dụng Proton VPN, bạn cần kích hoạt các phần mở rộng hệ thống sau trên Mac:";
+"_sysex_tutorial_subtitle_app" = "Để sử dụng prtvpn, bạn cần kích hoạt các phần mở rộng hệ thống sau trên Mac:";
 
 "_sysex_tutorial_subtitle_st" = "Để sử dụng tách đường hầm, bạn cần kích hoạt các phần mở rộng hệ thống sau trên Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "Để sử dụng WireGuard, bạn cần kích hoạt các phần mở rộng hệ thống sau trên Mac:";
 
-"_sysex_tutorial_subtitle_features" = "Để sử dụng một số tính năng VPN nhất định (và hầu hết các giao thức), bạn cần kích hoạt phần mở rộng hệ thống Proton VPN trên Mac.";
+"_sysex_tutorial_subtitle_features" = "Để sử dụng một số tính năng VPN nhất định (và hầu hết các giao thức), bạn cần kích hoạt phần mở rộng hệ thống prtvpn trên Mac.";
 
 "_sysex_tutorial_step_click_open" = "Nhấp vào **Mở phần mở rộng mạng.**";
 
 "_sysex_tutorial_step_click_security" = "Nhấp vào **Mở cài đặt hệ thống**, sau đó đi tới **Quyền riêng tư và Bảo mật → Bảo mật.**";
 
-"_sysex_tutorial_step_click_allow" = "Bạn sẽ thấy thông báo \"Phần mềm hệ thống từ ứng dụng ProtonVPN bị chặn.\". Nhấp vào **Cho phép**.";
+"_sysex_tutorial_step_click_allow" = "Bạn sẽ thấy thông báo \"Phần mềm hệ thống từ ứng dụng prtvpn bị chặn.\". Nhấp vào **Cho phép**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Bật **WireGuard** và **tách đường hầm**, sau đó nhấp vào **Xong**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Cần trợ giúp?";
 
-"_sysex_settings_description" = "Proton VPN yêu cầu tải Phần mở rộng hệ thống để tận dụng Smart Protocol, OpenVPN và WireGuard.";
+"_sysex_settings_description" = "prtvpn yêu cầu tải Phần mở rộng hệ thống để tận dụng Smart Protocol, OpenVPN và WireGuard.";
 
 "_sysex_enabled_title" = "Cấu hình hoàn tất";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Cần nâng cấp ứng dụng";
 
-"_force_upgrade_message" = "Phiên bản ứng dụng Proton VPN đang sử dụng không còn được hỗ trợ. Vui lòng cập nhật lên phiên bản mới nhất.";
+"_force_upgrade_message" = "Phiên bản ứng dụng prtvpn đang sử dụng không còn được hỗ trợ. Vui lòng cập nhật lên phiên bản mới nhất.";
 
 "login_fetch_vpn_data" = "Đang cấu hình truy cập VPN";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Xử lý sự cố";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Cập nhật Proton VPN";
+"_update_view_title" = "Cập nhật prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Bạn sẽ dễ gặp sự cố hơn nếu dùng các phiên bản đã lỗi thời của Proton VPN.";
+"_update_view_description" = "Bạn sẽ dễ gặp sự cố hơn nếu dùng các phiên bản đã lỗi thời của prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Cập nhật";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Cập nhật phần mềm";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Đã có phiên bản Proton VPN mới. Để nhận bản cập nhật, trước tiên cần cập nhật thiết bị lên %1$@ %2$@ hoặc mới hơn.";
+"_operating_system_out_of_date_alert_description" = "Đã có phiên bản prtvpn mới. Để nhận bản cập nhật, trước tiên cần cập nhật thiết bị lên %1$@ %2$@ hoặc mới hơn.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Phủ sóng toàn cầu";

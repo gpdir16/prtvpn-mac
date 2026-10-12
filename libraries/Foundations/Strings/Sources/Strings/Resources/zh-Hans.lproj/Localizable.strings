@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "国家/地区";
 
-"_show_protonvpn" = "显示 Proton VPN";
+"_show_protonvpn" = "显示 prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "清除应用数据";
@@ -290,7 +290,7 @@
 "_technical_details" = "技术细节";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "显示 Proton VPN 以登录...";
+"_open_app_to_log_in" = "显示 prtvpn 以登录...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "升级到Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "需要更新";
 
-"_update_required_no_longer_supported" = "此版本的 Proton VPN 不再支持，请更新应用程序继续使用。";
+"_update_required_no_longer_supported" = "此版本的 prtvpn 不再支持，请更新应用程序继续使用。";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "联系客服";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "立即更新";
 
-"_invalid_refresh_token_please_login" = "距离您上次使用Proton VPN已经有一段时间了，请重新登录。";
+"_invalid_refresh_token_please_login" = "距离您上次使用prtvpn已经有一段时间了，请重新登录。";
 
 "_error_mitm_title" = "不安全的连接";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "清除应用程序数据";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "所有 Proton VPN 数据将被删除，应用程序将退出。您想要继续吗？";
+"_delete_application_data_popup_body" = "所有 prtvpn 数据将被删除，应用程序将退出。您想要继续吗？";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "禁用 Kill Switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "网络未开启防护时提示";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "当 Proton VPN 检测到所连网络未受保护时提示。";
+"_unprotected_network_tooltip" = "当 prtvpn 检测到所连网络未受保护时提示。";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "防范 DNS 泄露";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "一并提交应用日志及系统信息";
 
 /* Main mac app menu item */
-"_menu_about" = "关于 Proton VPN";
+"_menu_about" = "关于 prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "检查更新...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "设置";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "隐藏 Proton VPN";
+"_menu_hide_self" = "隐藏 prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "隐藏其他";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "登出";
 
 /* Main mac app menu item */
-"_menu_quit" = "退出 Proton VPN";
+"_menu_quit" = "退出 prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "窗口";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch 正在保护您的 IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "一旦 ProtonVPN 重新连接到服务器，您的网络连接将立即恢复。\n若要在不使用 VPN 或 Kill Switch 的情况下使用互联网，请取消与服务器的重新连接。";
+"_kill_switch_reconnection" = "一旦 prtvpn 重新连接到服务器，您的网络连接将立即恢复。\n若要在不使用 VPN 或 Kill Switch 的情况下使用互联网，请取消与服务器的重新连接。";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "无";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "您的连接将以Smart Protocol模式重新启动。";
 
-"_sysex_tutorial_title_setup" = "配置 Proton VPN";
+"_sysex_tutorial_title_setup" = "配置 prtvpn";
 
 "_sysex_tutorial_title_enable" = "启用系统扩展以继续";
 
-"_sysex_tutorial_title_enable_proton" = "启用 Proton VPN 系统扩展";
+"_sysex_tutorial_title_enable_proton" = "启用 prtvpn 系统扩展";
 
 "_sysex_tutorial_how_to_enable" = "如何启用扩展";
 
-"_sysex_tutorial_subtitle_app" = "要使用 Proton VPN，您需要在 Mac 上启用以下系统扩展：";
+"_sysex_tutorial_subtitle_app" = "要使用 prtvpn，您需要在 Mac 上启用以下系统扩展：";
 
 "_sysex_tutorial_subtitle_st" = "要使用拆分隧道，您需要在 Mac 上启用以下系统扩展：";
 
 "_sysex_tutorial_subtitle_wg" = "要使用 WireGuard，您需要在 Mac 上启用以下系统扩展：";
 
-"_sysex_tutorial_subtitle_features" = "要使用某些 VPN 功能（及大多数协议），您需要在 Mac 上启用 Proton VPN 系统扩展。";
+"_sysex_tutorial_subtitle_features" = "要使用某些 VPN 功能（及大多数协议），您需要在 Mac 上启用 prtvpn 系统扩展。";
 
 "_sysex_tutorial_step_click_open" = "点击 **打开网络扩展**";
 
 "_sysex_tutorial_step_click_security" = "点击 **打开系统设置**，然后前往 **隐私与安全性 → 安全性**";
 
-"_sysex_tutorial_step_click_allow" = "您应会看到一条信息提示“来自应用程序 ProtonVPN 的系统软件已被阻止。”，点击 **允许**";
+"_sysex_tutorial_step_click_allow" = "您应会看到一条信息提示“来自应用程序 prtvpn 的系统软件已被阻止。”，点击 **允许**";
 
 "_sysex_tutorial_step_turn_on_both_done" = "打开 **WireGuard** 和 **拆分隧道** 开关，然后点击 **完成**";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "需要帮助？";
 
-"_sysex_settings_description" = "Proton VPN 需要加载系统扩展才能利用智能协议、OpenVPN 和 WireGuard。";
+"_sysex_settings_description" = "prtvpn 需要加载系统扩展才能利用智能协议、OpenVPN 和 WireGuard。";
 
 "_sysex_enabled_title" = "配置完成";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "排查问题";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "更新 Proton VPN";
+"_update_view_title" = "更新 prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "继续使用旧版本 Proton VPN 可能会出问题。";
+"_update_view_description" = "继续使用旧版本 prtvpn 可能会出问题。";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "更新";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "更新您的软件";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Proton VPN 新版本已发布。要获取更新，您首先需要将设备更新到 %1$@ %2$@ 或更高版本。";
+"_operating_system_out_of_date_alert_description" = "prtvpn 新版本已发布。要获取更新，您首先需要将设备更新到 %1$@ %2$@ 或更高版本。";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "覆盖全世界";

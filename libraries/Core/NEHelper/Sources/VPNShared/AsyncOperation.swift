@@ -23,7 +23,7 @@
 import Foundation
 
 open class AsyncOperation: Operation {
-    private let lockQueue = DispatchQueue(label: "ch.protonvpn.asyncoperation", attributes: .concurrent)
+    private let lockQueue = DispatchQueue(label: "app.prtvpn.asyncoperation", attributes: .concurrent)
 
     override public var isAsynchronous: Bool {
         true

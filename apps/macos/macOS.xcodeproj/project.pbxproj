@@ -283,6 +283,7 @@
 		E5C7F0B32DE8A98700A7AD13 /* ClearButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7F0B22DE8A98400A7AD13 /* ClearButtonModifier.swift */; };
 		E5CFAACE29E92E8300C36735 /* AppTheme+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFAACD29E92E8300C36735 /* AppTheme+Icons.swift */; };
 		E5D1A5A22F43292100A26EA8 /* Countries in Frameworks */ = {isa = PBXBuildFile; productRef = E5D1A5A12F43292100A26EA8 /* Countries */; };
+		C0DE00022F50000000A26EA8 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = C0DE00012F50000000A26EA8 /* Home */; };
 		E5DA73C12DC4D1930057B273 /* ThemeToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA73C02DC4D1930057B273 /* ThemeToggleStyle.swift */; };
 		E5DA73C52DCB880D0057B273 /* PlutoniumSelectionButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA73C42DCB880D0057B273 /* PlutoniumSelectionButtonLabel.swift */; };
 		E5DA73D42DD23A970057B273 /* PlutoniumFeatureState+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA73D32DD23A8B0057B273 /* PlutoniumFeatureState+UIExtension.swift */; };
@@ -301,7 +302,7 @@
 		E5FF89602A810043002B4A49 /* InitialStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CB3A92A43275E00D58D20 /* InitialStateProvider.swift */; };
 		E5FF89612A810043002B4A49 /* SidebarReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC642A42F5350058B3D9 /* SidebarReducer.swift */; };
 		E5FF89622A810046002B4A49 /* SideBarTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC752A430A720058B3D9 /* SideBarTab.swift */; };
-		E5FF89632A810046002B4A49 /* SideBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC722A430A720058B3D9 /* SideBarButtonStyle.swift */; };
+		E5FF89622A81004600C0FFEE /* NativeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC752A430A7200C0FFEE /* NativeSettingsView.swift */; };
 		E5FF89642A810046002B4A49 /* ProfileButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC732A430A720058B3D9 /* ProfileButtonView.swift */; };
 		E5FF89652A810046002B4A49 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC742A430A720058B3D9 /* SideBarView.swift */; };
 		E5FF89662A810046002B4A49 /* SideBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552FC762A430A720058B3D9 /* SideBarItemView.swift */; };
@@ -310,7 +311,7 @@
 		E93C4F1C26A1C1F30006680C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE182C551F617C0000F3BA4C /* NetworkExtension.framework */; };
 		E93D023726A1C90A0098520D /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D023426A1C90A0098520D /* PacketTunnelProvider.swift */; };
 		E93D023826A1C90A0098520D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93D023526A1C90A0098520D /* main.swift */; };
-		E976592826A859BF00E0983B /* ch.protonvpn.mac.WireGuard-Extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = E93C4F2526A1C1F30006680C /* ch.protonvpn.mac.WireGuard-Extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E976592826A859BF00E0983B /* app.prtvpn.mac.WireGuard-Extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = E93C4F2526A1C1F30006680C /* app.prtvpn.mac.WireGuard-Extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E99799BB26A6FFAC0083D61E /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99799AF26A6FFAC0083D61E /* FileManager+Extension.swift */; };
 		E99799BC26A6FFAC0083D61E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99799B026A6FFAC0083D61E /* Keychain.swift */; };
 		E99799BD26A6FFAC0083D61E /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99799B126A6FFAC0083D61E /* NotificationToken.swift */; };
@@ -330,7 +331,7 @@
 		E9F88DE727B544E0003E5179 /* Colors+BugReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F88DE627B544E0003E5179 /* Colors+BugReport.swift */; };
 		E9F8B6CF26206DE900B72549 /* VpnProtocolChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8B6CE26206DE900B72549 /* VpnProtocolChangeManager.swift */; };
 		E9FE72EB26FC995A00966404 /* CABasicAnimation+Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FE72EA26FC995A00966404 /* CABasicAnimation+Pulse.swift */; };
-		EB29024B2E3129E400C200E7 /* ch.protonvpn.mac.Transparent-Proxy.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = EBB751C42DA7D4C800F79994 /* ch.protonvpn.mac.Transparent-Proxy.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB29024B2E3129E400C200E7 /* app.prtvpn.mac.Transparent-Proxy.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = EBB751C42DA7D4C800F79994 /* app.prtvpn.mac.Transparent-Proxy.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB4E2CA52E535C31003EA83C /* PlutoniumMacLogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E2CA42E535C31003EA83C /* PlutoniumMacLogProvider.swift */; };
 		EB4E2CAC2E5369A1003EA83C /* IPCServerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8641C227D261FB00EEFB1D /* IPCServerConnection.swift */; };
 		EB4E2CAD2E5369E7003EA83C /* CodeSignatureComparitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8641B927D25C5D00EEFB1D /* CodeSignatureComparitor.swift */; };
@@ -538,8 +539,8 @@
 			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
 			dstSubfolderSpec = 16;
 			files = (
-				EB29024B2E3129E400C200E7 /* ch.protonvpn.mac.Transparent-Proxy.systemextension in Embed System Extensions */,
-				E976592826A859BF00E0983B /* ch.protonvpn.mac.WireGuard-Extension.systemextension in Embed System Extensions */,
+				EB29024B2E3129E400C200E7 /* app.prtvpn.mac.Transparent-Proxy.systemextension in Embed System Extensions */,
+				E976592826A859BF00E0983B /* app.prtvpn.mac.WireGuard-Extension.systemextension in Embed System Extensions */,
 			);
 			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +613,7 @@
 		65229530CD3C602EE8E33CB0 /* AnnouncementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailViewController.swift; sourceTree = "<group>"; };
 		661C76D02DE48E00005AE583 /* HermesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HermesWindowController.swift; sourceTree = "<group>"; };
 		663552132DB7D4160012B712 /* HermesNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HermesNotifications.swift; sourceTree = "<group>"; };
-		6640FF3F2ED5B24B004A4A9A /* ch.protonvpn.mac.ProTUN-Extension-Desktop.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "ch.protonvpn.mac.ProTUN-Extension-Desktop.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6640FF3F2ED5B24B004A4A9A /* app.prtvpn.mac.ProTUN-Extension-Desktop.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "app.prtvpn.mac.ProTUN-Extension-Desktop.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66474BD82E70830A0058726C /* AnyTwoFactorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTwoFactorView.swift; sourceTree = "<group>"; };
 		665897442DE5F95300295938 /* HermesUI-macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HermesUI-macOS.swift"; sourceTree = "<group>"; };
 		66A8A0CA2DBA8B490064CB10 /* HermesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HermesViewModelTests.swift; sourceTree = "<group>"; };
@@ -791,10 +792,10 @@
 		E551EB0629AF7B7B00B6612D /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		E551EB0729AF7C1300B6612D /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		E552FC642A42F5350058B3D9 /* SidebarReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarReducer.swift; sourceTree = "<group>"; };
-		E552FC722A430A720058B3D9 /* SideBarButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarButtonStyle.swift; sourceTree = "<group>"; };
 		E552FC732A430A720058B3D9 /* ProfileButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileButtonView.swift; sourceTree = "<group>"; };
 		E552FC742A430A720058B3D9 /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		E552FC752A430A720058B3D9 /* SideBarTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTab.swift; sourceTree = "<group>"; };
+		E552FC752A430A7200C0FFEE /* NativeSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeSettingsView.swift; sourceTree = "<group>"; };
 		E552FC762A430A720058B3D9 /* SideBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarItemView.swift; sourceTree = "<group>"; };
 		E565986728200ADA004F2240 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = ../../../../../macos/ProtonVPN/Scenes/Login/ViewControllers/LoadingView.swift; sourceTree = "<group>"; };
 		E56598692820FECE004F2240 /* WarningView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WarningView.xib; path = ../../../../../macos/ProtonVPN/Scenes/Login/ViewControllers/WarningView.xib; sourceTree = "<group>"; };
@@ -828,7 +829,7 @@
 		E91BDD37274BC89A005F370C /* WGLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGLogger.swift; sourceTree = "<group>"; };
 		E928092E26B42739008C9F2C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../macos/ExtensionsIPC/README.md; sourceTree = "<group>"; };
 		E928092F26B42B63008C9F2C /* IPCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IPCHelper.swift; path = ../../macos/ExtensionsIPC/IPCHelper.swift; sourceTree = "<group>"; };
-		E93C4F2526A1C1F30006680C /* ch.protonvpn.mac.WireGuard-Extension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "ch.protonvpn.mac.WireGuard-Extension.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93C4F2526A1C1F30006680C /* app.prtvpn.mac.WireGuard-Extension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "app.prtvpn.mac.WireGuard-Extension.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93D023126A1C90A0098520D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../macos/ProtonVPN WireGuard/Info.plist"; sourceTree = "<group>"; };
 		E93D023326A1C90A0098520D /* WireGuard.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = WireGuard.entitlements; sourceTree = "<group>"; };
 		E93D023426A1C90A0098520D /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacketTunnelProvider.swift; path = "../../macos/ProtonVPN WireGuard/PacketTunnelProvider.swift"; sourceTree = "<group>"; };
@@ -855,7 +856,7 @@
 		E9FE72EA26FC995A00966404 /* CABasicAnimation+Pulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CABasicAnimation+Pulse.swift"; path = "../../macos/ProtonVPN/CABasicAnimation+Pulse.swift"; sourceTree = "<group>"; };
 		EB4E2CA42E535C31003EA83C /* PlutoniumMacLogProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlutoniumMacLogProvider.swift; sourceTree = "<group>"; };
 		EBA003132E03008B00A8CC06 /* WireguardNetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireguardNetworkInterface.swift; sourceTree = "<group>"; };
-		EBB751C42DA7D4C800F79994 /* ch.protonvpn.mac.Transparent-Proxy.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "ch.protonvpn.mac.Transparent-Proxy.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB751C42DA7D4C800F79994 /* app.prtvpn.mac.Transparent-Proxy.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = "app.prtvpn.mac.Transparent-Proxy.systemextension"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE01DCFE1F5C1CED003D62ED /* SCEntryCountryAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCEntryCountryAnnotationView.swift; sourceTree = "<group>"; };
 		EE01DD001F5C2658003D62ED /* SCCoreCircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCoreCircleButton.swift; sourceTree = "<group>"; };
 		EE068DC11F23E7E30006C2D0 /* ProfilesSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesSectionViewModel.swift; sourceTree = "<group>"; };
@@ -976,7 +977,7 @@
 		EECEF3C91F164AEC00A16606 /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		EECF306A1F179A54006F819F /* CountryItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryItemViewModel.swift; sourceTree = "<group>"; };
 		EECF30701F17A188006F819F /* ServerItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerItemViewModel.swift; sourceTree = "<group>"; };
-		EED534811EEC112000013607 /* ProtonVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtonVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED534811EEC112000013607 /* prtvpn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prtvpn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED534841EEC112000013607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EED534881EEC112000013607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED5348D1EEC112000013607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1149,6 +1150,7 @@
 				4CD1F7952A72DE0400E8AB01 /* ProtonCoreCryptoVPNPatchedGoImplementation in Frameworks */,
 				E5E48CF72A4C363700B09111 /* ComposableArchitecture in Frameworks */,
 				E5D1A5A22F43292100A26EA8 /* Countries in Frameworks */,
+				C0DE00022F50000000A26EA8 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1545,10 +1547,10 @@
 		E552FC712A430A720058B3D9 /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
-				E552FC722A430A720058B3D9 /* SideBarButtonStyle.swift */,
 				E552FC732A430A720058B3D9 /* ProfileButtonView.swift */,
 				E552FC742A430A720058B3D9 /* SideBarView.swift */,
 				E552FC752A430A720058B3D9 /* SideBarTab.swift */,
+				E552FC752A430A7200C0FFEE /* NativeSettingsView.swift */,
 				E552FC762A430A720058B3D9 /* SideBarItemView.swift */,
 			);
 			path = SideBar;
@@ -1795,14 +1797,14 @@
 		EED534821EEC112000013607 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EED534811EEC112000013607 /* ProtonVPN.app */,
+				EED534811EEC112000013607 /* prtvpn.app */,
 				EEB404C71F77F639006CF513 /* ProtonVPNStarter.app */,
 				E15B754D20FA83CB0022C406 /* ProtonVPNmacOSTests.xctest */,
 				D5911706229F9574005829DA /* ProtonVPNmacOSUITests.xctest */,
-				E93C4F2526A1C1F30006680C /* ch.protonvpn.mac.WireGuard-Extension.systemextension */,
+				E93C4F2526A1C1F30006680C /* app.prtvpn.mac.WireGuard-Extension.systemextension */,
 				E5C00F082A15FC6E0030076F /* ProtonVPNmac-redesign-UITests.xctest */,
-				EBB751C42DA7D4C800F79994 /* ch.protonvpn.mac.Transparent-Proxy.systemextension */,
-				6640FF3F2ED5B24B004A4A9A /* ch.protonvpn.mac.ProTUN-Extension-Desktop.systemextension */,
+				EBB751C42DA7D4C800F79994 /* app.prtvpn.mac.Transparent-Proxy.systemextension */,
+				6640FF3F2ED5B24B004A4A9A /* app.prtvpn.mac.ProTUN-Extension-Desktop.systemextension */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2688,7 +2690,7 @@
 				6640FF512ED5B34D004A4A9A /* ProTUNExtension */,
 			);
 			productName = "ProTUN-Extension-Desktop";
-			productReference = 6640FF3F2ED5B24B004A4A9A /* ch.protonvpn.mac.ProTUN-Extension-Desktop.systemextension */;
+			productReference = 6640FF3F2ED5B24B004A4A9A /* app.prtvpn.mac.ProTUN-Extension-Desktop.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 		D5911705229F9574005829DA /* ProtonVPNmacOSUITests */ = {
@@ -2778,7 +2780,7 @@
 				D5EE412E2AD9539A00ECC064 /* WireGuardKit */,
 			);
 			productName = "ProtonVPN OpenVPN";
-			productReference = E93C4F2526A1C1F30006680C /* ch.protonvpn.mac.WireGuard-Extension.systemextension */;
+			productReference = E93C4F2526A1C1F30006680C /* app.prtvpn.mac.WireGuard-Extension.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 		EBB751C32DA7D4C800F79994 /* ProtonVPN Split Tunneling */ = {
@@ -2800,8 +2802,8 @@
 			packageProductDependencies = (
 				A456C8BB2ECF7FE1006438F7 /* PlutoniumExtension */,
 			);
-			productName = "ch.protonvpn.mac.Transparent-Proxy";
-			productReference = EBB751C42DA7D4C800F79994 /* ch.protonvpn.mac.Transparent-Proxy.systemextension */;
+			productName = "app.prtvpn.mac.Transparent-Proxy";
+			productReference = EBB751C42DA7D4C800F79994 /* app.prtvpn.mac.Transparent-Proxy.systemextension */;
 			productType = "com.apple.product-type.system-extension";
 		};
 		EEB404C61F77F639006CF513 /* ProtonVPNStarter */ = {
@@ -2871,10 +2873,11 @@
 				E5A6921A2EB0B4550050AB7F /* VPNShared */,
 				E5776A2C2EC5D5ED00A0F9EE /* Telemetry */,
 				E5D1A5A12F43292100A26EA8 /* Countries */,
+				C0DE00012F50000000A26EA8 /* Home */,
 				A405F25F2F61A26D00953E7B /* Payments */,
 			);
 			productName = ProtonVPN;
-			productReference = EED534811EEC112000013607 /* ProtonVPN.app */;
+			productReference = EED534811EEC112000013607 /* prtvpn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3407,7 +3410,6 @@
 				4CA7BA4F2965788B0001C7E7 /* PopUpButtonItemViewModel.swift in Sources */,
 				E9E5F98427C667170068309F /* AppCertificateRefreshManager.swift in Sources */,
 				F34AC17727F33E360007FF93 /* ProtonReachabilityChecker.swift in Sources */,
-				E5FF89632A810046002B4A49 /* SideBarButtonStyle.swift in Sources */,
 				EE46A08E1F2E1BD5008B435C /* StatusMenuViewModel.swift in Sources */,
 				E551EB0829AF7C1300B6612D /* Assets.swift in Sources */,
 				E192239F20EBABA0007ED5B0 /* ClickDetectingVisualEffectView.swift in Sources */,
@@ -3568,6 +3570,7 @@
 				EECF30711F17A188006F819F /* ServerItemViewModel.swift in Sources */,
 				E1B9A7D0203EBD30009677BC /* ConnectingOverlayButton.swift in Sources */,
 				E5FF89622A810046002B4A49 /* SideBarTab.swift in Sources */,
+				E5FF89622A81004600C0FFEE /* NativeSettingsView.swift in Sources */,
 				423467C7261CEAAF00A73773 /* UserAccountUpdateViewController.swift in Sources */,
 				4CFFC94427E0C0AE0035969B /* CancellationButton.swift in Sources */,
 				EEFE81D71F3F41B10052A7A6 /* MapHeaderViewModel.swift in Sources */,
@@ -3733,7 +3736,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3749,8 +3752,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.mac;
-				PRODUCT_NAME = ProtonVPN;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.mac;
+				PRODUCT_MODULE_NAME = ProtonVPN;
+				PRODUCT_NAME = prtvpn;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ProtonVPN/ProtonVPN-Bridging-Header.h";
@@ -3768,7 +3772,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNStarter/Info.plist;
@@ -3777,7 +3781,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNStarter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -3797,7 +3801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1234;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ProtonVPN WireGuard/Info.plist";
@@ -3808,7 +3812,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.WireGuard-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.WireGuard-Extension";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3828,7 +3832,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "";
@@ -3850,7 +3854,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3859,13 +3863,13 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(BUILD_DIR)/Products/$(CONFIGURATION)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtonVPN.app/Contents/MacOS/ProtonVPN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prtvpn.app/Contents/MacOS/prtvpn";
 			};
 			name = Profile;
 		};
@@ -3880,7 +3884,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3907,14 +3911,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "ProtonVPNmac-redesign-UITests/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProtonVPNmac-redesign-UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProtonVPNmac-redesign-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -3926,7 +3930,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3935,7 +3939,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -3944,7 +3948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Profile;
@@ -3953,7 +3957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-Staging";
@@ -3970,7 +3974,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -3999,7 +4003,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProTUN-Extension-Desktop";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProTUN-Extension-Desktop";
 				PRODUCT_NAME = "$(inherited)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -4024,7 +4028,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -4052,7 +4056,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProTUN-Extension-Desktop";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProTUN-Extension-Desktop";
 				PRODUCT_NAME = "$(inherited)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -4076,7 +4080,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -4104,7 +4108,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProTUN-Extension-Desktop";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProTUN-Extension-Desktop";
 				PRODUCT_NAME = "$(inherited)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -4128,7 +4132,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
@@ -4156,7 +4160,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProTUN-Extension-Desktop";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProTUN-Extension-Desktop";
 				PRODUCT_NAME = "$(inherited)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -4179,7 +4183,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4208,7 +4212,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4302,7 +4306,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4321,8 +4325,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.mac;
-				PRODUCT_NAME = ProtonVPN;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.mac;
+				PRODUCT_MODULE_NAME = ProtonVPN;
+				PRODUCT_NAME = prtvpn;
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN Application Developer ID PP";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TLS_PIN_DISABLE STAGING";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -4341,7 +4346,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNStarter/Info.plist;
@@ -4350,7 +4355,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNStarter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN Starter Developer ID PP";
 				SKIP_INSTALL = YES;
@@ -4370,7 +4375,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4379,13 +4384,13 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(BUILD_DIR)/Products/$(CONFIGURATION)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtonVPN.app/Contents/MacOS/ProtonVPN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prtvpn.app/Contents/MacOS/prtvpn";
 			};
 			name = "Debug-Staging";
 		};
@@ -4400,7 +4405,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4429,7 +4434,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4438,13 +4443,13 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(BUILD_DIR)/Products/$(CONFIGURATION)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtonVPN.app/Contents/MacOS/ProtonVPN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prtvpn.app/Contents/MacOS/prtvpn";
 			};
 			name = Debug;
 		};
@@ -4460,7 +4465,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = J6S6Q257EK;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4469,13 +4474,13 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNTests;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(BUILD_DIR)/Products/$(CONFIGURATION)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtonVPN.app/Contents/MacOS/ProtonVPN";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/prtvpn.app/Contents/MacOS/prtvpn";
 			};
 			name = Release;
 		};
@@ -4489,7 +4494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "ProtonVPNmac-redesign-UITests/Info.plist";
@@ -4497,7 +4502,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProtonVPNmac-redesign-UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProtonVPNmac-redesign-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -4515,14 +4520,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "ProtonVPNmac-redesign-UITests/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProtonVPNmac-redesign-UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProtonVPNmac-redesign-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -4540,14 +4545,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 2SB5Z68H26;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "ProtonVPNmac-redesign-UITests/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.ProtonVPNmac-redesign-UITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.ProtonVPNmac-redesign-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -4566,7 +4571,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUGGING_SYMBOLS = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4589,7 +4594,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "";
@@ -4609,7 +4614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "";
@@ -4631,7 +4636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1234;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ProtonVPN WireGuard/Info.plist";
@@ -4643,7 +4648,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.WireGuard-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.WireGuard-Extension";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4665,7 +4670,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1234;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ProtonVPN WireGuard/Info.plist";
@@ -4676,7 +4681,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.WireGuard-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.WireGuard-Extension";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN WireGuard Application Developer ID PP";
@@ -4698,7 +4703,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1234;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "ProtonVPN WireGuard/Info.plist";
@@ -4709,7 +4714,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.WireGuard-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.WireGuard-Extension";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN WireGuard Application Developer ID PP";
@@ -4732,7 +4737,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -4748,7 +4753,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.Transparent-Proxy";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.Transparent-Proxy";
 				PRODUCT_NAME = "$(inherited)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -4786,7 +4791,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.Transparent-Proxy";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.Transparent-Proxy";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4824,7 +4829,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.Transparent-Proxy";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.Transparent-Proxy";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4862,7 +4867,7 @@
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.protonvpn.mac.Transparent-Proxy";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.prtvpn.mac.Transparent-Proxy";
 				PRODUCT_NAME = "$(inherited)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4882,7 +4887,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNStarter/Info.plist;
@@ -4891,7 +4896,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNStarter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -4909,7 +4914,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = ProtonVPNStarter/Info.plist;
@@ -4918,7 +4923,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.ProtonVPNStarter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.ProtonVPNStarter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN Starter Developer ID PP";
 				SKIP_INSTALL = YES;
@@ -5070,7 +5075,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5091,8 +5096,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				OTHER_SWIFT_FLAGS = "$(REDESIGN_SWIFTFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.mac;
-				PRODUCT_NAME = ProtonVPN;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.mac;
+				PRODUCT_MODULE_NAME = ProtonVPN;
+				PRODUCT_NAME = prtvpn;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TLS_PIN_DISABLE";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -5116,7 +5122,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = J6S6Q257EK;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5132,8 +5138,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(DEPLOYMENT_TARGET)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.protonvpn.mac;
-				PRODUCT_NAME = ProtonVPN;
+				PRODUCT_BUNDLE_IDENTIFIER = app.prtvpn.mac;
+				PRODUCT_MODULE_NAME = ProtonVPN;
+				PRODUCT_NAME = prtvpn;
 				PROVISIONING_PROFILE_SPECIFIER = "ProtonVPN Application Developer ID PP";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ProtonVPN/ProtonVPN-Bridging-Header.h";
@@ -5511,6 +5518,10 @@
 		E5D1A5A12F43292100A26EA8 /* Countries */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Countries;
+		};
+		C0DE00012F50000000A26EA8 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
 		};
 		E5E48CF62A4C363700B09111 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;

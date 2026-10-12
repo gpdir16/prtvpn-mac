@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Země";
 
-"_show_protonvpn" = "Zobrazit Proton VPN";
+"_show_protonvpn" = "Zobrazit prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Vymazat data aplikace";
@@ -290,7 +290,7 @@
 "_technical_details" = "Technické detaily";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Zobrazit Proton VPN pro přihlášení...";
+"_open_app_to_log_in" = "Zobrazit prtvpn pro přihlášení...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Přejít na tarif Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Je vyžadována aktualizace";
 
-"_update_required_no_longer_supported" = "Tato verze Proton VPN již není podporována, aktualizujte aplikaci pro pokračování.";
+"_update_required_no_longer_supported" = "Tato verze prtvpn již není podporována, aktualizujte aplikaci pro pokračování.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Kontaktovat podporu";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Aktualizovat";
 
-"_invalid_refresh_token_please_login" = "Dlouho jste aplikaci Proton VPN nepoužívali. Prosím přihlaste se znovu.";
+"_invalid_refresh_token_please_login" = "Dlouho jste aplikaci prtvpn nepoužívali. Prosím přihlaste se znovu.";
 
 "_error_mitm_title" = "Nezabezpečené připojení";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Smazat data aplikace";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Veškerá data související s Proton VPN budou smazána a aplikace se ukončí. Přejete si pokračovat?";
+"_delete_application_data_popup_body" = "Veškerá data související s prtvpn budou smazána a aplikace se ukončí. Přejete si pokračovat?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Deaktivovat Kill Switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Upozornění na nechráněné sítě";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Obdržíte oznámení, když Proton VPN zjistí, že jste připojeni k nechráněné síti.";
+"_unprotected_network_tooltip" = "Obdržíte oznámení, když prtvpn zjistí, že jste připojeni k nechráněné síti.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Ochrana proti úniku DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Zahrnout logy aplikace a podrobnosti o systému";
 
 /* Main mac app menu item */
-"_menu_about" = "O Proton VPN";
+"_menu_about" = "O prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Kontrola aktualizací...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Nastavení";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Skrýt Proton VPN";
+"_menu_hide_self" = "Skrýt prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Skrýt ostatní";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Odhlásit se";
 
 /* Main mac app menu item */
-"_menu_quit" = "Ukončit Proton VPN";
+"_menu_quit" = "Ukončit prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Okno";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch chrání vaši IP adresu";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Vaše připojení k internetu bude obnoveno, jakmile se Proton VPN znovu připojí k serveru.\nChcete-li používat internet bez ochrany VPN a Kill Switch, zrušte opětovné připojení k serveru.";
+"_kill_switch_reconnection" = "Vaše připojení k internetu bude obnoveno, jakmile se prtvpn znovu připojí k serveru.\nChcete-li používat internet bez ochrany VPN a Kill Switch, zrušte opětovné připojení k serveru.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "bez";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Vaše připojení bude restartováno kvůli změně režimu Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "Nastavit Proton VPN";
+"_sysex_tutorial_title_setup" = "Nastavit prtvpn";
 
 "_sysex_tutorial_title_enable" = "Pro pokračování povolte systémové rozšíření";
 
-"_sysex_tutorial_title_enable_proton" = "Povolit systémová rozšíření Proton VPN";
+"_sysex_tutorial_title_enable_proton" = "Povolit systémová rozšíření prtvpn";
 
 "_sysex_tutorial_how_to_enable" = "Jak povolit rozšíření";
 
-"_sysex_tutorial_subtitle_app" = "Pro používání Proton VPN potřebujete povolit následující systémová rozšíření na vašem zařízení Mac:";
+"_sysex_tutorial_subtitle_app" = "Pro používání prtvpn potřebujete povolit následující systémová rozšíření na vašem zařízení Mac:";
 
 "_sysex_tutorial_subtitle_st" = "Pro používání funkce split tunneling potřebujete povolit následující systémová rozšíření na vašem zařízení Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "Pro používání WireGuard potřebujete povolit následující systémová rozšíření na vašem zařízení Mac:";
 
-"_sysex_tutorial_subtitle_features" = "Pro používání určitých funkcí VPN (a většiny protokolů), musíte mít povoleno systémové rozšíření Proton VPN na vašem zařízení Mac.";
+"_sysex_tutorial_subtitle_features" = "Pro používání určitých funkcí VPN (a většiny protokolů), musíte mít povoleno systémové rozšíření prtvpn na vašem zařízení Mac.";
 
 "_sysex_tutorial_step_click_open" = "Klikněte na **Otevřít síťová rozšíření.**";
 
 "_sysex_tutorial_step_click_security" = "Klikněte na **Otevřít systémová nastavení** a jděte do **Soukromí a bezpečnost → Bezpečnost**.";
 
-"_sysex_tutorial_step_click_allow" = "Měla by se vám zobrazit zpráva, která říká \"Systémový software z aplikace ProtonVPN byl zablokován.\". Klikněte na **Povolit**.";
+"_sysex_tutorial_step_click_allow" = "Měla by se vám zobrazit zpráva, která říká \"Systémový software z aplikace prtvpn byl zablokován.\". Klikněte na **Povolit**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Zapněte funkce **WireGuard** a **split tunneling**, následně klikněte na **Hotovo**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Potřebujete pomoci?";
 
-"_sysex_settings_description" = "Proton VPN vyžaduje nahrání systémového rozšíření pro využití Smart Protocol, OpenVPN a WireGuard.";
+"_sysex_settings_description" = "prtvpn vyžaduje nahrání systémového rozšíření pro využití Smart Protocol, OpenVPN a WireGuard.";
 
 "_sysex_enabled_title" = "Nastavení dokončeno";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Nutná aktualizace aplikace";
 
-"_force_upgrade_message" = "Verze aplikace Proton VPN, kterou právě používáte, již není podporována. Aktualizujte ji prosím na nejnovější verzi.";
+"_force_upgrade_message" = "Verze aplikace prtvpn, kterou právě používáte, již není podporována. Aktualizujte ji prosím na nejnovější verzi.";
 
 "login_fetch_vpn_data" = "Nastavení vašeho VPN přístupu";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Řešení problémů";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Aktualizovat Proton VPN";
+"_update_view_title" = "Aktualizovat prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Je pravděpodobnější, že u starších verzí Proton VPN budete mít více problémů.";
+"_update_view_description" = "Je pravděpodobnější, že u starších verzí prtvpn budete mít více problémů.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Aktualizovat";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Aktualizujte software";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Je dostupná nová verze Proton VPN. Před získáním aktualizace musíte nejprve aktualizovat svoje zařízení na %1$@ %2$@ nebo novější.";
+"_operating_system_out_of_date_alert_description" = "Je dostupná nová verze prtvpn. Před získáním aktualizace musíte nejprve aktualizovat svoje zařízení na %1$@ %2$@ nebo novější.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Celosvětové pokrytí";

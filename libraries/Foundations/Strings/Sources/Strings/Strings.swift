@@ -10,6 +10,102 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum Localizable {
+  /// Tunnel Daemon Log
+  public static var daemonLog: String { return Localizable.tr("Localizable", "_daemon_log", fallback: "Tunnel Daemon Log") }
+  /// Settings…
+  public static var statusItemSettings: String { return Localizable.tr("Localizable", "_status_item_settings", fallback: "Settings…") }
+  /// Quit prtvpn
+  public static var statusItemQuit: String { return Localizable.tr("Localizable", "_status_item_quit", fallback: "Quit prtvpn") }
+  /// Open prtvpn
+  public static var statusItemOpen: String { return Localizable.tr("Localizable", "_status_item_open", fallback: "Open prtvpn") }
+  /// Activate and don't show again
+  public static var secureCoreActivateDontShow: String { return Localizable.tr("Localizable", "_secure_core_activate_dont_show", fallback: "Activate and don't show again") }
+  /// On the free plan you can change servers again at %@.
+  public static func serverChangeWaitMessage(_ p1: Any) -> String {
+    return Localizable.tr("Localizable", "_server_change_wait_message", String(describing: p1), fallback: "On the free plan you can change servers again at %@.")
+  }
+  /// Please wait before changing servers
+  public static var serverChangeWaitTitle: String { return Localizable.tr("Localizable", "_server_change_wait_title", fallback: "Please wait before changing servers") }
+  /// This feature needs a paid Proton VPN plan. You can change your plan in your Proton account.
+  public static var planNoticeMessage: String { return Localizable.tr("Localizable", "_plan_notice_message", fallback: "This feature needs a paid Proton VPN plan. You can change your plan in your Proton account.") }
+  /// Not included in your plan
+  public static var planNoticeTitle: String { return Localizable.tr("Localizable", "_plan_notice_title", fallback: "Not included in your plan") }
+  /// The VPN connection dropped unexpectedly, and the firewall is blocking internet access on this Mac. It stays blocked after quitting. To use the internet, connect again or change the firewall mode before quitting.
+  public static var quitAlertFirewallArmed: String { return Localizable.tr("Localizable", "_quit_alert_firewall_armed", fallback: "The VPN connection dropped unexpectedly, and the firewall is blocking internet access on this Mac. It stays blocked after quitting. To use the internet, connect again or change the firewall mode before quitting.") }
+  /// The firewall is in the overwhelmingly on mode. Internet access on this Mac stays blocked after quitting. To use the internet, change the firewall mode before quitting.
+  public static var quitAlertFirewallLockdown: String { return Localizable.tr("Localizable", "_quit_alert_firewall_lockdown", fallback: "The firewall is in the overwhelmingly on mode. Internet access on this Mac stays blocked after quitting. To use the internet, change the firewall mode before quitting.") }
+  /// The firewall stays on after quitting. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.
+  public static var quitAlertFirewallOn: String { return Localizable.tr("Localizable", "_quit_alert_firewall_on", fallback: "The firewall stays on after quitting. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.") }
+  /// Quitting disconnects the VPN, but the firewall stays on. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.
+  public static var quitAlertConnectedFirewallOn: String { return Localizable.tr("Localizable", "_quit_alert_connected_firewall_on", fallback: "Quitting disconnects the VPN, but the firewall stays on. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.") }
+  /// Quitting disconnects the VPN and turns the firewall off. After that you are connected to the internet without protection.
+  public static var quitAlertConnectedFirewallAuto: String { return Localizable.tr("Localizable", "_quit_alert_connected_firewall_auto", fallback: "Quitting disconnects the VPN and turns the firewall off. After that you are connected to the internet without protection.") }
+  /// Quitting disconnects the VPN and leaves you connected to the internet without protection.
+  public static var quitAlertConnectedFirewallOff: String { return Localizable.tr("Localizable", "_quit_alert_connected_firewall_off", fallback: "Quitting disconnects the VPN and leaves you connected to the internet without protection.") }
+  /// Quit
+  public static var quitAlertConfirm: String { return Localizable.tr("Localizable", "_quit_alert_confirm", fallback: "Quit") }
+  /// Quit prtvpn?
+  public static var quitAlertTitle: String { return Localizable.tr("Localizable", "_quit_alert_title", fallback: "Quit prtvpn?") }
+  /// Also allows connections that don't go through the VPN, with a risk of IP leaks. Similar to turning a kill switch off. Only use it when losing internet access would cause serious problems, such as a computer you only use through remote desktop.
+  public static var firewallModeOffDescription: String { return Localizable.tr("Localizable", "_firewall_mode_off_description", fallback: "Also allows connections that don't go through the VPN, with a risk of IP leaks. Similar to turning a kill switch off. Only use it when losing internet access would cause serious problems, such as a computer you only use through remote desktop.") }
+  /// Off
+  public static var firewallModeOff: String { return Localizable.tr("Localizable", "_firewall_mode_off", fallback: "Off") }
+  /// Doesn't allow connections through the VPN either. Bluntly blocks all internet access on this Mac so that no connection at all can reach the internet. Similar to Windscribe's 'Always On +'.
+  public static var firewallModeLockdownDescription: String { return Localizable.tr("Localizable", "_firewall_mode_lockdown_description", fallback: "Doesn't allow connections through the VPN either. Bluntly blocks all internet access on this Mac so that no connection at all can reach the internet. Similar to Windscribe's 'Always On +'.") }
+  /// Overwhelmingly on
+  public static var firewallModeLockdown: String { return Localizable.tr("Localizable", "_firewall_mode_lockdown", fallback: "Overwhelmingly on") }
+  /// Only allows connections through the VPN, protecting against IP leaks when the connection drops unintentionally. If you disconnect on purpose, all internet access on this Mac is blocked. Useful in dangerous situations where no data at all may leak outside the VPN tunnel. Similar to Windscribe's 'Always On'.
+  public static var firewallModeOnDescription: String { return Localizable.tr("Localizable", "_firewall_mode_on_description", fallback: "Only allows connections through the VPN, protecting against IP leaks when the connection drops unintentionally. If you disconnect on purpose, all internet access on this Mac is blocked. Useful in dangerous situations where no data at all may leak outside the VPN tunnel. Similar to Windscribe's 'Always On'.") }
+  /// On
+  public static var firewallModeOn: String { return Localizable.tr("Localizable", "_firewall_mode_on", fallback: "On") }
+  /// Turns on when you connect to a VPN and off when you disconnect on purpose. Protects against IP leaks from unexpected drops. Unlike the official ProtonVPN app it provides proper security. It is similar to the kill switch most VPNs offer, but a cut above.
+  public static var firewallModeAutoDescription: String { return Localizable.tr("Localizable", "_firewall_mode_auto_description", fallback: "Turns on when you connect to a VPN and off when you disconnect on purpose. Protects against IP leaks from unexpected drops. Unlike the official ProtonVPN app it provides proper security. It is similar to the kill switch most VPNs offer, but a cut above.") }
+  /// Automatic (recommended)
+  public static var firewallModeAuto: String { return Localizable.tr("Localizable", "_firewall_mode_auto", fallback: "Automatic (recommended)") }
+  /// Only when no physical server exists
+  public static var virtualServersFallback: String { return Localizable.tr("Localizable", "_virtual_servers_fallback", fallback: "Only when no physical server exists") }
+  /// Never use virtual servers
+  public static var virtualServersNever: String { return Localizable.tr("Localizable", "_virtual_servers_never", fallback: "Never use virtual servers") }
+  /// Virtual servers only
+  public static var virtualServersOnly: String { return Localizable.tr("Localizable", "_virtual_servers_only", fallback: "Virtual servers only") }
+  /// Use any server
+  public static var virtualServersAny: String { return Localizable.tr("Localizable", "_virtual_servers_any", fallback: "Use any server") }
+  /// Virtual servers show a location in one country while physically running in another.
+  public static var virtualServersDescription: String { return Localizable.tr("Localizable", "_virtual_servers_description", fallback: "Virtual servers show a location in one country while physically running in another.") }
+  /// Virtual servers
+  public static var virtualServersTitle: String { return Localizable.tr("Localizable", "_virtual_servers_title", fallback: "Virtual servers") }
+  /// Sign out
+  public static var settingsSignOut: String { return Localizable.tr("Localizable", "_settings_sign_out", fallback: "Sign out") }
+  /// Privacy
+  public static var settingsSectionPrivacy: String { return Localizable.tr("Localizable", "_settings_section_privacy", fallback: "Privacy") }
+  /// Notifications
+  public static var settingsSectionNotifications: String { return Localizable.tr("Localizable", "_settings_section_notifications", fallback: "Notifications") }
+  /// Startup
+  public static var settingsSectionStartup: String { return Localizable.tr("Localizable", "_settings_section_startup", fallback: "Startup") }
+  /// Lets printers, file shares and other devices on your local network stay reachable while the firewall is on.
+  public static var settingsFirewallAllowLanFooter: String { return Localizable.tr("Localizable", "_settings_firewall_lan_footer", fallback: "Lets printers, file shares and other devices on your local network stay reachable while the firewall is on.") }
+  /// Load
+  public static var hudLoad: String { return Localizable.tr("Localizable", "_hud_load", fallback: "Load") }
+  /// Server
+  public static var hudServer: String { return Localizable.tr("Localizable", "_hud_server", fallback: "Server") }
+  /// Connected for
+  public static var hudDuration: String { return Localizable.tr("Localizable", "_hud_duration", fallback: "Connected for") }
+  /// Protocol
+  public static var hudProtocol: String { return Localizable.tr("Localizable", "_hud_protocol", fallback: "Protocol") }
+  /// VPN IP
+  public static var hudVpnIp: String { return Localizable.tr("Localizable", "_hud_vpn_ip", fallback: "VPN IP") }
+  /// Don't keep
+  public static var recentsLimitNone: String { return Localizable.tr("Localizable", "_recents_limit_none", fallback: "Don't keep") }
+  /// Recent connections to keep
+  public static var recentsLimit: String { return Localizable.tr("Localizable", "_recents_limit", fallback: "Recent connections to keep") }
+  /// Clear recents
+  public static var recentsClear: String { return Localizable.tr("Localizable", "_recents_clear", fallback: "Clear recents") }
+  /// Nearest first
+  public static var locationsSortNearest: String { return Localizable.tr("Localizable", "_locations_sort_nearest", fallback: "Nearest first") }
+  /// Alphabetical
+  public static var locationsSortAlphabetical: String { return Localizable.tr("Localizable", "_locations_sort_alphabetical", fallback: "Alphabetical") }
+  /// Sort
+  public static var locationsSortTitle: String { return Localizable.tr("Localizable", "_locations_sort_title", fallback: "Sort") }
   /// 5 Connections
   public static var _5Connections: String { return Localizable.tr("Localizable", "_5_connections", fallback: "5 Connections") }
   /// Connect up to 5 devices
@@ -309,8 +405,8 @@ public enum Localizable {
   public static var connectionErrorPreparation: String { return Localizable.tr("Localizable", "_connection_error_preparation", fallback: "There was a problem preparing the connection") }
   /// Error message: the chosen server isn't available anymore. It could have been deleted from the list or gone into maintenance.
   public static var connectionErrorServerMissing: String { return Localizable.tr("Localizable", "_connection_error_server_missing", fallback: "The server you have chosen is no longer available. Please choose a different server.") }
-  /// Error message: we tried to connect, but something took too long.
-  public static var connectionErrorTimeout: String { return Localizable.tr("Localizable", "_connection_error_timeout", fallback: "We encountered an error when trying to connect: the server did not respond in time. Please try again.") }
+  /// The server did not respond in time. Please try again.
+  public static var connectionErrorTimeout: String { return Localizable.tr("Localizable", "_connection_error_timeout", fallback: "The server did not respond in time. Please try again.") }
   /// Error alert title: a connection error has occurred.
   public static var connectionErrorTitle: String { return Localizable.tr("Localizable", "_connection_error_title", fallback: "Connection Error") }
   /// Error message: a problem occurred while starting the VPN connection, with a number of sub-errors that can occur.
@@ -406,7 +502,7 @@ public enum Localizable {
   /// Common word
   public static var delete: String { return Localizable.tr("Localizable", "_delete", fallback: "Delete") }
   /// MacOS: clear application data alert
-  public static var deleteApplicationDataPopupBody: String { return Localizable.tr("Localizable", "_delete_application_data_popup_body", fallback: "All Proton VPN data will be deleted and the application will quit. Do you wish to continue?") }
+  public static var deleteApplicationDataPopupBody: String { return Localizable.tr("Localizable", "_delete_application_data_popup_body", fallback: "All prtvpn data will be deleted and the application will quit. Do you wish to continue?") }
   /// MacOS: clear application data alert
   public static var deleteApplicationDataPopupTitle: String { return Localizable.tr("Localizable", "_delete_application_data_popup_title", fallback: "Clear application data") }
   /// Button
@@ -551,8 +647,8 @@ public enum Localizable {
   public static var featureTorDescription: String { return Localizable.tr("Localizable", "_feature_tor_description", fallback: "Route your internet traffic through the Tor network. Slower, but more private.") }
   /// Features
   public static var featuresTitle: String { return Localizable.tr("Localizable", "_features_title", fallback: "Features") }
-  /// The version of Proton VPN application you are currently using is no longer supported. Please update to the latest version.
-  public static var forceUpgradeMessage: String { return Localizable.tr("Localizable", "_force_upgrade_message", fallback: "The version of Proton VPN application you are currently using is no longer supported. Please update to the latest version.") }
+  /// The version of prtvpn application you are currently using is no longer supported. Please update to the latest version.
+  public static var forceUpgradeMessage: String { return Localizable.tr("Localizable", "_force_upgrade_message", fallback: "The version of prtvpn application you are currently using is no longer supported. Please update to the latest version.") }
   /// Application upgrade needed
   public static var forceUpgradeTitle: String { return Localizable.tr("Localizable", "_force_upgrade_title", fallback: "Application upgrade needed") }
   /// iOS: button in login screen
@@ -720,8 +816,8 @@ public enum Localizable {
   public static var informationTitle: String { return Localizable.tr("Localizable", "_information_title", fallback: "Information") }
   /// MacOS: connecting overlay
   public static var initializingConnection: String { return Localizable.tr("Localizable", "_initializing_connection", fallback: "Initializing Connection...") }
-  /// It's been a while since you last used the Proton VPN app. Please log back in.
-  public static var invalidRefreshTokenPleaseLogin: String { return Localizable.tr("Localizable", "_invalid_refresh_token_please_login", fallback: "It's been a while since you last used the Proton VPN app. Please log back in.") }
+  /// It's been a while since you last used the prtvpn app. Please log back in.
+  public static var invalidRefreshTokenPleaseLogin: String { return Localizable.tr("Localizable", "_invalid_refresh_token_please_login", fallback: "It's been a while since you last used the prtvpn app. Please log back in.") }
   /// iOS: Status view
   public static var ip: String { return Localizable.tr("Localizable", "_ip", fallback: "IP") }
   /// %@ is an IP address e.g. IP: 123.45.67.890
@@ -731,25 +827,25 @@ public enum Localizable {
   /// Your IP will not be exposed.
   public static var ipWillNotBeExposed: String { return Localizable.tr("Localizable", "_ip_will_not_be_exposed", fallback: "Your IP will not be exposed.") }
   /// MacOS: Settings -> Connection: name of field.
-  public static var killSwitch: String { return Localizable.tr("Localizable", "_kill_switch", fallback: "Kill switch") }
+  public static var killSwitch: String { return Localizable.tr("Localizable", "_kill_switch", fallback: "Firewall") }
   /// Disconnect notification
-  public static var killSwitchBlockingConnection: String { return Localizable.tr("Localizable", "_kill_switch_blocking_connection", fallback: "Kill switch blocking all connections") }
+  public static var killSwitchBlockingConnection: String { return Localizable.tr("Localizable", "_kill_switch_blocking_connection", fallback: "Firewall is blocking connections outside the VPN") }
   /// MacOS: killswitch blocking alert button
-  public static var killSwitchDisable: String { return Localizable.tr("Localizable", "_kill_switch_disable", fallback: "Disable Kill switch") }
+  public static var killSwitchDisable: String { return Localizable.tr("Localizable", "_kill_switch_disable", fallback: "Turn firewall off") }
   /// iOS and macOS: Enable kill switch on badly-routed networks
-  public static var killSwitchEnable: String { return Localizable.tr("Localizable", "_kill_switch_enable", fallback: "Enable Kill Switch") }
+  public static var killSwitchEnable: String { return Localizable.tr("Localizable", "_kill_switch_enable", fallback: "Turn firewall on") }
   /// MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect
-  public static var killSwitchReconnection: String { return Localizable.tr("Localizable", "_kill_switch_reconnection", fallback: "Your internet connection will resume as soon as Proton VPN reconnects to a server.\nTo use the internet without VPN and kill switch protection, cancel the reconnection to the server.") }
+  public static var killSwitchReconnection: String { return Localizable.tr("Localizable", "_kill_switch_reconnection", fallback: "Your internet connection will resume as soon as prtvpn reconnects to a server.\nTo use the internet without VPN and kill switch protection, cancel the reconnection to the server.") }
   /// MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded
   public static var killSwitchReconnectionBold1: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_bold1", fallback: "without") }
   /// MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded
-  public static var killSwitchReconnectionBold2: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_bold2", fallback: "Kill switch protection") }
+  public static var killSwitchReconnectionBold2: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_bold2", fallback: "Firewall protection") }
   /// MacOS: connection screen - cancel button
   public static var killSwitchReconnectionCancel: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_cancel", fallback: "Cancel reconnection") }
   /// MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect
-  public static var killSwitchReconnectionHeader: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_header", fallback: "Kill switch is protecting your IP") }
+  public static var killSwitchReconnectionHeader: String { return Localizable.tr("Localizable", "_kill_switch_reconnection_header", fallback: "Firewall is protecting your IP") }
   /// MacOS: Settings -> Connection. Kill switch functionality description.
-  public static var killSwitchTooltip: String { return Localizable.tr("Localizable", "_kill_switch_tooltip", fallback: "Blocks all network traffic when VPN tunnel is lost.") }
+  public static var killSwitchTooltip: String { return Localizable.tr("Localizable", "_kill_switch_tooltip", fallback: "While on, only traffic through the VPN is allowed. Everything else is blocked, even when the VPN is disconnected.") }
   /// MacOS: link in login screen
   public static var learnMore: String { return Localizable.tr("Localizable", "_learn_more", fallback: "Learn more") }
   /// MacOS: SecureCore warning alert when users plan has to be upgraded
@@ -833,13 +929,13 @@ public enum Localizable {
   /// Value of speed in _speed
   public static var medium: String { return Localizable.tr("Localizable", "_medium", fallback: "Medium") }
   /// Main mac app menu item
-  public static var menuAbout: String { return Localizable.tr("Localizable", "_menu_about", fallback: "About Proton VPN") }
+  public static var menuAbout: String { return Localizable.tr("Localizable", "_menu_about", fallback: "About prtvpn") }
   /// Main mac app menu item
   public static var menuCheckUpdates: String { return Localizable.tr("Localizable", "_menu_check_updates", fallback: "Check for Updates...") }
   /// Main mac app menu item
   public static var menuHideOthers: String { return Localizable.tr("Localizable", "_menu_hide_others", fallback: "Hide Others") }
   /// Main mac app menu item
-  public static var menuHideSelf: String { return Localizable.tr("Localizable", "_menu_hide_self", fallback: "Hide Proton VPN") }
+  public static var menuHideSelf: String { return Localizable.tr("Localizable", "_menu_hide_self", fallback: "Hide prtvpn") }
   /// Main mac app menu item
   public static var menuLogout: String { return Localizable.tr("Localizable", "_menu_logout", fallback: "Sign out") }
   /// Main mac app menu item
@@ -847,7 +943,7 @@ public enum Localizable {
   /// Main mac app menu item
   public static var menuPreferences: String { return Localizable.tr("Localizable", "_menu_preferences", fallback: "Preferences") }
   /// Main mac app menu item
-  public static var menuQuit: String { return Localizable.tr("Localizable", "_menu_quit", fallback: "Quit Proton VPN") }
+  public static var menuQuit: String { return Localizable.tr("Localizable", "_menu_quit", fallback: "Quit prtvpn") }
   /// Main mac app menu item
   public static var menuShowAll: String { return Localizable.tr("Localizable", "_menu_show_all", fallback: "Show All") }
   /// Main mac app menu item
@@ -1021,12 +1117,12 @@ public enum Localizable {
   /// Telemetry label in the onboarding screen for mac next to a toggle
   public static var onboardingMacUsageStats: String { return Localizable.tr("Localizable", "_onboarding_mac_usage_stats", fallback: "Share anonymous usage statistics. This helps us overcome VPN blocks and improve app performance.") }
   /// Main mac app menu item
-  public static var openAppToLogIn: String { return Localizable.tr("Localizable", "_open_app_to_log_in", fallback: "Show Proton VPN to sign in...") }
+  public static var openAppToLogIn: String { return Localizable.tr("Localizable", "_open_app_to_log_in", fallback: "Show prtvpn to sign in...") }
   /// OpenVPN
   public static var openvpn: String { return Localizable.tr("Localizable", "_openvpn", fallback: "OpenVPN") }
   /// Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update.
   public static func operatingSystemOutOfDateAlertDescription(_ p1: Any, _ p2: Any) -> String {
-    return Localizable.tr("Localizable", "_operating_system_out_of_date_alert_description", String(describing: p1), String(describing: p2), fallback: "A new version of Proton VPN is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.")
+    return Localizable.tr("Localizable", "_operating_system_out_of_date_alert_description", String(describing: p1), String(describing: p2), fallback: "A new version of prtvpn is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.")
   }
   /// User's OS version is no longer actively supported by Proton VPN (alert title)
   public static var operatingSystemOutOfDateAlertTitle: String { return Localizable.tr("Localizable", "_operating_system_out_of_date_alert_title", fallback: "Update your software") }
@@ -1244,8 +1340,8 @@ public enum Localizable {
   public static var quickConnectTooltip: String { return Localizable.tr("Localizable", "_quick_connect_tooltip", fallback: "Quick Connect button will connect you to the selected profile") }
   /// Get Plus
   public static var quickSettingsGetPlus: String { return Localizable.tr("Localizable", "_quick_settings_get_plus", fallback: "Get Plus") }
-  /// Disables internet if the VPN connection drops to prevent accidental IP leak. Your IP may be briefly visible when switching servers.
-  public static var quickSettingsKillSwitchDescription: String { return Localizable.tr("Localizable", "_quick_settings_killSwitch_description", fallback: "Disables internet if the VPN connection drops to prevent accidental IP leak. Your IP may be briefly visible when switching servers.") }
+  /// Blocks all traffic outside the VPN tunnel. The block stays in place while the VPN is disconnected, until you turn the firewall off.
+  public static var quickSettingsKillSwitchDescription: String { return Localizable.tr("Localizable", "_quick_settings_killSwitch_description", fallback: "Blocks all traffic outside the VPN tunnel. The block stays in place while the VPN is disconnected, until you turn the firewall off.") }
   /// If you can't connect to devices on your local network, try disabling kill switch.
   public static var quickSettingsKillSwitchNote: String { return Localizable.tr("Localizable", "_quick_settings_killSwitch_note", fallback: "If you can't connect to devices on your local network, try disabling kill switch.") }
   /// Browse the internet without ads and malware.
@@ -1545,7 +1641,7 @@ public enum Localizable {
   /// Title of the Debug Logs cell in the Settings tab [Redesign_2023]
   public static var settingsTitleDebugLogs: String { return Localizable.tr("Localizable", "_settings_title_debug_logs", fallback: "Debug logs") }
   /// Title of the KillSwitch cell in the Settings tab [Redesign_2023]
-  public static var settingsTitleKillSwitch: String { return Localizable.tr("Localizable", "_settings_title_kill_switch", fallback: "Kill Switch") }
+  public static var settingsTitleKillSwitch: String { return Localizable.tr("Localizable", "_settings_title_kill_switch", fallback: "Firewall") }
   /// Title of the NetShield cell in the Settings tab [Redesign_2023]
   public static var settingsTitleNetshield: String { return Localizable.tr("Localizable", "_settings_title_netshield", fallback: "NetShield") }
   /// Title of the Protocol cell in the Settings tab [Redesign_2023]
@@ -1580,8 +1676,8 @@ public enum Localizable {
   public static var showConnectionDetailsButtonHint: String { return Localizable.tr("Localizable", "_show_connection_details_button_hint", fallback: "Show connection details") }
   /// Button in some alerts
   public static var showInstructions: String { return Localizable.tr("Localizable", "_show_instructions", fallback: "Show instructions") }
-  /// Show Proton VPN
-  public static var showProtonvpn: String { return Localizable.tr("Localizable", "_show_protonvpn", fallback: "Show Proton VPN") }
+  /// Show prtvpn
+  public static var showProtonvpn: String { return Localizable.tr("Localizable", "_show_protonvpn", fallback: "Show prtvpn") }
   /// iOS: button in login and onboarding screens
   public static var signUp: String { return Localizable.tr("Localizable", "_sign_up", fallback: "Sign Up") }
   /// Description for Smart Protocol in Settings
@@ -1689,8 +1785,8 @@ public enum Localizable {
   public static var sysexErrorDescriptionSubcaseForbiddenBySystemPolicy: String { return Localizable.tr("Localizable", "_sysex_error_description_subcase_forbidden_by_system_policy", fallback: "the current system policy prohibits activating extensions on your device.") }
   /// Open System Settings
   public static var sysexOpenSystemSettings: String { return Localizable.tr("Localizable", "_sysex_open_system_settings", fallback: "Open System Settings") }
-  /// Proton VPN requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.
-  public static var sysexSettingsDescription: String { return Localizable.tr("Localizable", "_sysex_settings_description", fallback: "Proton VPN requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.") }
+  /// prtvpn requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.
+  public static var sysexSettingsDescription: String { return Localizable.tr("Localizable", "_sysex_settings_description", fallback: "prtvpn requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.") }
   /// Open Network Extensions
   public static var sysexTutorialButtonOpen: String { return Localizable.tr("Localizable", "_sysex_tutorial_button_open", fallback: "Open Network Extensions") }
   /// Didn't work?
@@ -1707,8 +1803,8 @@ public enum Localizable {
   public static var sysexTutorialStepAuthenticate: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_authenticate", fallback: "Authenticate with password or Touch ID if asked.") }
   /// Authenticate with Touch ID or password if asked. On some devices, you might also need to click on a button that says **Details**.
   public static var sysexTutorialStepAuthenticateDetails: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_authenticate_details", fallback: "Authenticate with Touch ID or password if asked. On some devices, you might also need to click on a button that says **Details**.") }
-  /// You should see a message that says "System software from application ProtonVPN was blocked.". Click **Allow**.
-  public static var sysexTutorialStepClickAllow: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_click_allow", fallback: "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.") }
+  /// You should see a message that says "System software from application prtvpn was blocked.". Click **Allow**.
+  public static var sysexTutorialStepClickAllow: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_click_allow", fallback: "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.") }
   /// Click **Open Network Extensions.**
   public static var sysexTutorialStepClickOpen: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_click_open", fallback: "Click **Open Network Extensions.**") }
   /// Click **Open System Settings**, then go to **Privacy & Security → Security.**
@@ -1729,20 +1825,20 @@ public enum Localizable {
   public static var sysexTutorialStepTurnOnWgDone: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_turn_on_wg_done", fallback: "Turn on the **WireGuard** switch, then click **Done**.") }
   /// Turn on the **WireGuard** switch, then click **OK**.
   public static var sysexTutorialStepTurnOnWgOk: String { return Localizable.tr("Localizable", "_sysex_tutorial_step_turn_on_wg_ok", fallback: "Turn on the **WireGuard** switch, then click **OK**.") }
-  /// To use Proton VPN, you need to enable the following system extensions on your Mac:
-  public static var sysexTutorialSubtitleApp: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_app", fallback: "To use Proton VPN, you need to enable the following system extensions on your Mac:") }
-  /// To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.
-  public static var sysexTutorialSubtitleFeatures: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_features", fallback: "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.") }
+  /// To use prtvpn, you need to enable the following system extensions on your Mac:
+  public static var sysexTutorialSubtitleApp: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_app", fallback: "To use prtvpn, you need to enable the following system extensions on your Mac:") }
+  /// To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.
+  public static var sysexTutorialSubtitleFeatures: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_features", fallback: "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.") }
   /// To use split tunneling, you need to enable the following system extensions on your Mac:
   public static var sysexTutorialSubtitleSt: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_st", fallback: "To use split tunneling, you need to enable the following system extensions on your Mac:") }
   /// To use WireGuard, you need to enable the following system extensions on your Mac:
   public static var sysexTutorialSubtitleWg: String { return Localizable.tr("Localizable", "_sysex_tutorial_subtitle_wg", fallback: "To use WireGuard, you need to enable the following system extensions on your Mac:") }
   /// Enable system extensions to continue
   public static var sysexTutorialTitleEnable: String { return Localizable.tr("Localizable", "_sysex_tutorial_title_enable", fallback: "Enable system extensions to continue") }
-  /// Enable Proton VPN system extensions
-  public static var sysexTutorialTitleEnableProton: String { return Localizable.tr("Localizable", "_sysex_tutorial_title_enable_proton", fallback: "Enable Proton VPN system extensions") }
-  /// Set up Proton VPN
-  public static var sysexTutorialTitleSetup: String { return Localizable.tr("Localizable", "_sysex_tutorial_title_setup", fallback: "Set up Proton VPN") }
+  /// Enable prtvpn system extensions
+  public static var sysexTutorialTitleEnableProton: String { return Localizable.tr("Localizable", "_sysex_tutorial_title_enable_proton", fallback: "Enable prtvpn system extensions") }
+  /// Set up prtvpn
+  public static var sysexTutorialTitleSetup: String { return Localizable.tr("Localizable", "_sysex_tutorial_title_setup", fallback: "Set up prtvpn") }
   /// Main mac app menu item
   public static var systemExtensionTutorialMenuItem: String { return Localizable.tr("Localizable", "_system_extension_tutorial_menu_item", fallback: "System Extension Tutorial") }
   /// MacOS: Settings -> General: name of field.
@@ -1853,7 +1949,7 @@ public enum Localizable {
   /// MacOS: Settings -> General: name of field.
   public static var unprotectedNetwork: String { return Localizable.tr("Localizable", "_unprotected_network", fallback: "Notify unprotected networks") }
   /// MacOS: Settings -> General: description
-  public static var unprotectedNetworkTooltip: String { return Localizable.tr("Localizable", "_unprotected_network_tooltip", fallback: "Receive a notification when Proton VPN detects you are connected to an unprotected network.") }
+  public static var unprotectedNetworkTooltip: String { return Localizable.tr("Localizable", "_unprotected_network_tooltip", fallback: "Receive a notification when prtvpn detects you are connected to an unprotected network.") }
   /// Insecure WiFi connection detected
   public static var unsecureWifi: String { return Localizable.tr("Localizable", "_unsecure_wifi", fallback: "Insecure WiFi connection detected") }
   /// Learn More
@@ -1864,8 +1960,8 @@ public enum Localizable {
   public static var updateBilling: String { return Localizable.tr("Localizable", "_update_billing", fallback: "UPDATE MY BILLING") }
   /// Update required
   public static var updateRequired: String { return Localizable.tr("Localizable", "_update_required", fallback: "Update required") }
-  /// This version of Proton VPN is no longer supported, please update the app to continue using it.
-  public static var updateRequiredNoLongerSupported: String { return Localizable.tr("Localizable", "_update_required_no_longer_supported", fallback: "This version of Proton VPN is no longer supported, please update the app to continue using it.") }
+  /// This version of prtvpn is no longer supported, please update the app to continue using it.
+  public static var updateRequiredNoLongerSupported: String { return Localizable.tr("Localizable", "_update_required_no_longer_supported", fallback: "This version of prtvpn is no longer supported, please update the app to continue using it.") }
   /// Secondary button title in the App update required alert
   public static var updateRequiredSupport: String { return Localizable.tr("Localizable", "_update_required_support", fallback: "Contact support") }
   /// Primary button title in the App update required alert
@@ -1873,9 +1969,9 @@ public enum Localizable {
   /// Action button of the view nudging users to update before filling Bug Report
   public static var updateViewButton: String { return Localizable.tr("Localizable", "_update_view_button", fallback: "Update") }
   /// Description text of the view nudging users to update before filling Bug Report
-  public static var updateViewDescription: String { return Localizable.tr("Localizable", "_update_view_description", fallback: "You’re more likely to have issues on older versions of Proton VPN.") }
+  public static var updateViewDescription: String { return Localizable.tr("Localizable", "_update_view_description", fallback: "You’re more likely to have issues on older versions of prtvpn.") }
   /// Title of the view nudging users to update before filling Bug Report
-  public static var updateViewTitle: String { return Localizable.tr("Localizable", "_update_view_title", fallback: "Update Proton VPN") }
+  public static var updateViewTitle: String { return Localizable.tr("Localizable", "_update_view_title", fallback: "Update prtvpn") }
   /// Button in many places in both iOS and MacOS apps
   public static var upgrade: String { return Localizable.tr("Localizable", "_upgrade", fallback: "Upgrade") }
   /// UPGRADE AGAIN

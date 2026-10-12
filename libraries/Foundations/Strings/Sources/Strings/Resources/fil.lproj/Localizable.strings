@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Bansa";
 
-"_show_protonvpn" = "Ipakita ang Proton VPN";
+"_show_protonvpn" = "Ipakita ang prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "I-clear ang Data ng Application";
@@ -290,7 +290,7 @@
 "_technical_details" = "Mga Teknikal na Detalye";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Ipakita ang Proton VPN upang mag-sign in...";
+"_open_app_to_log_in" = "Ipakita ang prtvpn upang mag-sign in...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Mag-upgrade sa Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Kailangan ng update";
 
-"_update_required_no_longer_supported" = "Hindi na suportado ang bersyong ito ng Proton VPN. Mangyaring i-update ang app para magpatuloy sa paggamit nito.";
+"_update_required_no_longer_supported" = "Hindi na suportado ang bersyong ito ng prtvpn. Mangyaring i-update ang app para magpatuloy sa paggamit nito.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Makipag-ugnayan sa suporta";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "I-update";
 
-"_invalid_refresh_token_please_login" = "Matagal-tagal na mula noong huli mong ginamit ang Proton VPN app. Mangyaring mag-log in muli.";
+"_invalid_refresh_token_please_login" = "Matagal-tagal na mula noong huli mong ginamit ang prtvpn app. Mangyaring mag-log in muli.";
 
 "_error_mitm_title" = "Hindi ligtas na koneksyon";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "I-clear ang data ng application";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Mabubura ang lahat ng data ng Proton VPN at titigil ang application. Gusto mo bang magpatuloy?";
+"_delete_application_data_popup_body" = "Mabubura ang lahat ng data ng prtvpn at titigil ang application. Gusto mo bang magpatuloy?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "I-disable ang kill switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Abisuhan ang mga hindi protektadong network";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Makatanggap ng abiso kapag na-detect ng Proton VPN na nakakonekta ka sa isang hindi protektadong network.";
+"_unprotected_network_tooltip" = "Makatanggap ng abiso kapag na-detect ng prtvpn na nakakonekta ka sa isang hindi protektadong network.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Proteksyon sa DNS Leak";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Isama ang mga log ng app at mga detalye ng system";
 
 /* Main mac app menu item */
-"_menu_about" = "Tungkol sa Proton VPN";
+"_menu_about" = "Tungkol sa prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Maghanap ng Mga Update...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Mga Kagustuhan";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Itago ang Proton VPN";
+"_menu_hide_self" = "Itago ang prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Itago ang Iba";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Mag-sign out";
 
 /* Main mac app menu item */
-"_menu_quit" = "Mag-quit sa Proton VPN";
+"_menu_quit" = "Mag-quit sa prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Window";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Pinoprotektahan ng kill switch ang iyong IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Magpapatuloy ang iyong koneksyon sa internet sa sandaling kumonekta muli ang Proton VPN sa server.\nUpang gamitin ang internet nang walang VPN at proteksyon ng kill switch, kanselahin ang muling pagkonekta sa server.";
+"_kill_switch_reconnection" = "Magpapatuloy ang iyong koneksyon sa internet sa sandaling kumonekta muli ang prtvpn sa server.\nUpang gamitin ang internet nang walang VPN at proteksyon ng kill switch, kanselahin ang muling pagkonekta sa server.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "nang walang";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Ire-restart ang iyong koneksyon upang palitan ang mode ng Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "I-set up ang Proton VPN";
+"_sysex_tutorial_title_setup" = "I-set up ang prtvpn";
 
 "_sysex_tutorial_title_enable" = "I-enable ang mga system extension para magpatuloy";
 
-"_sysex_tutorial_title_enable_proton" = "I-enable ang mga Proton VPN system extension";
+"_sysex_tutorial_title_enable_proton" = "I-enable ang mga prtvpn system extension";
 
 "_sysex_tutorial_how_to_enable" = "Paano i-enable ang mga extension";
 
-"_sysex_tutorial_subtitle_app" = "Para magamit ang Proton VPN, kailangan mong i-enable ang mga sumusunod na system extension sa iyong Mac:";
+"_sysex_tutorial_subtitle_app" = "Para magamit ang prtvpn, kailangan mong i-enable ang mga sumusunod na system extension sa iyong Mac:";
 
 "_sysex_tutorial_subtitle_st" = "Para magamit ang split tunneling, kailangan mong i-enable ang mga sumusunod na system extension sa iyong Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "Para magamit ang WireGuard, kailangan mong i-enable ang mga sumusunod na system extension sa iyong Mac:";
 
-"_sysex_tutorial_subtitle_features" = "Para magamit ang ilang feature ng VPN (at karamihan sa mga protocol), kailangan mong i-enable ang mga Proton VPN system extension sa iyong Mac.";
+"_sysex_tutorial_subtitle_features" = "Para magamit ang ilang feature ng VPN (at karamihan sa mga protocol), kailangan mong i-enable ang mga prtvpn system extension sa iyong Mac.";
 
 "_sysex_tutorial_step_click_open" = "I-click ang **Buksan ang Mga Network Extension.**";
 
 "_sysex_tutorial_step_click_security" = "I-click ang **Buksan ang Mga Setting ng System**, tapos pumunta sa **Privacy at Seguridad → Seguridad.**";
 
-"_sysex_tutorial_step_click_allow" = "Dapat may makita kang mensahe na nagsasabing \"Na-block ang system software mula sa application na Proton VPN\". I-click ang **Payagan**.";
+"_sysex_tutorial_step_click_allow" = "Dapat may makita kang mensahe na nagsasabing \"Na-block ang system software mula sa application na prtvpn\". I-click ang **Payagan**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "I-on ang mga switch ng **WireGuard** at **split tunneling**, tapos i-click ang **Tapos na**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Kailangan ng tulong?";
 
-"_sysex_settings_description" = "Kinakailangan ng Proton VPN na mag-load ng System Extension upang magamit ang Smart Protocol, OpenVPN at WireGuard.";
+"_sysex_settings_description" = "Kinakailangan ng prtvpn na mag-load ng System Extension upang magamit ang Smart Protocol, OpenVPN at WireGuard.";
 
 "_sysex_enabled_title" = "Nakumpleto ang configuration";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Kailangan ng pag-upgrade ng application";
 
-"_force_upgrade_message" = "Ang bersyon ng Proton VPN application na kasalukuyan mong ginagamit ay hindi na sinusuportahan. Mangyaring mag-update sa pinakabagong bersyon.";
+"_force_upgrade_message" = "Ang bersyon ng prtvpn application na kasalukuyan mong ginagamit ay hindi na sinusuportahan. Mangyaring mag-update sa pinakabagong bersyon.";
 
 "login_fetch_vpn_data" = "Pag-configure ng iyong access sa VPN";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Mag-troubleshoot";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "I-update ang Proton VPN";
+"_update_view_title" = "I-update ang prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Mas malaki ang posibilidad na magkaroon ka ng isyu sa mga lumang bersyon ng Proton VPN.";
+"_update_view_description" = "Mas malaki ang posibilidad na magkaroon ka ng isyu sa mga lumang bersyon ng prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "I-update";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "I-update ang software";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "May available na bagong bersyon ng Proton VPN. Para makuha ang update, kailangan mo munang i-update ang iyong device sa %1$@ %2$@ o mas bago pa.";
+"_operating_system_out_of_date_alert_description" = "May available na bagong bersyon ng prtvpn. Para makuha ang update, kailangan mo munang i-update ang iyong device sa %1$@ %2$@ o mas bago pa.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Pandaigdigang coverage";

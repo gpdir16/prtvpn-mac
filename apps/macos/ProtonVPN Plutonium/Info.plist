@@ -49,7 +49,7 @@
 	<key>NetworkExtension</key>
 	<dict>
 		<key>NEMachServiceName</key>
-		<string>$(TeamIdentifierPrefix)group.ch.protonvpn.mac.Transparent-Proxy</string>
+		<string>$(TeamIdentifierPrefix)group.app.prtvpn.mac.Transparent-Proxy</string>
 		<key>NEProviderClasses</key>
 		<dict>
 			<key>com.apple.networkextension.app-proxy</key>

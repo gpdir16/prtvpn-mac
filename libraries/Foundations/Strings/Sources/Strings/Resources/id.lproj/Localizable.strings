@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Negara";
 
-"_show_protonvpn" = "Tampilkan Proton VPN";
+"_show_protonvpn" = "Tampilkan prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Bersihkan Data Aplikasi";
@@ -290,7 +290,7 @@
 "_technical_details" = "Rincian Teknis";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Tampilkan Proton VPN untuk masuk...";
+"_open_app_to_log_in" = "Tampilkan prtvpn untuk masuk...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Tingkatkan ke Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Pembaruan diperlukan";
 
-"_update_required_no_longer_supported" = "Versi Proton VPN ini sudah tidak lagi didukung. Silakan perbarui aplikasi untuk terus menggunakannya.";
+"_update_required_no_longer_supported" = "Versi prtvpn ini sudah tidak lagi didukung. Silakan perbarui aplikasi untuk terus menggunakannya.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Hubungi dukungan";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Perbarui";
 
-"_invalid_refresh_token_please_login" = "Anda sudah tidak menggunakan aplikasi Proton VPN selama beberapa waktu. Silakan masuk kembali.";
+"_invalid_refresh_token_please_login" = "Anda sudah tidak menggunakan aplikasi prtvpn selama beberapa waktu. Silakan masuk kembali.";
 
 "_error_mitm_title" = "Koneksi tidak aman";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Bersihkan data aplikasi";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Seluruh data Proton VPN akan dihapus dan aplikasi akan keluar. Apakah Anda ingin melanjutkan?";
+"_delete_application_data_popup_body" = "Seluruh data prtvpn akan dihapus dan aplikasi akan keluar. Apakah Anda ingin melanjutkan?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Nonaktifkan Kill switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Beri tahu jaringan yang tidak dilindungi";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Terima notifikasi pada saat Proton VPN mendeteksi Anda sedang terhubung ke jaringan yang tidak terlindungi.";
+"_unprotected_network_tooltip" = "Terima notifikasi pada saat prtvpn mendeteksi Anda sedang terhubung ke jaringan yang tidak terlindungi.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Perlindungan Kebocoran DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Sertakan log aplikasi dan rincian sistem";
 
 /* Main mac app menu item */
-"_menu_about" = "Tentang Proton VPN";
+"_menu_about" = "Tentang prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Periksa Pembaruan...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Preferensi";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Sembunyikan Proton VPN";
+"_menu_hide_self" = "Sembunyikan prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Sembunyikan Lainnya";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Keluar";
 
 /* Main mac app menu item */
-"_menu_quit" = "Keluar dari Proton VPN";
+"_menu_quit" = "Keluar dari prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Jendela";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill switch melindungi IP Anda";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Koneksi internet Anda akan dilanjutkan ketika Proton VPN menghubungkan ulang ke sebuah server.\nUntuk menggunakan internet tanpa VPN dan perlindungan kill switch, batalkan penghubungan ulang ke server.";
+"_kill_switch_reconnection" = "Koneksi internet Anda akan dilanjutkan ketika prtvpn menghubungkan ulang ke sebuah server.\nUntuk menggunakan internet tanpa VPN dan perlindungan kill switch, batalkan penghubungan ulang ke server.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "tanpa";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Koneksi Anda akan dimulai ulang untuk mengubah mode Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "Siapkan Proton VPN";
+"_sysex_tutorial_title_setup" = "Siapkan prtvpn";
 
 "_sysex_tutorial_title_enable" = "Aktifkan ekstensi sistem untuk melanjutkan";
 
-"_sysex_tutorial_title_enable_proton" = "Aktifkan ekstensi sistem Proton VPN";
+"_sysex_tutorial_title_enable_proton" = "Aktifkan ekstensi sistem prtvpn";
 
 "_sysex_tutorial_how_to_enable" = "Cara mengaktifkan ekstensi";
 
-"_sysex_tutorial_subtitle_app" = "Untuk menggunakan Proton VPN, Anda perlu mengaktifkan ekstensi sistem berikut pada perangkat Mac Anda:";
+"_sysex_tutorial_subtitle_app" = "Untuk menggunakan prtvpn, Anda perlu mengaktifkan ekstensi sistem berikut pada perangkat Mac Anda:";
 
 "_sysex_tutorial_subtitle_st" = "Untuk menggunakan split tunneling, Anda perlu mengaktifkan ekstensi sistem berikut pada perangkat Mac Anda:";
 
 "_sysex_tutorial_subtitle_wg" = "Untuk menggunakan WireGuard, Anda perlu mengaktifkan ekstensi sistem berikut pada perangkat Mac Anda:";
 
-"_sysex_tutorial_subtitle_features" = "Untuk menggunakan fitur VPN tertentu (dan sebagian besar protokol), Anda perlu mengaktifkan ekstensi sistem Proton VPN pada perangkat Mac Anda.";
+"_sysex_tutorial_subtitle_features" = "Untuk menggunakan fitur VPN tertentu (dan sebagian besar protokol), Anda perlu mengaktifkan ekstensi sistem prtvpn pada perangkat Mac Anda.";
 
 "_sysex_tutorial_step_click_open" = "Klik **Buka Ekstensi Jaringan.**";
 
 "_sysex_tutorial_step_click_security" = "Klik **Buka Pengaturan Sistem**, lalu buka **Privasi & Keamanan → Keamanan.**";
 
-"_sysex_tutorial_step_click_allow" = "Anda akan melihat pesan yang berbunyi \"Perangkat lunak sistem dari aplikasi ProtonVPN diblokir.\". Klik **Izinkan**.";
+"_sysex_tutorial_step_click_allow" = "Anda akan melihat pesan yang berbunyi \"Perangkat lunak sistem dari aplikasi prtvpn diblokir.\". Klik **Izinkan**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Aktifkan sakelar **WireGuard** dan **split tunneling**, lalu klik **Selesai**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Butuh bantuan?";
 
-"_sysex_settings_description" = "Proton VPN perlu memuat Ekstensi Sistem untuk mengaktifkan Smart Protocol, OpenVPN, dan WireGuard.";
+"_sysex_settings_description" = "prtvpn perlu memuat Ekstensi Sistem untuk mengaktifkan Smart Protocol, OpenVPN, dan WireGuard.";
 
 "_sysex_enabled_title" = "Konfigurasi selesai";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Aplikasi perlu ditingkatkan";
 
-"_force_upgrade_message" = "Versi aplikasi Proton VPN yang Anda gunakan sudah tidak lagi didukung. Silakan perbarui aplikasi Anda ke versi terbaru.";
+"_force_upgrade_message" = "Versi aplikasi prtvpn yang Anda gunakan sudah tidak lagi didukung. Silakan perbarui aplikasi Anda ke versi terbaru.";
 
 "login_fetch_vpn_data" = "Mengonfigurasi akses VPN Anda";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Penyelesaian Masalah";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Perbarui Proton VPN";
+"_update_view_title" = "Perbarui prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Anda akan cenderung lebih rentan terhadap berbagai isu apabila Anda menggunakan Proton VPN versi lama.";
+"_update_view_description" = "Anda akan cenderung lebih rentan terhadap berbagai isu apabila Anda menggunakan prtvpn versi lama.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Perbarui";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Perbarui perangkat lunak Anda";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Versi Proton VPN yang baru telah tersedia. Untuk mendapatkan pembaruan, Anda perlu memperbarui perangkat Anda ke %1$@ %2$@ atau yang lebih baru.";
+"_operating_system_out_of_date_alert_description" = "Versi prtvpn yang baru telah tersedia. Untuk mendapatkan pembaruan, Anda perlu memperbarui perangkat Anda ke %1$@ %2$@ atau yang lebih baru.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Jangkauan global";

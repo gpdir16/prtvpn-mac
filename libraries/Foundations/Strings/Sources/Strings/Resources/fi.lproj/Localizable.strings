@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Maa";
 
-"_show_protonvpn" = "Näytä Proton VPN";
+"_show_protonvpn" = "Näytä prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Tyhjennä sovelluksen tiedot";
@@ -290,7 +290,7 @@
 "_technical_details" = "Tekniset tiedot";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Näytä Proton VPN kirjautuaksesi...";
+"_open_app_to_log_in" = "Näytä prtvpn kirjautuaksesi...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Päivitä Plus-tilaukseen";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Päivitys vaaditaan";
 
-"_update_required_no_longer_supported" = "Nykyistä Proton VPN -versiota ei enää tueta ja se on päivitettävä käytön jatkamiseksi.";
+"_update_required_no_longer_supported" = "Nykyistä prtvpn -versiota ei enää tueta ja se on päivitettävä käytön jatkamiseksi.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Ota yhteyttä tukeen";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Päivitä";
 
-"_invalid_refresh_token_please_login" = "Edellisestä Proton VPN:n käyttökerrastasi on vierähtänyt tovi. Kirjaudu uudelleen.";
+"_invalid_refresh_token_please_login" = "Edellisestä prtvpn:n käyttökerrastasi on vierähtänyt tovi. Kirjaudu uudelleen.";
 
 "_error_mitm_title" = "Suojaamaton yhteys";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Tyhjennä sovelluksen tiedot";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Kaikki Proton VPN:n tiedot poistetaan ja sovellus suljetaan. Haluatko jatkaa?";
+"_delete_application_data_popup_body" = "Kaikki prtvpn:n tiedot poistetaan ja sovellus suljetaan. Haluatko jatkaa?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Poista tappokytkin käytöstä";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Ilmoita suojaamattomista verkoista";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Saa ilmoitus, kun Proton VPN havaitsee yhteyden suojaamattomaan verkkoon.";
+"_unprotected_network_tooltip" = "Saa ilmoitus, kun prtvpn havaitsee yhteyden suojaamattomaan verkkoon.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "DNS-vuotosuojaus";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Sisällytä sovelluksen loki ja järjestelmätiedot";
 
 /* Main mac app menu item */
-"_menu_about" = "Tietoja Proton VPN:stä";
+"_menu_about" = "Tietoja prtvpn:stä";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Tarkista päivitykset...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Asetukset";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Piilota Proton VPN";
+"_menu_hide_self" = "Piilota prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Piilota muut";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Kirjaudu ulos";
 
 /* Main mac app menu item */
-"_menu_quit" = "Sulje Proton VPN";
+"_menu_quit" = "Sulje prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Ikkuna";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Tappokytkin suojaa IP-osoitettasi";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Internet-yhteytesi palautuu Proton VPN:n yhditettyä palvelimeen uudelleen.\nJatkaaksesi ilman VPN-yhteyttä ja tappokytkimen suojausta, peru uudelleenyhdistys.";
+"_kill_switch_reconnection" = "Internet-yhteytesi palautuu prtvpn:n yhditettyä palvelimeen uudelleen.\nJatkaaksesi ilman VPN-yhteyttä ja tappokytkimen suojausta, peru uudelleenyhdistys.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "ilman";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Yhteys muodostetaan uudelleen Smart Protocol -tilan vaihtamiseksi.";
 
-"_sysex_tutorial_title_setup" = "Määritä Proton VPN";
+"_sysex_tutorial_title_setup" = "Määritä prtvpn";
 
 "_sysex_tutorial_title_enable" = "Ota järjestelmälaajennukset käyttöön jatkaaksesi";
 
-"_sysex_tutorial_title_enable_proton" = "Ota Proton VPN -järjestelmälaajennukset käyttöön";
+"_sysex_tutorial_title_enable_proton" = "Ota prtvpn -järjestelmälaajennukset käyttöön";
 
 "_sysex_tutorial_how_to_enable" = "Miten laajennukset otetaan käyttöön";
 
-"_sysex_tutorial_subtitle_app" = "Proton VPN:n käyttämiseksi sinun on otettava seuraavat järjestelmälaajennukset käyttöön Macillasi:";
+"_sysex_tutorial_subtitle_app" = "prtvpn:n käyttämiseksi sinun on otettava seuraavat järjestelmälaajennukset käyttöön Macillasi:";
 
 "_sysex_tutorial_subtitle_st" = "Jaetun tunneloinnin käyttämiseksi sinun on otettava seuraavat järjestelmälaajennukset käyttöön Macillasi:";
 
 "_sysex_tutorial_subtitle_wg" = "WireGuardin käyttämiseksi sinun on otettava seuraavat järjestelmälaajennukset käyttöön Macillasi:";
 
-"_sysex_tutorial_subtitle_features" = "Tiettyjen VPN-ominaisuuksien (ja useimpien protokollien) käyttämiseksi sinun on otettava Proton VPN -järjestelmälaajennukset käyttöön Macillasi.";
+"_sysex_tutorial_subtitle_features" = "Tiettyjen VPN-ominaisuuksien (ja useimpien protokollien) käyttämiseksi sinun on otettava prtvpn -järjestelmälaajennukset käyttöön Macillasi.";
 
 "_sysex_tutorial_step_click_open" = "Klikkaa **Avaa verkkolaajennukset.**";
 
 "_sysex_tutorial_step_click_security" = "Klikkaa **Avaa Järjestelmäasetukset** ja siirry sitten kohtaan **Tietosuoja ja suojaus → Suojaus.**";
 
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Ota **WireGuard** ja **jaettu tunnelointi** käyttöön ja klikkaa sitten **Valmis**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Tarvitsetko apua?";
 
-"_sysex_settings_description" = "Proton VPN:n on ladattava Järjestelmälaajennus Smart Protocol -toiminnon sekä OpenVPN- ja WireGuard-protokollan käyttöä varten.";
+"_sysex_settings_description" = "prtvpn:n on ladattava Järjestelmälaajennus Smart Protocol -toiminnon sekä OpenVPN- ja WireGuard-protokollan käyttöä varten.";
 
 "_sysex_enabled_title" = "Määritys on suoritettu";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Sovelluspäivitys tarvitaan";
 
-"_force_upgrade_message" = "Käyttämääsi Proton VPN -sovelluksen versiota ei enää tueta. Päivitä uusimpaan versioon.";
+"_force_upgrade_message" = "Käyttämääsi prtvpn -sovelluksen versiota ei enää tueta. Päivitä uusimpaan versioon.";
 
 "login_fetch_vpn_data" = "VPN-yhteyttäsi määritetään";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Vianetsintä";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Päivitä Proton VPN";
+"_update_view_title" = "Päivitä prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Ongelmia esiintyy todennäköisesti useammin vanhemmissa Proton VPN -versioissa.";
+"_update_view_description" = "Ongelmia esiintyy todennäköisesti useammin vanhemmissa prtvpn -versioissa.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Päivitä";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Päivitä ohjelmistosi";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Proton VPN:n uusi versio on saatavilla. Saadaksesi päivityksen sinun on ensin päivitettävä laitteesi %1$@ %2$@ tai uudempaan versioon.";
+"_operating_system_out_of_date_alert_description" = "prtvpn:n uusi versio on saatavilla. Saadaksesi päivityksen sinun on ensin päivitettävä laitteesi %1$@ %2$@ tai uudempaan versioon.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Maailmalaajuinen kattavuus";

@@ -190,7 +190,7 @@
 
 /* Profile create/edit menu */
 "_country" = "Country";
-"_show_protonvpn" = "Show Proton VPN";
+"_show_protonvpn" = "Show prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Clear Application Data";
@@ -239,7 +239,7 @@
 
 /* MacOS: button in connecting overlay */
 "_try_again" = "Try again";
-"_try_again_without_killswitch" = "Disable kill switch and retry";
+"_try_again_without_killswitch" = "Disable firewall and retry";
 
 /* Button in some alerts */
 "_retry" = "Retry";
@@ -281,7 +281,7 @@
 "_technical_details" = "Technical Details";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Show Proton VPN to sign in...";
+"_open_app_to_log_in" = "Show prtvpn to sign in...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Upgrade to Plus";
@@ -293,7 +293,7 @@
 
 
 /* MacOS: shown when connection timed out and user has problematic setup involving ikev2 and kill switch on */
-"_timeout_ks_ike_descritpion" = "Another application might be interfering with kill switch. To fix this problem, switch to the OpenVPN protocol or disable kill switch and retry.";
+"_timeout_ks_ike_descritpion" = "Another application might be interfering with firewall. To fix this problem, switch to the OpenVPN protocol or disable firewall and retry.";
 
 
 /* Free tier plan title */
@@ -302,7 +302,7 @@
 // MARK: Notifications
 
 /* Disconnect notification */
-"_kill_switch_blocking_connection" = "Kill switch blocking all connections";
+"_kill_switch_blocking_connection" = "Firewall is blocking connections outside the VPN";
 
 /* Disconnect notification */
 "_always_on_will_reconnect" = "Always-on VPN will reconnect you automatically";
@@ -457,7 +457,7 @@
 "_terms_and_conditions" = "Terms and Conditions";
 
 /* iOS: text under sign-up form. %@1 is a link with a title of 'Terms and Conditions'; %@2 is a link with a title of 'Privacy Policy' */
-"_terms_and_conditions_disclaimer" = "By using Proton VPN, you agree to our\n%1$@ and %2$@";
+"_terms_and_conditions_disclaimer" = "By using prtvpn, you agree to Proton VPN’s\n%1$@ and %2$@";
 
 /* iOS: link inside text under sign-up form */
 "_privacy_policy" = "Privacy Policy";
@@ -843,13 +843,13 @@
 "_vpn_stuck_disconnecting_body" = "Your device failed to terminate a previous VPN session. You will need to restart your device before you can establish a new VPN connection.";
 
 "_update_required" = "Update required";
-"_update_required_no_longer_supported" = "This version of Proton VPN is no longer supported, please update the app to continue using it.";
+"_update_required_no_longer_supported" = "This version of prtvpn is no longer supported, please update the app to continue using it.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Contact support";
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Update";
-"_invalid_refresh_token_please_login" = "It's been a while since you last used the Proton VPN app. Please log back in.";
+"_invalid_refresh_token_please_login" = "It's been a while since you last used the prtvpn app. Please log back in.";
 
 "_error_mitm_title" = "Insecure connection";
 "_error_mitm_description" = "The TLS certificate validation failed when trying to connect to the Proton VPN API. Your current internet connection may be monitored. To keep your data secure, we are preventing the app from accessing the Proton VPN API.\nTo sign in or access your account, switch to a new network and try to connect again.";
@@ -896,13 +896,13 @@
 "_delete_application_data_popup_title" = "Clear application data";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "All Proton VPN data will be deleted and the application will quit. Do you wish to continue?";
+"_delete_application_data_popup_body" = "All prtvpn data will be deleted and the application will quit. Do you wish to continue?";
 
 /* MacOS: killswitch blocking alert button */
-"_kill_switch_disable" = "Disable Kill switch";
+"_kill_switch_disable" = "Turn firewall off";
 
 /* iOS and macOS: Enable kill switch on badly-routed networks */
-"_kill_switch_enable" = "Enable Kill Switch";
+"_kill_switch_enable" = "Turn firewall on";
 
 // MARK: Settings
 
@@ -932,10 +932,10 @@
 "_manage_subscription_on_web" = "Manage your subscription in the web dashboard";
 
 /* MacOS: Settings -> Connection: name of field. */
-"_kill_switch" = "Kill switch";
+"_kill_switch" = "Firewall";
 
 /* MacOS: Settings -> Connection. Kill switch functionality description. */
-"_kill_switch_tooltip" = "Blocks all network traffic when VPN tunnel is lost.";
+"_kill_switch_tooltip" = "While on, only traffic through the VPN is allowed. Everything else is blocked, even when the VPN is disconnected.";
 
 /* MacOS: Settings -> Port forwarding: name of field. */
 "_port_forwarding" = "Port forwarding";
@@ -950,7 +950,7 @@
 "_auto_connect" = "Auto Connect";
 
 /* MacOS: Settings -> Connection: description. */
-"_auto_connect_tooltip" = "On app start, you are connected to the selected profile";
+"_auto_connect_tooltip" = "Connects to the fastest server when the app starts.";
 
 /* MacOS: Settings -> Connection: description. */
 "_quick_connect_tooltip" = "Quick Connect button will connect you to the selected profile";
@@ -971,7 +971,7 @@
 "_unprotected_network" = "Notify unprotected networks";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Receive a notification when Proton VPN detects you are connected to an unprotected network.";
+"_unprotected_network_tooltip" = "Receive a notification when prtvpn detects you are connected to an unprotected network.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "DNS Leak Protection";
@@ -1041,11 +1041,11 @@
 
 "_allow_lan_title" = "Allow LAN connections";
 "_allow_lan_info" = "Allows to bypass the VPN and connect to devices on your local network, like your printer.";
-"_allow_lan_description" = "In order to allow LAN access, kill switch must be turned off.\n\nContinue?";
+"_allow_lan_description" = "In order to allow LAN access, firewall must be turned off.\n\nContinue?";
 "_allow_lan_note" = "Note that your connection needs to be restarted to apply this change";
 
 /* Title of alert shown if user tries to enable KillSwitch when Allow LAN or split tunneling is on */
-"_turn_ks_on_title" = "Enable kill switch?";
+"_turn_ks_on_title" = "Enable firewall?";
 /* [mac] Description text of alert shown if user tries to enable KillSwitch when split tunneling is on */
 "_turn_ks_on_description_macos_st_conflict" = "• This will disable split tunneling";
 /* [mac] Description text of alert shown if user tries to enable KillSwitch when Allow LAN is on */
@@ -1056,7 +1056,7 @@
 /* Title of alert shown if user tries to enable split tunneling when KillSwitch is on */
 "turn_split_tunneling_on_title" = "Enable split tunneling?";
 /* Description text of alert shown if user tries to enable split tunneling when KillSwitch is on */
-"turn_split_tunneling_on_description" = "This will disable kill switch.";
+"turn_split_tunneling_on_description" = "This will disable firewall.";
 
 /* Title of alert shown if user tries to enable split tunneling when IKEv2 is enabled */
 "split_tunneling_alert_title" = "Cannot enable split tunneling";
@@ -1162,7 +1162,7 @@
 
 "_no_thanks" = "No thanks";
 
-"_welcome_description" = "Thanks for using Proton VPN.";
+"_welcome_description" = "Thanks for using prtvpn.";
 
 /* Plus word that is put inside `enjoyForFree` translation instead of %@ */
 "_plus" = "Plus";
@@ -1227,7 +1227,7 @@
 
 /* iOS widget: text for not-logged-in user */
 "_log_in_to_use_widget" = "Please sign in to get started";
-"_vpnstatus_not_loggedin" = "You are not signed in to Proton VPN. Open the Proton VPN app and sign in.";
+"_vpnstatus_not_loggedin" = "You are not signed in. Open the prtvpn app and sign in.";
 
 // MARK: Report bug
 
@@ -1273,7 +1273,7 @@
 // MARK: Mac main menu
 
 /* Main mac app menu item */
-"_menu_about" = "About Proton VPN";
+"_menu_about" = "About prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Check for Updates...";
@@ -1282,7 +1282,7 @@
 "_menu_preferences" = "Preferences";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Hide Proton VPN";
+"_menu_hide_self" = "Hide prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Hide Others";
@@ -1294,7 +1294,7 @@
 "_menu_logout" = "Sign out";
 
 /* Main mac app menu item */
-"_menu_quit" = "Quit Proton VPN";
+"_menu_quit" = "Quit prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Window";
@@ -1424,12 +1424,12 @@
 "_quick_settings_title" = "Quick Settings";
 "_quick_settings_secureCore_description" = "Route your most sensitive data through our safest servers in privacy-friendly countries.";
 "_quick_settings_netShield_description" = "Browse the internet without ads and malware.";
-"_quick_settings_killSwitch_description" = "Disables internet if the VPN connection drops to prevent accidental IP leak. Your IP may be briefly visible when switching servers.";
+"_quick_settings_killSwitch_description" = "Blocks all traffic outside the VPN tunnel. The block stays in place while the VPN is disconnected, until you turn the firewall off.";
 /* Text for Port forwarding quick setting in the app */
 "_quick_settings_portForwarding_description" = "Improves torrenting and gaming speeds by allowing direct P2P connections through a designated port.";
 "_quick_settings_secureCore_note" = "Secure Core may reduce VPN speed";
 "_quick_settings_netShield_note" = "If websites don’t load, try disabling NetShield";
-"_quick_settings_killSwitch_note" = "If you can't connect to devices on your local network, try disabling kill switch.";
+"_quick_settings_killSwitch_note" = "To reach devices on your local network while the firewall is on, allow LAN connections in Settings.";
 "_quick_settings_portForwarding_note" = "Enter the active port number into your BitTorrent app to improve your P2P speeds";
 "_quick_settings_portForwarding_warningNote" = "Connect to a P2P server to improve torrenting speeds";
 "_quick_settings_portForwarding_errorNote" = "Cannot retrieve active port number. Restart your connection and try again.";
@@ -1446,16 +1446,16 @@
 
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection_header" = "Kill switch is protecting your IP";
+"_kill_switch_reconnection_header" = "Firewall is protecting your IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Your internet connection will resume as soon as Proton VPN reconnects to a server.\nTo use the internet without VPN and kill switch protection, cancel the reconnection to the server.";
+"_kill_switch_reconnection" = "Your internet connection will resume as soon as prtvpn reconnects to a server.\nTo use the internet without VPN and firewall protection, cancel the reconnection to the server.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "without";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
-"_kill_switch_reconnection_bold2" = "Kill switch protection";
+"_kill_switch_reconnection_bold2" = "Firewall protection";
 
 /* MacOS: connection screen - cancel button */
 "_kill_switch_reconnection_cancel" = "Cancel reconnection";
@@ -1479,18 +1479,18 @@
 
 // MARK: System Extensions tutorial
 
-"_sysex_tutorial_title_setup" = "Set up Proton VPN";
+"_sysex_tutorial_title_setup" = "Set up prtvpn";
 "_sysex_tutorial_title_enable" = "Enable system extensions to continue";
-"_sysex_tutorial_title_enable_proton" = "Enable Proton VPN system extensions";
+"_sysex_tutorial_title_enable_proton" = "Enable prtvpn system extensions";
 "_sysex_tutorial_how_to_enable" = "How to enable extensions";
-"_sysex_tutorial_subtitle_app" = "To use Proton VPN, you need to enable the following system extensions on your Mac:";
+"_sysex_tutorial_subtitle_app" = "To use prtvpn, you need to enable the following system extensions on your Mac:";
 "_sysex_tutorial_subtitle_st" = "To use split tunneling, you need to enable the following system extensions on your Mac:";
 "_sysex_tutorial_subtitle_wg" = "To use WireGuard, you need to enable the following system extensions on your Mac:";
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Click **Open Network Extensions.**";
 "_sysex_tutorial_step_click_security" = "Click **Open System Settings**, then go to **Privacy & Security → Security.**";
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Turn on the **WireGuard** and **split tunneling** switches, then click **Done**.";
 "_sysex_tutorial_step_turn_on_st_done" = "Turn on the **split tunneling** switch, then click **Done**.";
@@ -1516,7 +1516,7 @@
 
 // MARK: WireGuard configuration
 
-"_sysex_settings_description" = "Proton VPN requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.";
+"_sysex_settings_description" = "prtvpn requires to load a System Extension to leverage Smart Protocol, OpenVPN and WireGuard.";
 
 "_sysex_enabled_title" = "Configuration completed";
 "_sysex_enabled_description" = "Configuration completed. Now you can browse the internet faster with the best VPN technologies.";
@@ -1735,19 +1735,19 @@
 "_welcome_body" = "High-speed Swiss VPN that safeguards your privacy by encrypting your internet connection.";
 
 "_force_upgrade_title" = "Application upgrade needed";
-"_force_upgrade_message" = "The version of Proton VPN application you are currently using is no longer supported. Please update to the latest version.";
+"_force_upgrade_message" = "The version of prtvpn application you are currently using is no longer supported. Please update to the latest version.";
 
 "login_fetch_vpn_data" = "Configuring your VPN access";
-"login_summary_button" = "Start using Proton VPN";
+"login_summary_button" = "Start using prtvpn";
 
 /* Also used for disabling kill switch in the 'NetworkExtension + KillSwitch on T2 Macs' case below */
-"_wgks_ks_off" = "Disable kill switch";
+"_wgks_ks_off" = "Disable firewall";
 
 /* NetworkExtension + KillSwitch on T2 Macs */
-"_neks_t2_title" = "Kill switch Stability Warning";
+"_neks_t2_title" = "Firewall Stability Warning";
 /* Hyperlink to the "T2 Security Chip" page on Apple's website. String must also appear in the `_neks_t2_description' localized string. */
 "_neks_t2_hyperlink" = "T2 Security Chip";
-"_neks_t2_description" = "The use of kill switch is unstable on this device.\n\nYour device has a T2 Security Chip, which can result in system stability issues if the kill switch functionality of macOS is used by Proton VPN.";
+"_neks_t2_description" = "The use of firewall is unstable on this device.\n\nYour device has a T2 Security Chip, which can result in system stability issues if the firewall functionality of macOS is used by Proton VPN.";
 "_neks_t2_connect" = "Enable anyway";
 
 
@@ -2116,7 +2116,7 @@
 /* Title of the NetShield cell in the Settings tab [Redesign_2023] */
 "_settings_title_netshield" = "NetShield";
 /* Title of the KillSwitch cell in the Settings tab [Redesign_2023] */
-"_settings_title_kill_switch" = "Kill Switch";
+"_settings_title_kill_switch" = "Firewall";
 /* Title of the Protocol cell in the Settings tab [Redesign_2023] */
 "_settings_title_protocol" = "Protocol";
 /* Title of the VPN Accelerator cell in the Settings tab [Redesign_2023] */
@@ -2222,7 +2222,7 @@
 "_bad_interface_ip_range_alert_title" = "Bad Network Interface";
 
 /* Error message indicating that one of the device's interfaces to the local network is poorly configured, which can result in traffic leaks if Kill Switch is not enabled. %@1 is the name of the bad network interface, %@2 is the IP and network prefix assigned to that interface in CIDR notation (an example would be 10.0.1.3/24). */
-"_prompt_kill_switch_due_to_bad_interface_ip_range" = "Your local network might be unsafe (the interface '%@' has the IP and prefix '%@'). Your data may be sent unencrypted over the local network. Enabling Kill Switch will block this traffic. Connections to local peripherals will be interrupted.";
+"_prompt_kill_switch_due_to_bad_interface_ip_range" = "Your local network might be unsafe (the interface '%@' has the IP and prefix '%@'). Your data may be sent unencrypted over the local network. Enabling Firewall will block this traffic. Connections to local peripherals will be interrupted.";
 
 /* Section header with count */
 "cities_section_title" = "Cities (%@)";
@@ -2646,7 +2646,7 @@
 "welcome_upgrade_subtitle_fallback" = "You've upgraded your subscription. Enjoy advanced privacy features and next-level performance.";
 
 /* Welcome to Proton screen shown during onboarding. Title label. */
-"welcome_to_proton_title" = "Welcome to Proton VPN";
+"welcome_to_proton_title" = "Welcome to prtvpn";
 
 /* Welcome to Proton screen shown during onboarding. Subtitle label. */
 "welcome_to_proton_subtitle" = "Browse privately, access blocked content, and enjoy digital freedom.";
@@ -2789,10 +2789,10 @@
 "_br_failure_button_troubleshoot" = "Troubleshoot";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Update Proton VPN";
+"_update_view_title" = "Update prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "You’re more likely to have issues on older versions of Proton VPN.";
+"_update_view_description" = "You’re more likely to have issues on older versions of prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Update";
@@ -2840,7 +2840,7 @@
 "_operating_system_out_of_date_alert_title" = "Update your software";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "A new version of Proton VPN is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
+"_operating_system_out_of_date_alert_description" = "A new version of prtvpn is available. To get the update, you’ll first need to update your device to %1$@ %2$@ or later.";
 
 // MARK: Upsell Carousel
 
@@ -2917,7 +2917,7 @@
 "_connection_error_server_missing" = "The server you have chosen is no longer available. Please choose a different server.";
 
 /* Error message: we tried to connect, but something took too long. */
-"_connection_error_timeout" = "We encountered an error when trying to connect: the server did not respond in time. Please try again.";
+"_connection_error_timeout" = "The server did not respond in time. Please try again.";
 
 /* Error message: we tried sending a message to the connection provider, but it responded with an error. */
 "_provider_message_error" = "There was a problem with the connection.";
@@ -3115,3 +3115,97 @@
 
 /* Current transaction is pending and may need approval from the account managing this one, i.e. from a parent or guardian. */
 "_payment_pending_error" = "The purchase is pending and will be available once approved.";
+
+"_locations_sort_title" = "Sort";
+
+"_locations_sort_alphabetical" = "Alphabetical";
+
+"_locations_sort_nearest" = "Nearest first";
+
+"_recents_clear" = "Clear recents";
+
+"_recents_limit" = "Recent connections to keep";
+
+"_recents_limit_none" = "Don't keep";
+
+"_hud_vpn_ip" = "VPN IP";
+
+"_hud_protocol" = "Protocol";
+
+"_hud_duration" = "Connected for";
+
+"_hud_server" = "Server";
+
+"_hud_load" = "Load";
+
+"_settings_firewall_lan_footer" = "Lets printers, file shares and other devices on your local network stay reachable while the firewall is on.";
+
+"_settings_section_startup" = "Startup";
+
+"_settings_section_notifications" = "Notifications";
+
+"_settings_section_privacy" = "Privacy";
+
+"_settings_sign_out" = "Sign out";
+
+"_virtual_servers_title" = "Virtual servers";
+
+"_virtual_servers_description" = "Virtual servers show a location in one country while physically running in another.";
+
+"_virtual_servers_any" = "Use any server";
+
+"_virtual_servers_only" = "Virtual servers only";
+
+"_virtual_servers_never" = "Never use virtual servers";
+
+"_virtual_servers_fallback" = "Only when no physical server exists";
+
+"_firewall_mode_auto" = "Automatic (recommended)";
+
+"_firewall_mode_auto_description" = "Turns on when you connect to a VPN and off when you disconnect on purpose. Protects against IP leaks from unexpected drops. Unlike the official ProtonVPN app it provides proper security. It is similar to the kill switch most VPNs offer, but a cut above.";
+
+"_firewall_mode_on" = "On";
+
+"_firewall_mode_on_description" = "Only allows connections through the VPN, protecting against IP leaks when the connection drops unintentionally. If you disconnect on purpose, all internet access on this Mac is blocked. Useful in dangerous situations where no data at all may leak outside the VPN tunnel. Similar to Windscribe's 'Always On'.";
+
+"_firewall_mode_lockdown" = "Overwhelmingly on";
+
+"_firewall_mode_lockdown_description" = "Doesn't allow connections through the VPN either. Bluntly blocks all internet access on this Mac so that no connection at all can reach the internet. Similar to Windscribe's 'Always On +'.";
+
+"_firewall_mode_off" = "Off";
+
+"_firewall_mode_off_description" = "Also allows connections that don't go through the VPN, with a risk of IP leaks. Similar to turning a kill switch off. Only use it when losing internet access would cause serious problems, such as a computer you only use through remote desktop.";
+
+"_quit_alert_title" = "Quit prtvpn?";
+
+"_quit_alert_confirm" = "Quit";
+
+"_quit_alert_connected_firewall_off" = "Quitting disconnects the VPN and leaves you connected to the internet without protection.";
+
+"_quit_alert_connected_firewall_auto" = "Quitting disconnects the VPN and turns the firewall off. After that you are connected to the internet without protection.";
+
+"_quit_alert_connected_firewall_on" = "Quitting disconnects the VPN, but the firewall stays on. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.";
+
+"_quit_alert_firewall_on" = "The firewall stays on after quitting. Internet access on this Mac is blocked until you open prtvpn again and connect. To use the internet without a VPN, change the firewall mode before quitting.";
+
+"_quit_alert_firewall_lockdown" = "The firewall is in the overwhelmingly on mode. Internet access on this Mac stays blocked after quitting. To use the internet, change the firewall mode before quitting.";
+
+"_quit_alert_firewall_armed" = "The VPN connection dropped unexpectedly, and the firewall is blocking internet access on this Mac. It stays blocked after quitting. To use the internet, connect again or change the firewall mode before quitting.";
+
+"_plan_notice_title" = "Not included in your plan";
+
+"_plan_notice_message" = "This feature needs a paid Proton VPN plan. You can change your plan in your Proton account.";
+
+"_server_change_wait_title" = "Please wait before changing servers";
+
+"_server_change_wait_message" = "On the free plan you can change servers again at %@.";
+
+"_secure_core_activate_dont_show" = "Activate and don't show again";
+
+"_status_item_open" = "Open prtvpn";
+
+"_status_item_quit" = "Quit prtvpn";
+
+"_status_item_settings" = "Settings…";
+
+"_daemon_log" = "Tunnel Daemon Log";

@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Ország";
 
-"_show_protonvpn" = "A Proton VPN-től";
+"_show_protonvpn" = "A prtvpn-től";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Alkalmazás adatainak törlése";
@@ -290,7 +290,7 @@
 "_technical_details" = "Technikai részletek";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Proton VPN megjelenítése a bejelentkezéshez...";
+"_open_app_to_log_in" = "prtvpn megjelenítése a bejelentkezéshez...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Váltás a Plus csomagra";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Frissítés szükséges";
 
-"_update_required_no_longer_supported" = "A Proton VPN ezen verziója már nem támogatott. Az alkalmazást frissíteni kell egy újabbra.";
+"_update_required_no_longer_supported" = "A prtvpn ezen verziója már nem támogatott. Az alkalmazást frissíteni kell egy újabbra.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Kapcsolatfelvétel";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Frissítés";
 
-"_invalid_refresh_token_please_login" = "Egy ideje már nem használta a Proton VPN alkalmazást. Jelentkezzen be újra.";
+"_invalid_refresh_token_please_login" = "Egy ideje már nem használta a prtvpn alkalmazást. Jelentkezzen be újra.";
 
 "_error_mitm_title" = "Nem biztonságos kapcsolat";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Alkalmazás adatainak törlése";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Minden Proton VPN adat törlődik, és az alkalmazás kilép. Folytatja?";
+"_delete_application_data_popup_body" = "Minden prtvpn adat törlődik, és az alkalmazás kilép. Folytatja?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Vészkapcsoló kikapcsolása";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Értesítés a nem védett hálózatoknál";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Értesítést kap, ha a Proton VPN észleli, hogy nem védett hálózathoz kapcsolódik.";
+"_unprotected_network_tooltip" = "Értesítést kap, ha a prtvpn észleli, hogy nem védett hálózathoz kapcsolódik.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "DNS szivárgás elleni védelem";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Tartalmazzon alkalmazás naplókat és rendszer információkat";
 
 /* Main mac app menu item */
-"_menu_about" = "A Proton VPN-ről";
+"_menu_about" = "A prtvpn-ről";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Frissítések keresése...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Beállítások";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Proton VPN elrejtése";
+"_menu_hide_self" = "prtvpn elrejtése";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Többi elrejtése";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Kijelentkezés";
 
 /* Main mac app menu item */
-"_menu_quit" = "Kilépés a Proton VPN-ből";
+"_menu_quit" = "Kilépés a prtvpn-ből";
 
 /* Main mac app menu item */
 "_menu_window" = "Ablak";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "A vészkapcsoló védi az IP-jét";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Az internetkapcsolat újraindul, amint a Proton VPN újra csatlakozik egy szerverhez.\nAz internet VPN és kill switch védelem nélküli használatához törölje az újracsatlakozást a szerverhez.";
+"_kill_switch_reconnection" = "Az internetkapcsolat újraindul, amint a prtvpn újra csatlakozik egy szerverhez.\nAz internet VPN és kill switch védelem nélküli használatához törölje az újracsatlakozást a szerverhez.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "nincs";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "A kapcsolat újraindul a Smart Protocol üzemmód megváltoztatásához.";
 
-"_sysex_tutorial_title_setup" = "Proton VPN beállítása";
+"_sysex_tutorial_title_setup" = "prtvpn beállítása";
 
 "_sysex_tutorial_title_enable" = "Enable system extensions to continue";
 
-"_sysex_tutorial_title_enable_proton" = "Enable Proton VPN system extensions";
+"_sysex_tutorial_title_enable_proton" = "Enable prtvpn system extensions";
 
 "_sysex_tutorial_how_to_enable" = "How to enable extensions";
 
-"_sysex_tutorial_subtitle_app" = "To use Proton VPN, you need to enable the following system extensions on your Mac:";
+"_sysex_tutorial_subtitle_app" = "To use prtvpn, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_st" = "To use split tunneling, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "To use WireGuard, you need to enable the following system extensions on your Mac:";
 
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Click **Open Network Extensions.**";
 
 "_sysex_tutorial_step_click_security" = "Click **Open System Settings**, then go to **Privacy & Security → Security.**";
 
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Turn on the **WireGuard** and **split tunneling** switches, then click **Done**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Segítségre van szüksége?";
 
-"_sysex_settings_description" = "A Proton VPN-nek szüksége van egy System Extension betöltésére, hogy be tudja emelni a Smart Protocolt, az OpenVPN-t és a WireGuardot.";
+"_sysex_settings_description" = "A prtvpn-nek szüksége van egy System Extension betöltésére, hogy be tudja emelni a Smart Protocolt, az OpenVPN-t és a WireGuardot.";
 
 "_sysex_enabled_title" = "Konfiguráció befejezve";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Alkalmazás frissítése szükséges";
 
-"_force_upgrade_message" = "Az ön által jelenleg használt Proton VPN alkalmazás verziója már nem támogatott. Kérjük, frissítsen a legújabb verzióra.";
+"_force_upgrade_message" = "Az ön által jelenleg használt prtvpn alkalmazás verziója már nem támogatott. Kérjük, frissítsen a legújabb verzióra.";
 
 "login_fetch_vpn_data" = "A VPN-hozzáférés konfigurálása";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Hibaelhárítás";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Proton VPN frissítése";
+"_update_view_title" = "prtvpn frissítése";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "A Proton VPN régebbi verzióinál nagyobb valószínűséggel jelentkeznek problémák.";
+"_update_view_description" = "A prtvpn régebbi verzióinál nagyobb valószínűséggel jelentkeznek problémák.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Frissítés";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Frissítse szoftverét";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "A Proton VPN új verziója elérhető. A frissítéshez először frissítenie kell a készülékét a %1$@ %2$@ vagy újabb verzióra.";
+"_operating_system_out_of_date_alert_description" = "A prtvpn új verziója elérhető. A frissítéshez először frissítenie kell a készülékét a %1$@ %2$@ vagy újabb verzióra.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Világméretű lefedettség";

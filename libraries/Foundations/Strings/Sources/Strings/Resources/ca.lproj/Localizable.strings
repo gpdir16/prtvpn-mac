@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "País";
 
-"_show_protonvpn" = "Mostra Proton VPN";
+"_show_protonvpn" = "Mostra prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Esborra les dades de l'aplicació";
@@ -290,7 +290,7 @@
 "_technical_details" = "Detalls tècnics";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Mostra el Proton VPN en iniciar la sessió...";
+"_open_app_to_log_in" = "Mostra el prtvpn en iniciar la sessió...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Actualiza a Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Actualització requerida";
 
-"_update_required_no_longer_supported" = "Aquesta versió de Proton VPN ja no és compatible. Actualitzeu l'aplicació per a continuar utilitzant-la.";
+"_update_required_no_longer_supported" = "Aquesta versió de prtvpn ja no és compatible. Actualitzeu l'aplicació per a continuar utilitzant-la.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Contacta amb suport";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Actualitza";
 
-"_invalid_refresh_token_please_login" = "Ha passat temps des de l'última vegada que vau utilitzar l'aplicació Proton VPN. Torneu a iniciar la sessió.";
+"_invalid_refresh_token_please_login" = "Ha passat temps des de l'última vegada que vau utilitzar l'aplicació prtvpn. Torneu a iniciar la sessió.";
 
 "_error_mitm_title" = "Connexió insegura";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Esborra les dades de l'aplicació";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "S'eliminaran totes les dades de Proton VPN i l'aplicació es tancarà. Voleu continuar?";
+"_delete_application_data_popup_body" = "S'eliminaran totes les dades de prtvpn i l'aplicació es tancarà. Voleu continuar?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Desactiva el Kill switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Notifica xarxes desprotegides";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Rebeu una notificació quan Proton VPN detecti que esteu connectat a una xarxa desprotegida.";
+"_unprotected_network_tooltip" = "Rebeu una notificació quan prtvpn detecti que esteu connectat a una xarxa desprotegida.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Protecció contra fuites de DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Inclou els registres de l'aplicació i els detalls del sistema";
 
 /* Main mac app menu item */
-"_menu_about" = "Sobre Proton VPN";
+"_menu_about" = "Sobre prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Comprova si hi ha actualitzacions...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Preferències";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Amaga Proton VPN";
+"_menu_hide_self" = "Amaga prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Amaga els altres";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Tanca la sessió";
 
 /* Main mac app menu item */
-"_menu_quit" = "Tanca Proton VPN";
+"_menu_quit" = "Tanca prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Finestra";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "El Kill switch està protegint la vostra adreça IP.";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "La connexió a internet es reiniciarà tan aviat com el Proton VPN es reconnecti a un servidor. \nPer a emprar internet sense VPN i sense la protecció del kill switch, cancel·leu la reconnexió al servidor.";
+"_kill_switch_reconnection" = "La connexió a internet es reiniciarà tan aviat com el prtvpn es reconnecti a un servidor. \nPer a emprar internet sense VPN i sense la protecció del kill switch, cancel·leu la reconnexió al servidor.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "sense";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "La vostra connexió es reiniciarà per canviar al mode Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "Configureu Proton VPN";
+"_sysex_tutorial_title_setup" = "Configureu prtvpn";
 
 "_sysex_tutorial_title_enable" = "Habiliteu les extensions del sistema per continuar";
 
-"_sysex_tutorial_title_enable_proton" = "Habiliteu les extensions del sistema de Proton VPN";
+"_sysex_tutorial_title_enable_proton" = "Habiliteu les extensions del sistema de prtvpn";
 
 "_sysex_tutorial_how_to_enable" = "Com habilitar les extensions";
 
-"_sysex_tutorial_subtitle_app" = "Per utilitzar Proton VPN, cal que habiliteu les següents extensions del sistema al vostre Mac:";
+"_sysex_tutorial_subtitle_app" = "Per utilitzar prtvpn, cal que habiliteu les següents extensions del sistema al vostre Mac:";
 
 "_sysex_tutorial_subtitle_st" = "Per utilitzar la tunelització dividida, cal que habiliteu les següents extensions del sistema al vostre Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "Per utilitzar WireGuard, cal que habiliteu les següents extensions del sistema al vostre Mac:";
 
-"_sysex_tutorial_subtitle_features" = "Per utilitzar algunes característiques de la VPN (i la majoria de protocols), cal que tingueu les extensions del sistema de Proton VPN habilitades al vostre Mac.";
+"_sysex_tutorial_subtitle_features" = "Per utilitzar algunes característiques de la VPN (i la majoria de protocols), cal que tingueu les extensions del sistema de prtvpn habilitades al vostre Mac.";
 
 "_sysex_tutorial_step_click_open" = "Feu clic a **Obrir Extensions de xarxa.**";
 
 "_sysex_tutorial_step_click_security" = "Feu clic a **Obrir Preferències del sistema** i, a continuació, aneu a **Privacitat i seguretat → Seguretat.**";
 
-"_sysex_tutorial_step_click_allow" = "Hauríeu de veure un missatge que diu \"El programari del sistema de l'aplicació ProtonVPN ha estat bloquejat.\". Feu clic a **Permetre**.";
+"_sysex_tutorial_step_click_allow" = "Hauríeu de veure un missatge que diu \"El programari del sistema de l'aplicació prtvpn ha estat bloquejat.\". Feu clic a **Permetre**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Activeu els commutadors de **WireGuard** i **tunelització dividida** i, a continuació, feu clic a **Fet**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Necessiteu ajuda?";
 
-"_sysex_settings_description" = "Proton VPN requereix carregar una extensió del sistema per utilitzar Smart Protocol, OpenVPN i WireGuard.";
+"_sysex_settings_description" = "prtvpn requereix carregar una extensió del sistema per utilitzar Smart Protocol, OpenVPN i WireGuard.";
 
 "_sysex_enabled_title" = "S'ha completat la configuració";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Cal actualitzar l'aplicació";
 
-"_force_upgrade_message" = "La versió de l'aplicació Proton VPN que esteu utilitzant ja no és compatible. Actualitzeu-la a la darrera versió.";
+"_force_upgrade_message" = "La versió de l'aplicació prtvpn que esteu utilitzant ja no és compatible. Actualitzeu-la a la darrera versió.";
 
 "login_fetch_vpn_data" = "Configuració del vostre accés VPN";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Resolució de problemes";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Actualitza Proton VPN";
+"_update_view_title" = "Actualitza prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "És més probable que tingueu problemes amb versions anteriors del Proton VPN.";
+"_update_view_description" = "És més probable que tingueu problemes amb versions anteriors del prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Actualitza";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Actualitzeu el programari";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Hi ha disponible una nova versió de Proton VPN. Per obtenir l'actualització, primer haureu d'actualitzar el dispositiu a %1$@ %2$@ o una versió posterior.";
+"_operating_system_out_of_date_alert_description" = "Hi ha disponible una nova versió de prtvpn. Per obtenir l'actualització, primer haureu d'actualitzar el dispositiu a %1$@ %2$@ o una versió posterior.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Cobertura mundial";

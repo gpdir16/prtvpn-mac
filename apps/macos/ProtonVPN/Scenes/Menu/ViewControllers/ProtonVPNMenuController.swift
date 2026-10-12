@@ -38,6 +38,8 @@ final class ProtonVPNMenuController: NSObject {
     lazy var checkForUpdatesItem: NSMenuItem = .init(title: Localizable.menuCheckUpdates, action: #selector(checkForUpdatesAction), keyEquivalent: "").with {
         $0.isEnabled = true
         $0.target = self
+        // 업데이트 피드가 없으면(이 포크의 기본값) 눌러도 아무 일도 일어나지 않으므로 숨김
+        $0.isHidden = Bundle.main.object(forInfoDictionaryKey: "SUFeedURL") == nil
     }
 
     lazy var preferencesItem: NSMenuItem = .init(title: Localizable.menuPreferences, action: #selector(preferencesItemAction), keyEquivalent: ",").with {
@@ -70,7 +72,7 @@ final class ProtonVPNMenuController: NSObject {
         $0.target = self
     }
 
-    lazy var menu = NSMenu(title: "ProtonVPN").with {
+    lazy var menu = NSMenu(title: "prtvpn").with {
         $0.autoenablesItems = false
         $0.items = [
             aboutItem,

@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "Страна";
 
-"_show_protonvpn" = "Показать Proton VPN";
+"_show_protonvpn" = "Показать prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "Удалить данные приложения";
@@ -290,7 +290,7 @@
 "_technical_details" = "Техническая информация";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "Показать Proton VPN, чтобы войти...";
+"_open_app_to_log_in" = "Показать prtvpn, чтобы войти...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "Улучшить до Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "Требуется обновление";
 
-"_update_required_no_longer_supported" = "Эта версия Proton VPN больше не поддерживается, пожалуйста, обновите приложение, чтобы продолжить его использование.";
+"_update_required_no_longer_supported" = "Эта версия prtvpn больше не поддерживается, пожалуйста, обновите приложение, чтобы продолжить его использование.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "Связаться с поддержкой";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "Обновить";
 
-"_invalid_refresh_token_please_login" = "Прошло много времени с тех пор, как вы в последний раз использовали приложение Proton VPN. Пожалуйста, войдите в систему заново.";
+"_invalid_refresh_token_please_login" = "Прошло много времени с тех пор, как вы в последний раз использовали приложение prtvpn. Пожалуйста, войдите в систему заново.";
 
 "_error_mitm_title" = "Небезопасное соединение";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "Удаление данных приложения";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "Все данные Proton VPN будут удалены, после чего приложение будет закрыто. Вы хотите продолжить?";
+"_delete_application_data_popup_body" = "Все данные prtvpn будут удалены, после чего приложение будет закрыто. Вы хотите продолжить?";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "Отключить Kill Switch";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "Уведомлять о работе в незащищенной сети";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "Получать уведомление, когда Proton VPN обнаруживает, что вы подключены к незащищенной сети.";
+"_unprotected_network_tooltip" = "Получать уведомление, когда prtvpn обнаруживает, что вы подключены к незащищенной сети.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "Защита от утечки DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "Включить журналы и системные данные";
 
 /* Main mac app menu item */
-"_menu_about" = "О Proton VPN";
+"_menu_about" = "О prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "Проверка наличия обновлений...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "Настройки";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "Скрыть Proton VPN";
+"_menu_hide_self" = "Скрыть prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "Скрыть другие";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "Выйти";
 
 /* Main mac app menu item */
-"_menu_quit" = "Закрыть Proton VPN";
+"_menu_quit" = "Закрыть prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "Окно";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "Kill Switch защищает ваш IP";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "Ваше подключение к Интернету возобновится, как только Proton VPN переподключится к серверу.\nЧтобы пользоваться Интернетом без VPN и защиты Kill Switch, отмените повторное подключение к серверу.";
+"_kill_switch_reconnection" = "Ваше подключение к Интернету возобновится, как только prtvpn переподключится к серверу.\nЧтобы пользоваться Интернетом без VPN и защиты Kill Switch, отмените повторное подключение к серверу.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "без";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "Ваше соединение будет перезапущено для изменения режима Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "Настроить Proton VPN";
+"_sysex_tutorial_title_setup" = "Настроить prtvpn";
 
 "_sysex_tutorial_title_enable" = "Enable system extensions to continue";
 
-"_sysex_tutorial_title_enable_proton" = "Enable Proton VPN system extensions";
+"_sysex_tutorial_title_enable_proton" = "Enable prtvpn system extensions";
 
 "_sysex_tutorial_how_to_enable" = "Как включить расширения";
 
-"_sysex_tutorial_subtitle_app" = "To use Proton VPN, you need to enable the following system extensions on your Mac:";
+"_sysex_tutorial_subtitle_app" = "To use prtvpn, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_st" = "To use split tunneling, you need to enable the following system extensions on your Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "To use WireGuard, you need to enable the following system extensions on your Mac:";
 
-"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have Proton VPN system extensions enabled on your Mac.";
+"_sysex_tutorial_subtitle_features" = "To use certain VPN features (and most protocols), you need to have prtvpn system extensions enabled on your Mac.";
 
 "_sysex_tutorial_step_click_open" = "Click **Open Network Extensions.**";
 
 "_sysex_tutorial_step_click_security" = "Click **Open System Settings**, then go to **Privacy & Security → Security.**";
 
-"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application ProtonVPN was blocked.\". Click **Allow**.";
+"_sysex_tutorial_step_click_allow" = "You should see a message that says \"System software from application prtvpn was blocked.\". Click **Allow**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "Turn on the **WireGuard** and **split tunneling** switches, then click **Done**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "Нужна помощь?";
 
-"_sysex_settings_description" = "Proton VPN потребуется загрузить системное расширение для использования Smart Protocol, OpenVPN и WireGuard.";
+"_sysex_settings_description" = "prtvpn потребуется загрузить системное расширение для использования Smart Protocol, OpenVPN и WireGuard.";
 
 "_sysex_enabled_title" = "Настройка завершена";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "Надо обновить приложение";
 
-"_force_upgrade_message" = "Версия приложения Proton VPN, которую вы сейчас используете, больше не поддерживается. Пожалуйста, обновите приложение до последней версии.";
+"_force_upgrade_message" = "Версия приложения prtvpn, которую вы сейчас используете, больше не поддерживается. Пожалуйста, обновите приложение до последней версии.";
 
 "login_fetch_vpn_data" = "Настройка доступа к VPN";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "Устранение неполадок";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "Обновить Proton VPN";
+"_update_view_title" = "Обновить prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "Вероятность возникновения проблем выше на старых версиях Proton VPN.";
+"_update_view_description" = "Вероятность возникновения проблем выше на старых версиях prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "Обновить";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "Обновить программное обеспечение";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "Доступна новая версия Proton VPN. Чтобы выполнить обновление, сначала необходимо обновить ваше устройство до версии %1$@ %2$@ или более поздней.";
+"_operating_system_out_of_date_alert_description" = "Доступна новая версия prtvpn. Чтобы выполнить обновление, сначала необходимо обновить ваше устройство до версии %1$@ %2$@ или более поздней.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "Всемирное покрытие";

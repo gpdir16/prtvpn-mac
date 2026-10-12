@@ -195,7 +195,7 @@
 /* Profile create/edit menu */
 "_country" = "دولة";
 
-"_show_protonvpn" = "افتح Proton VPN";
+"_show_protonvpn" = "افتح prtvpn";
 
 /* Main mac app menu item */
 "_clear_application_data" = "مسح بيانات التطبيق";
@@ -290,7 +290,7 @@
 "_technical_details" = "تفاصيل تقنية";
 
 /* Main mac app menu item */
-"_open_app_to_log_in" = "افتح Proton VPN لتسجيل الدخول...";
+"_open_app_to_log_in" = "افتح prtvpn لتسجيل الدخول...";
 
 /* Main mac app menu item */
 "_upgrade_to_plus" = "ترقية إلى اشتراك Plus";
@@ -850,7 +850,7 @@
 
 "_update_required" = "يلزم إجراء تحديث";
 
-"_update_required_no_longer_supported" = "لم يعد هذا الإصدار من Proton VPN مدعومًا، يُرجى تحديث التطبيق لمواصلة استخدامه.";
+"_update_required_no_longer_supported" = "لم يعد هذا الإصدار من prtvpn مدعومًا، يُرجى تحديث التطبيق لمواصلة استخدامه.";
 
 /* Secondary button title in the App update required alert  */
 "_update_required_support" = "الاتصال بالدعم";
@@ -858,7 +858,7 @@
 /* Primary button title in the App update required alert  */
 "_update_required_update" = "تحديث";
 
-"_invalid_refresh_token_please_login" = "لقد مر وقت طويل منذ آخر مرة استخدمت فيها تطبيق Proton VPN. يُرجى تسجيل الدخول مرة أخرى.";
+"_invalid_refresh_token_please_login" = "لقد مر وقت طويل منذ آخر مرة استخدمت فيها تطبيق prtvpn. يُرجى تسجيل الدخول مرة أخرى.";
 
 "_error_mitm_title" = "اتصال غير آمن";
 
@@ -906,7 +906,7 @@
 "_delete_application_data_popup_title" = "مسح بيانات التطبيق";
 
 /* MacOS: clear application data alert */
-"_delete_application_data_popup_body" = "سيتم حذف جميع بيانات Proton VPN وسيتم إغلاق التطبيق. هل ترغب في المتابعة؟";
+"_delete_application_data_popup_body" = "سيتم حذف جميع بيانات prtvpn وسيتم إغلاق التطبيق. هل ترغب في المتابعة؟";
 
 /* MacOS: killswitch blocking alert button */
 "_kill_switch_disable" = "تعطيل مفتاح الإيقاف";
@@ -980,7 +980,7 @@
 "_unprotected_network" = "إشعار الشبكات غير المحمية";
 
 /* MacOS: Settings -> General: description */
-"_unprotected_network_tooltip" = "تلقي إشعار عندما يكتشف Proton VPN أنك متصل بشبكة غير محمية.";
+"_unprotected_network_tooltip" = "تلقي إشعار عندما يكتشف prtvpn أنك متصل بشبكة غير محمية.";
 
 /* MacOS: Settings -> Connection: name of field. */
 "_dns_leak_protection" = "حماية من تسرب DNS";
@@ -1278,7 +1278,7 @@
 "_report_attachments_checkbox" = "تضمين سجلات التطبيق وتفاصيل النظام";
 
 /* Main mac app menu item */
-"_menu_about" = "حول Proton VPN";
+"_menu_about" = "حول prtvpn";
 
 /* Main mac app menu item */
 "_menu_check_updates" = "التحقق من وجود تحديثات...";
@@ -1287,7 +1287,7 @@
 "_menu_preferences" = "التفضيلات";
 
 /* Main mac app menu item */
-"_menu_hide_self" = "إخفاء Proton VPN";
+"_menu_hide_self" = "إخفاء prtvpn";
 
 /* Main mac app menu item */
 "_menu_hide_others" = "إخفاء الآخرين";
@@ -1299,7 +1299,7 @@
 "_menu_logout" = "تسجيل الخروج";
 
 /* Main mac app menu item */
-"_menu_quit" = "إنهاء Proton VPN";
+"_menu_quit" = "إنهاء prtvpn";
 
 /* Main mac app menu item */
 "_menu_window" = "نافذة";
@@ -1488,7 +1488,7 @@
 "_kill_switch_reconnection_header" = "مفتاح الإيقاف يحمي عنوان IP الخاص بك";
 
 /* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
-"_kill_switch_reconnection" = "سيستأنف اتصالك بالإنترنت بمجرد إعادة اتصال Proton VPN بالخادم.\nلاستخدام الإنترنت بدون حماية VPN ومفتاح الإيقاف، قم بإلغاء إعادة الاتصال بالخادم.";
+"_kill_switch_reconnection" = "سيستأنف اتصالك بالإنترنت بمجرد إعادة اتصال prtvpn بالخادم.\nلاستخدام الإنترنت بدون حماية VPN ومفتاح الإيقاف، قم بإلغاء إعادة الاتصال بالخادم.";
 
 /* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
 "_kill_switch_reconnection_bold1" = "بدون";
@@ -1514,27 +1514,27 @@
 /* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
 "_smart_protocol_reconnect_modal_body" = "سيتم إعادة تشغيل اتصالك لتغيير وضع Smart Protocol.";
 
-"_sysex_tutorial_title_setup" = "إعداد Proton VPN";
+"_sysex_tutorial_title_setup" = "إعداد prtvpn";
 
 "_sysex_tutorial_title_enable" = "تفعيل ملحقات النظام للمتابعة";
 
-"_sysex_tutorial_title_enable_proton" = "تفعيل ملحقات نظام Proton VPN";
+"_sysex_tutorial_title_enable_proton" = "تفعيل ملحقات نظام prtvpn";
 
 "_sysex_tutorial_how_to_enable" = "كيفية تفعيل الملحقات";
 
-"_sysex_tutorial_subtitle_app" = "لاستخدام Proton VPN، يلزم تفعيل ملحقات النظام التالية على جهازك الـ Mac:";
+"_sysex_tutorial_subtitle_app" = "لاستخدام prtvpn، يلزم تفعيل ملحقات النظام التالية على جهازك الـ Mac:";
 
 "_sysex_tutorial_subtitle_st" = "لاستخدام الانقسام النفقي، يلزم تفعيل ملحقات النظام التالية على جهازك الـ Mac:";
 
 "_sysex_tutorial_subtitle_wg" = "لاستخدام WireGuard، يلزم تفعيل ملحقات النظام التالية على جهازك الـ Mac:";
 
-"_sysex_tutorial_subtitle_features" = "لاستخدام ميزات VPN معينة (ومعظم البروتوكولات)، يلزم تفعيل ملحقات نظام Proton VPN على جهازك الـ Mac.";
+"_sysex_tutorial_subtitle_features" = "لاستخدام ميزات VPN معينة (ومعظم البروتوكولات)، يلزم تفعيل ملحقات نظام prtvpn على جهازك الـ Mac.";
 
 "_sysex_tutorial_step_click_open" = "انقر على **فتح ملحقات الشبكة.**";
 
 "_sysex_tutorial_step_click_security" = "انقر على **فتح إعدادات النظام**، ثم انتقل إلى **الخصوصية والأمان ← الأمان.**";
 
-"_sysex_tutorial_step_click_allow" = "يجب أن تظهر لك رسالة تقول \"تم حظر برامج النظام من تطبيق ProtonVPN.\". انقر على **سماح**.";
+"_sysex_tutorial_step_click_allow" = "يجب أن تظهر لك رسالة تقول \"تم حظر برامج النظام من تطبيق prtvpn.\". انقر على **سماح**.";
 
 "_sysex_tutorial_step_turn_on_both_done" = "شغّل مفتاحي **WireGuard** و**الانقسام النفقي**، ثم انقر على **تم**.";
 
@@ -1568,7 +1568,7 @@
 
 "_sysex_tutorial_need_help" = "هل تحتاج إلى مساعدة؟";
 
-"_sysex_settings_description" = "يتطلب Proton VPN تحميل ملحق نظام للاستفادة من Smart Protocol وOpenVPN وWireGuard.";
+"_sysex_settings_description" = "يتطلب prtvpn تحميل ملحق نظام للاستفادة من Smart Protocol وOpenVPN وWireGuard.";
 
 "_sysex_enabled_title" = "اكتمل التكوين";
 
@@ -1813,7 +1813,7 @@
 
 "_force_upgrade_title" = "يلزم ترقية التطبيق";
 
-"_force_upgrade_message" = "إصدار تطبيق Proton VPN الذي تستخدمه حاليًا لم يعد مدعومًا. يُرجى التحديث إلى أحدث إصدار.";
+"_force_upgrade_message" = "إصدار تطبيق prtvpn الذي تستخدمه حاليًا لم يعد مدعومًا. يُرجى التحديث إلى أحدث إصدار.";
 
 "login_fetch_vpn_data" = "جارٍ تكوين وصول الـ VPN الخاص بك";
 
@@ -2912,10 +2912,10 @@
 "_br_failure_button_troubleshoot" = "استكشاف الأخطاء وإصلاحها";
 
 /* Title of the view nudging users to update before filling Bug Report */
-"_update_view_title" = "تحديث Proton VPN";
+"_update_view_title" = "تحديث prtvpn";
 
 /* Description text of the view nudging users to update before filling Bug Report */
-"_update_view_description" = "من المرجح أن تواجه مشكلات في الإصدارات الأقدم من Proton VPN.";
+"_update_view_description" = "من المرجح أن تواجه مشكلات في الإصدارات الأقدم من prtvpn.";
 
 /* Action button of the view nudging users to update before filling Bug Report */
 "_update_view_button" = "تحديث";
@@ -2963,7 +2963,7 @@
 "_operating_system_out_of_date_alert_title" = "تحديث البرنامج";
 
 /* Users' OS version is no longer actively supported by Proton VPN (alert text). %@1 is the name of the platform, like iOS or macOS. %@2 is the minimum version string that supports the next update. */
-"_operating_system_out_of_date_alert_description" = "يتوفر إصدار جديد من Proton VPN. للحصول على التحديث، يجب أولاً تحديث جهازك إلى %1$@ %2$@ أو إصدار أحدث.";
+"_operating_system_out_of_date_alert_description" = "يتوفر إصدار جديد من prtvpn. للحصول على التحديث، يجب أولاً تحديث جهازك إلى %1$@ %2$@ أو إصدار أحدث.";
 
 /* Home upsell carousel card title */
 "upsell_carousel_worldwide_title" = "تغطية عالمية";

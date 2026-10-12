@@ -22,7 +22,6 @@ import Strings
 
 final class MenuManager {
     private var protonVpnMenu: ProtonVPNMenuController = .init()
-    private var profilesMenu: ProfilesMenuController = .init()
     private var helpMenu: HelpMenuController = .init()
     private var statusMenu: StatusMenuWindowController = .init(window: nil)
     private var editMenu: EditMenuController = .init()
@@ -38,7 +37,7 @@ final class MenuManager {
         let mainMenu = NSMenu(title: "Main Menu")
 
         // Create ProtonVPN menu (Application menu)
-        let protonVpnMenuItem = NSMenuItem(title: "ProtonVPN", action: nil, keyEquivalent: "")
+        let protonVpnMenuItem = NSMenuItem(title: "prtvpn", action: nil, keyEquivalent: "")
         protonVpnMenuItem.submenu = protonVpnMenu.menu
         mainMenu.addItem(protonVpnMenuItem)
 
@@ -47,11 +46,6 @@ final class MenuManager {
         editMenuItem.submenu = editMenu.editMenu
         mainMenu.addItem(editMenuItem)
 
-        // Create Profiles menu
-        let profilesMenuItem = NSMenuItem(title: Localizable.profiles, action: nil, keyEquivalent: "")
-        profilesMenuItem.submenu = profilesMenu.profilesMenu
-        profilesMenu.profilesMenuItem = profilesMenuItem
-        mainMenu.addItem(profilesMenuItem)
 
         // Create Window menu
         let windowMenuItem = NSMenuItem(title: Localizable.menuWindow, action: nil, keyEquivalent: "")
@@ -75,7 +69,6 @@ final class MenuManager {
 
     func updateMenuControllers() {
         protonVpnMenu.update(with: container.makeProtonVpnMenuViewModel())
-        profilesMenu.update(with: container.makeProfilesMenuViewModel())
         helpMenu.update(with: container.makeHelpMenuViewModel())
         statusMenu.update(with: container.makeStatusMenuWindowModel())
         container.makeWindowService().setStatusMenuWindowController(statusMenu)
