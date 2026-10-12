@@ -103,14 +103,15 @@ class WelcomeViewController: NSViewController {
         usageStatisticsButton.delegate = self
         crashReportsButton.delegate = self
 
-        // Telemetry and crash report is on by default
-        $telemetryUsageData.withLock { $0 = String(true) }
-        $telemetryCrashReports.withLock { $0 = String(true) }
+        // 사용 통계와 충돌 보고는 보내지 않으므로 값은 항상 꺼 두고 스위치도 숨김
+        $telemetryUsageData.withLock { $0 = String(false) }
+        $telemetryCrashReports.withLock { $0 = String(false) }
+        telemetryStackView.isHidden = true
 
         usageStatisticsButton.buttonView?.tag = Switch.usageData.rawValue
-        usageStatisticsButton.setState(.on)
+        usageStatisticsButton.setState(.off)
         crashReportsButton.buttonView?.tag = Switch.crashReports.rawValue
-        crashReportsButton.setState(.on)
+        crashReportsButton.setState(.off)
 
         DarkAppearance {
             usageStatisticsButton.maskColor = .cgColor(.background, .weak)

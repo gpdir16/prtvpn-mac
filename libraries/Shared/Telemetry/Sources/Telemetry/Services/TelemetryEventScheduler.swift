@@ -51,7 +51,12 @@ public class TelemetryEventScheduler {
     }
 
     private var telemetryUsageData: Bool {
-        isBusiness ? businessEvents : telemetryUsageDataShared == String(true)
+        #if os(macOS)
+            // macOS 앱은 사용 통계를 수집하거나 보내지 않음
+            return false
+        #else
+            return isBusiness ? businessEvents : telemetryUsageDataShared == String(true)
+        #endif
     }
 
     private var businessEvents: Bool {
