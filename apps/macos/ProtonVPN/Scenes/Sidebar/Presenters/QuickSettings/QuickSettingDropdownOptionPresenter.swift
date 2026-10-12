@@ -33,6 +33,13 @@ protocol QuickSettingDropdownOptionPresenter: AnyObject {
     var requiresUpdate: Bool { get }
 
     var selectCallback: SuccessConfirmationCallback { get }
+
+    /// 제목 아래에 보여 줄 설명. 없으면 제목만 보임.
+    var detail: String? { get }
+}
+
+extension QuickSettingDropdownOptionPresenter {
+    var detail: String? { nil }
 }
 
 class QuickSettingGenericOption: QuickSettingDropdownOptionPresenter {
@@ -41,14 +48,17 @@ class QuickSettingGenericOption: QuickSettingDropdownOptionPresenter {
     let icon: NSImage
     let requiresUpdate: Bool
     let selectCallback: SuccessConfirmationCallback
+    let detail: String?
 
     init(
         _ title: String,
         icon: NSImage = AppTheme.Icon.brandTor,
         active: Bool,
         requiresUpdate: Bool = false,
+        detail: String? = nil,
         selectCallback: @escaping SuccessConfirmationCallback
     ) {
+        self.detail = detail
         self.title = title
         self.active = active
         self.icon = icon

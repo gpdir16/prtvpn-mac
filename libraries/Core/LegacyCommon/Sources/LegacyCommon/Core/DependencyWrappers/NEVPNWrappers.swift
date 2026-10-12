@@ -87,7 +87,24 @@ public struct NETunnelProviderManagerClient: Sendable {
 }
 
 extension NETunnelProviderManagerClient: DependencyKey {
-    public static let liveValue = NETunnelProviderManagerClient(
+    #if os(macOS)
+        // macOS 에서는 NetworkExtension 대신 데몬(prtvpn-daemon)이 터널을 올림. `DaemonTunnel.swift` 참고.
+        public static let liveValue = NETunnelProviderManagerClient(
+            loadManagers: {
+                [DaemonTunnelManager.shared]
+            },
+            getManagerForBundleSync: { _, completionHandler in
+                completionHandler(DaemonTunnelManager.shared, nil)
+            },
+            getManagerForBundle: { _ in
+                DaemonTunnelManager.shared
+            }
+        )
+    #else
+        public static let liveValue = networkExtensionValue
+    #endif
+
+    static let networkExtensionValue = NETunnelProviderManagerClient(
         loadManagers: {
             try await NETunnelProviderManager.loadAllFromPreferences()
         },

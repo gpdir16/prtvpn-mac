@@ -108,6 +108,12 @@ extension AppDelegate: NSApplicationDelegate {
         NSApp.appearance = .init(named: .darkAqua)
         injectDefaultCryptoImplementation()
 
+        // 킬 스위치 설정을 터널 데몬의 방화벽 스위치에 반영함. 방화벽이 켜져 있어도 API 에는 닿아야 함.
+        DaemonFirewall.apiHosts = [ObfuscatedConstants.apiHost, ObfuscatedConstants.humanVerificationV3Host]
+            .compactMap { URL(string: $0)?.host }
+        DaemonFirewall.shared.start()
+        DaemonFirewall.shared.sync()
+
         #if DEBUG
             Atlantis.start()
         #endif
@@ -146,15 +152,7 @@ extension AppDelegate: NSApplicationDelegate {
                 setNSCodingModuleName()
                 setupDebugHelpers()
 
-                SentryHelper.setupSentry(
-                    dsn: ObfuscatedConstants.sentryDsnmacOS,
-                    isEnabled: { [weak self] in
-                        self?.telemetryCrashReports == String(true)
-                    },
-                    getUserId: { [weak self] in
-                        self?.authKeychain.userId
-                    }
-                )
+                // 충돌 보고(Sentry)와 사용 통계는 이 앱에서 보내지 않음
 
                 AppLaunchRoutine.execute()
                 #if !REDESIGN
@@ -239,11 +237,7 @@ extension AppDelegate: NSApplicationDelegate {
         log.info("applicationDidBecomeActive", category: .os)
         updateRecentlyActive(true)
 
-        // Refresh API announcements
-        @Dependency(\.announcementRefresher) var announcementRefresher: AnnouncementRefresher
-        if propertiesManager.featureFlags.pollNotificationAPI, authKeychain.username != nil {
-            announcementRefresher.tryRefreshing()
-        }
+        // 프로모션 공지는 보여 주지 않으므로 받아 오지도 않음
     }
 
     func applicationDidResignActive(_: Notification) {
@@ -338,7 +332,7 @@ extension AppDelegate: NSApplicationDelegate {
     }
 
     private func startedAtLogin() -> Bool {
-        let launcherAppIdentifier = "ch.protonvpn.ProtonVPNStarter"
+        let launcherAppIdentifier = "app.prtvpn.ProtonVPNStarter"
         for app in NSWorkspace.shared.runningApplications where app.bundleIdentifier == launcherAppIdentifier {
             return true
         }
@@ -457,11 +451,7 @@ extension AppDelegate {
 
                 await CheckedFeatureFlagsRepository.shared.fetchFlags()
 
-                if telemetryCrashReports == String(true) {
-                    enableExternalLogging()
-                } else {
-                    disableExternalLogging()
-                }
+                disableExternalLogging()
             default:
                 break
             }
@@ -471,18 +461,10 @@ extension AppDelegate {
                 category: .api, event: .response, metadata: ["error": "\(error)"]
             )
         }
-        ObservabilityEnv.current.setupWorld(requestPerformer: apiService)
     }
 
     private func registerForTelemetryChanges() {
-        $telemetryCrashReports.publisher.sink { value in
-            switch value == String(true) {
-            case true:
-                self.enableExternalLogging()
-            case false:
-                self.disableExternalLogging()
-            }
-        }
-        .store(in: &cancellables)
+        // 설정 값과 관계없이 외부로 로그를 보내지 않음
+        disableExternalLogging()
     }
 }

@@ -113,7 +113,11 @@ final class ConnectionSettingsViewModel {
 
     // MARK: - Available protocols and Profiles
 
-    lazy var availableConnectionProtocols: [ConnectionProtocol] = ConnectionProtocol.availableProtocols(wireguardTLSEnabled: propertiesManager.featureFlags.wireGuardTls)
+    // IKEv2 는 시스템 VPN 구성(NEVPNManager)을 저장해야 해서 Apple 이 서명한 앱에서만 동작함.
+    // 이 빌드의 터널은 데몬이 올리는 WireGuard 뿐이므로 고를 수 없게 뺌.
+    lazy var availableConnectionProtocols: [ConnectionProtocol] = ConnectionProtocol
+        .availableProtocols(wireguardTLSEnabled: propertiesManager.featureFlags.wireGuardTls)
+        .filter { $0 != .vpnProtocol(.ike) }
         .appending(selectedProtocol) // Edge case - user's protocol has been deprecated. Show it as disabled
         .uniqued
         .sorted(by: ConnectionProtocol.uiSort)
@@ -455,21 +459,9 @@ final class ConnectionSettingsViewModel {
         let isConnected = vpnGateway.connection == .connected || vpnGateway.connection == .connecting
         let newValue: ExcludeLocalNetworks = enabled ? .on : .off
 
-        if propertiesManager.killSwitch {
-            let alert = LANConnectionsKillSwitchConflictAlert(connected: isConnected) {
-                self.featurePropertyProvider.setValue(newValue)
-                self.propertiesManager.killSwitch = false
-                if isConnected {
-                    log.info("Connection will restart after VPN feature change", category: .connectionConnect, event: .trigger, metadata: ["feature": "excludeLocalNetworks", "feature_additional": "killSwitch"])
-                    self.vpnGateway.retryConnection()
-                }
-                completion(true)
-            } cancelHandler: {
-                completion(false)
-            }
-
-            alertService.push(alert: alert)
-            return
+        // 방화벽(킬 스위치)이 켜져 있으면 LAN 허용 여부는 방화벽 규칙에도 바로 반영함
+        defer {
+            if propertiesManager.killSwitch { DaemonFirewall.shared.sync() }
         }
 
         guard isConnected else {

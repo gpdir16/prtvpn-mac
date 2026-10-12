@@ -36,8 +36,8 @@
     }
 
     public enum SystemExtensionType: String, CaseIterable {
-        case wireGuard = "ch.protonvpn.mac.WireGuard-Extension"
-        case plutonium = "ch.protonvpn.mac.Transparent-Proxy"
+        case wireGuard = "app.prtvpn.mac.WireGuard-Extension"
+        case plutonium = "app.prtvpn.mac.Transparent-Proxy"
 
         public var machServiceName: String {
             "\(DomainConstants.appIdentifierPrefix)group.\(rawValue)"
@@ -207,7 +207,7 @@
             userActionRequiredHandler: @escaping (([SystemExtensionType]) -> Void),
             installationFinishedHandler: @escaping ((InstallationState) -> Void)
         ) {
-            let queue = DispatchQueue(label: "ch.protonvpn.sysext.status.\(UUID().uuidString)")
+            let queue = DispatchQueue(label: "app.prtvpn.sysext.status.\(UUID().uuidString)")
             var states: InstallationState = [:]
             var extensionsRequiringApproval = [SystemExtensionType]()
 
@@ -302,6 +302,14 @@
             includedTypes: [SystemExtensionType],
             actionHandler: @escaping (SystemExtensionResult, [SystemExtensionType: SystemExtensionResult]) -> Void
         ) {
+            // 이 포크는 시스템 확장을 쓰지 않음(터널은 데몬이 올림, `DaemonTunnel.swift` 참고).
+            // 설치할 것이 없으므로 WireGuard 를 바로 쓸 수 있다고 알림.
+            let results: [SystemExtensionType: SystemExtensionResult] = Dictionary(
+                uniqueKeysWithValues: includedTypes.map { ($0, .success(.installed)) }
+            )
+            DispatchQueue.main.async { actionHandler(.success(.installed), results) }
+            return
+
             var didRequireUserApproval = false
 
             submitInstallationRequests(includedTypes: includedTypes, userInitiated: shouldStartTour, userActionRequiredHandler: { [unowned self] installationState in

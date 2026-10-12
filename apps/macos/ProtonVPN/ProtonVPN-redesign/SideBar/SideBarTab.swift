@@ -16,51 +16,56 @@
 //  You should have received a copy of the GNU General Public License
 //  along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
 
-#if REDESIGN
 
-    import Home
-    import ProtonCoreUIFoundations
-    import Strings
-    import SwiftUI
-    import Theme
+import AppKit
+import Domain
+import Strings
+import Theme
 
-    enum SideBarTab: Hashable, CaseIterable {
-        case home
-        case countries
-        case settings
+/// 오른쪽 기능 바에 올라가는 빠른 설정 항목
+enum QuickSettingWidget: CaseIterable, Identifiable {
+    case netShield
+    case killSwitch
+    case portForwarding
+    case secureCore
 
-        var title: String {
-            switch self {
-            case .home:
-                Localizable.homeTab
-            case .countries:
-                Localizable.countriesTab
-            case .settings:
-                Localizable.settingsTab
-            }
-        }
+    var id: Self { self }
 
-        var accessibilityIdentifier: String {
-            switch self {
-            case .home:
-                "Home tab"
-            case .countries:
-                "Countries tab"
-            case .settings:
-                "Settings tab"
-            }
-        }
-
-        var image: SwiftUI.Image {
-            switch self {
-            case .home:
-                IconProvider.house
-            case .countries:
-                IconProvider.earth
-            case .settings:
-                IconProvider.cogWheel
-            }
+    var title: String {
+        switch self {
+        case .netShield: Localizable.netshieldTitle
+        case .killSwitch: Localizable.killSwitch
+        case .portForwarding: Localizable.portForwarding
+        case .secureCore: Localizable.secureCore
         }
     }
 
-#endif
+    var accessibilityIdentifier: String {
+        switch self {
+        case .netShield: "NetShieldWidget"
+        case .killSwitch: "KillSwitchWidget"
+        case .portForwarding: "PortForwardingWidget"
+        case .secureCore: "SecureCoreWidget"
+        }
+    }
+
+    /// 팝오버에서 제목 아래에 보여 주는 기능 설명
+    var detail: String {
+        switch self {
+        case .netShield: Localizable.quickSettingsNetShieldDescription
+        case .killSwitch: ""
+        case .portForwarding: Localizable.quickSettingsPortForwardingDescription
+        case .secureCore: Localizable.quickSettingsSecureCoreDescription
+        }
+    }
+
+    /// 원래 앱에서 쓰던 아이콘. 켜짐/꺼짐(NetShield는 단계)에 따라 모양이 달라짐.
+    func icon(isOn: Bool, netShieldLevel: NetShieldType = .off) -> NSImage {
+        switch self {
+        case .netShield: netShieldLevel.quickSettingsIcon
+        case .killSwitch: isOn ? AppTheme.Icon.switchOn : AppTheme.Icon.switchOff
+        case .portForwarding: isOn ? AppTheme.Icon.arrowsSwitch : AppTheme.Icon.arrowUpBounceLeft
+        case .secureCore: isOn ? AppTheme.Icon.locks : AppTheme.Icon.lock
+        }
+    }
+}

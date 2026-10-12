@@ -77,7 +77,7 @@ public final class VpnManager: VpnManagerProtocol {
 
     private var quickReconnection = false
 
-    let connectionQueue = DispatchQueue(label: "ch.protonvpn.vpnmanager.connection", qos: .utility)
+    let connectionQueue = DispatchQueue(label: "app.prtvpn.vpnmanager.connection", qos: .utility)
 
     @Dependency(\.ikeProtocolManager) private var ikeProtocolManager
     @Dependency(\.wireguardProtocolManager) private var wireguardProtocolManager
@@ -136,7 +136,7 @@ public final class VpnManager: VpnManagerProtocol {
 
     public var stateChanged: (() -> Void)?
 
-    private let localAgentIsConnectedQueue = DispatchQueue(label: "ch.protonvpn.local-agent.is-connected")
+    private let localAgentIsConnectedQueue = DispatchQueue(label: "app.prtvpn.local-agent.is-connected")
     private var _isLocalAgentConnectedNoSync: Bool?
     public internal(set) var isLocalAgentConnected: Bool? {
         get {
@@ -711,21 +711,8 @@ public final class VpnManager: VpnManagerProtocol {
             "currentProtocol": "\(optional: currentVpnProtocol)",
         ])
 
-        #if os(macOS)
-            // Prevents creating a plutonium tunnel config if the FF is disabled.
-            if VPNFeatureFlagType.plutoniumMacOS.enabled {
-                plutoniumUpdateTask?.cancel()
-                plutoniumUpdateTask = Task {
-                    do {
-                        try await updatePlutoniumStateIfNeeded()
-                    } catch let PlutoniumManagerError.saveFailed(error) {
-                        log.error("Error while saving plutonium manager: \(error)")
-                    } catch {
-                        log.error("Error while updating plutonium state: \(error.localizedDescription)")
-                    }
-                }
-            }
-        #endif
+        // Plutonium(분할 터널링)은 Apple 이 서명한 NetworkExtension 이 있어야 동작함. 이 빌드는 데몬 터널만 쓰므로
+        // NE 구성을 만들지 않음 (만들려고 하면 매번 permission denied 로 실패함).
 
         switch state {
         case .connecting:

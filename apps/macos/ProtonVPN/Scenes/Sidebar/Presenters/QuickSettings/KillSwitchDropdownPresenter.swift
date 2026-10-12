@@ -53,7 +53,7 @@ class KillSwitchDropdownPresenter: QuickSettingDropdownPresenter {
     }
 
     override var options: [QuickSettingDropdownOptionPresenter] {
-        [killSwitchOff, killSwitchOn]
+        [option(.auto), option(.on), option(.lockdown), option(.off)]
     }
 
     override func viewDidLoad() {
@@ -75,46 +75,25 @@ class KillSwitchDropdownPresenter: QuickSettingDropdownPresenter {
 
     // MARK: - Private
 
-    private var killSwitchOff: QuickSettingGenericOption {
-        let active = propertiesManager.killSwitch
-        let text = Localizable.killSwitch + " " + Localizable.switchSideButtonOff.capitalized
-        let icon = AppTheme.Icon.switchOff
-        return QuickSettingGenericOption(text, icon: icon, active: !active, selectCallback: { dismissCallback in
-            self.propertiesManager.killSwitch = false
-            if self.vpnGateway.connection == .connected {
-                log.info("Connection will restart after VPN feature change", category: .connectionConnect, event: .trigger, metadata: ["feature": "killSwitch"])
-                self.vpnGateway.retryConnection()
-            }
-            dismissCallback()
-        })
-    }
-
-    private var killSwitchOn: QuickSettingGenericOption {
-        let active = propertiesManager.killSwitch
-        let text = Localizable.killSwitch + " " + Localizable.switchSideButtonOn.capitalized
-        let icon = AppTheme.Icon.switchOn
-
-        @Shared(.plutoniumFeature) var plutonium: PlutoniumFeatureToggle
-
-        let confirmKillSwitchOn = {
-            self.propertiesManager.killSwitch = true
-            self.featurePropertyProvider.setValue(ExcludeLocalNetworks.off)
-            $plutonium.withLock { $0 = .disabled(plutonium.mode) }
-            if self.vpnGateway.connection == .connected {
-                log.info("Connection will restart after VPN feature change", category: .connectionConnect, event: .trigger, metadata: ["feature": "killSwitch"])
-                self.vpnGateway.retryConnection()
-            }
+    // 방화벽은 터널과 독립적이라 모드를 바꿔도 재연결이 필요 없고, LAN 허용 여부는 데몬이 설정을 그대로 따르므로 충돌 경고도 없음.
+    private func option(_ mode: FirewallMode) -> QuickSettingGenericOption {
+        let title: String
+        let detail: String
+        switch mode {
+        case .auto: (title, detail) = (Localizable.firewallModeAuto, Localizable.firewallModeAutoDescription)
+        case .on: (title, detail) = (Localizable.firewallModeOn, Localizable.firewallModeOnDescription)
+        case .lockdown: (title, detail) = (Localizable.firewallModeLockdown, Localizable.firewallModeLockdownDescription)
+        case .off: (title, detail) = (Localizable.firewallModeOff, Localizable.firewallModeOffDescription)
         }
-
-        return QuickSettingGenericOption(text, icon: icon, active: active, selectCallback: { dismissCallback in
-            defer { dismissCallback() }
-
-            if self.featurePropertyProvider.getValue(for: ExcludeLocalNetworks.self) == .off, case .disabled = plutonium {
-                confirmKillSwitchOn()
-                return
+        let icon = mode == .off ? AppTheme.Icon.switchOff : AppTheme.Icon.switchOn
+        return QuickSettingGenericOption(title, icon: icon, active: DaemonFirewall.mode == mode, detail: detail, selectCallback: { dismissCallback in
+            // 예기치 않게 끊겨 자동 전환이 막고 있는 상태에서 벗어날 방법이 필요함:
+            // 연결이 끊긴 채로 사용자가 모드를 직접 고르면 의도적으로 끊은 것으로 봄.
+            if self.appStateManager.state.isDisconnected {
+                DaemonFirewall.userWillDisconnect()
             }
-
-            self.alertService.push(alert: KillSwitchConflictAlert(confirmHandler: confirmKillSwitchOn, cancelHandler: nil))
+            DaemonFirewall.mode = mode
+            dismissCallback()
         })
     }
 }

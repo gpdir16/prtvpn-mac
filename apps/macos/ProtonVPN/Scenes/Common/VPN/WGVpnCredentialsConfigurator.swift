@@ -39,10 +39,9 @@ final class WGVpnCredentialsConfigurator: VpnCredentialsConfigurator {
             completionHandler(protocolConfig)
         }
 
-        xpcServiceUser.setConfigData(configData) { result in
-            let success = result ? "success" : "failure"
-            log.info("Credentials set result (wg): \(success)", category: .sysex)
-            completionHandler(protocolConfig)
-        }
+        // 시스템 확장에 XPC 로 보내던 설정을, 터널을 올리는 데몬 세션에 넘김
+        DaemonTunnelConfigStore.configData = configData
+        log.info("Credentials set for daemon tunnel (wg)", category: .sysex)
+        completionHandler(protocolConfig)
     }
 }

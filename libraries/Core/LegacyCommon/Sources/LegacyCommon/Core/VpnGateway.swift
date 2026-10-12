@@ -536,6 +536,9 @@ public class VpnGateway: VpnGatewayProtocol {
     public func stopConnecting(userInitiated: Bool) {
         AppEvent.userInitiatedVPNChange.post(UserInitiatedVPNChange.abort)
         log.info("Connecting cancelled, userInitiated: \(userInitiated)", category: .connectionConnect)
+        #if os(macOS)
+            if userInitiated { DaemonFirewall.userWillDisconnect() }
+        #endif
         connectionPreparer = nil
         appStateManager.cancelConnectionAttempt()
     }

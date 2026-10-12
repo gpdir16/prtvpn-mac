@@ -137,6 +137,11 @@ class VpnConnectionPreparer {
         }
 
         log.info("Selected \(serverIp) as server ip for \(server.domain)", category: .connectionConnect)
+        #if os(macOS)
+            if let entryIp = serverIp.entryIp {
+                DaemonFirewall.allowServer(entryIp)
+            }
+        #endif
         return serverIp
     }
 

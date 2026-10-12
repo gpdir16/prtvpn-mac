@@ -34,6 +34,11 @@ extension DisconnectVPNKey: @retroactive DependencyKey {
         @Dependency(\.connectionBridge) var bridge
         @SharedReader(.connectionState) var connectionState: ConnectionState
 
+        #if os(macOS)
+            // 사용자가 연결 끊기를 직접 누른 경우에만 자동 전환 방화벽을 풀어 줌.
+            // 앱이 대신 끊는 경우(.auto: 프로토콜 변경, Secure Core 전환, 세션 전환 등)에는 방화벽을 그대로 둬야 IP 가 새지 않음.
+            if trigger != .auto { DaemonFirewall.userWillDisconnect() }
+        #endif
         AppEvent.userInitiatedVPNChange.post(UserInitiatedVPNChange.disconnect(trigger))
         await bridge.push(intent: .disconnect)
 
@@ -46,7 +51,12 @@ extension DisconnectVPNKey: @retroactive DependencyKey {
     }
 
     /// Bridges new disconnection dependency with the legacy connection layer
-    public static let legacyDisconnect: @Sendable (UserInitiatedVPNChange.VPNTrigger) async throws -> Void = { _ in
+    public static let legacyDisconnect: @Sendable (UserInitiatedVPNChange.VPNTrigger) async throws -> Void = { trigger in
+        #if os(macOS)
+            // 사용자가 연결 끊기를 직접 누른 경우에만 자동 전환 방화벽을 풀어 줌.
+            // 앱이 대신 끊는 경우(.auto: 프로토콜 변경, Secure Core 전환, 세션 전환 등)에는 방화벽을 그대로 둬야 IP 가 새지 않음.
+            if trigger != .auto { DaemonFirewall.userWillDisconnect() }
+        #endif
         let gateway = Container.sharedContainer.makeVpnGateway2()
         try await gateway.disconnect()
 

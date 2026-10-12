@@ -16,100 +16,103 @@
 //  You should have received a copy of the GNU General Public License
 //  along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
 
-#if REDESIGN
 
-    import ComposableArchitecture
-    import ConnectionDetails
-    import ConnectionDetails_macOS
-    import Home
-    import ProtonCoreUIFoundations
-    import SwiftUI
-    import Theme
+import ComposableArchitecture
+import Countries
+import Dependencies
+import Domain
+import Home
+import LegacyCommon
+import SwiftUI
+import Theme
+import VPNAppCore
 
-    public struct SideBarView: View {
-        @State private var connectionDetailsVisible = false
+/// 메인 창의 루트 뷰. Windows 앱과 같은 구조로, 지도 위에 목록 패널과 기능 바가 떠 있음.
+struct MainView: View {
+    let homeStore: StoreOf<HomeFeature>
+    let countriesViewModel: CountriesSectionViewModel
+    let openSettings: () -> Void
 
-        @State private var sidebarActive: Bool = true
-        @State private var backgroundActive: Bool = false
-        @State private var selectedTab: SideBarTab = .home
+    /// 프레젠터는 접근할 때마다 새로 만들어지므로 항목별로 하나씩 보관함
+    private let presenters: [QuickSettingWidget: QuickSettingDropdownPresenter]
 
-        let store: StoreOf<SidebarReducer>
+    @Dependency(\.propertiesManager) private var propertiesManager
+    @Dependency(\.netShieldPropertyProvider) private var netShieldPropertyProvider
+    @Dependency(\.portForwardingPropertyProvider) private var portForwardingPropertyProvider
 
-        init(store: StoreOf<SidebarReducer>) {
-            self.store = store
-        }
+    init(
+        homeStore: StoreOf<HomeFeature>,
+        countriesViewModel: CountriesSectionViewModel,
+        openSettings: @escaping () -> Void
+    ) {
+        self.homeStore = homeStore
+        self.countriesViewModel = countriesViewModel
+        self.openSettings = openSettings
+        self.presenters = [
+            .netShield: countriesViewModel.netShieldPresenter,
+            .killSwitch: countriesViewModel.killSwitchPresenter,
+            .portForwarding: countriesViewModel.portForwardingPresenter,
+            .secureCore: countriesViewModel.secureCorePresenter,
+        ]
+    }
 
-        public var body: some View {
-            ZStack {
-                if backgroundActive { // This background is made to block the pixels behind the sidebar from being visible while view moves to 0% opacity
-                    Color(.background).ignoresSafeArea()
+    var body: some View {
+        HomeDesktopView(
+            store: homeStore,
+            onSearch: { countriesViewModel.filterContent(forQuery: $0) },
+            locations: {
+                LocationListView(model: countriesViewModel.listModel) {
+                    DesktopRecentsSection(store: homeStore.scope(state: \.recents, action: \.recents))
                 }
-                HStack(spacing: 0) {
-                    if sidebarActive {
-                        VStack(alignment: .leading, spacing: 0) {
-                            SideBarItemView(category: .home, selectedTab: $selectedTab)
-                            SideBarItemView(category: .countries, selectedTab: $selectedTab)
-                            SideBarItemView(category: .settings, selectedTab: $selectedTab)
-                            Spacer()
-                            ProfileButtonView()
-                        }
-                        .fixedSize(horizontal: true, vertical: false) // don't allow for horizontal resizing the view when window resizes
-                        .background(.ultraThickMaterial)
-                    }
-                    switch selectedTab {
-                    case .home:
-                        VStack(spacing: 0) {
-                            HomeView(store: store.scope(state: \.home, action: SidebarReducer.Action.home))
-                        }
-                        .background(Color(.background))
-                        if store.connectionDetailsVisible {
-                            ConnectionDetailsView()
-                        }
-                    case .countries:
-                        CountriesView {
-                            selectedTab = .home
-                        }
-                    case .settings:
-                        SettingsView()
-                    }
-                }
+            },
+            widgets: {
+                WidgetBarView(
+                    widgets: widgets,
+                    presenter: { presenters[$0]! },
+                    isOn: isOn,
+                    netShieldLevel: { netShieldPropertyProvider.getNetShieldType() },
+                    openSettings: openSettings
+                )
             }
-            .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    Button(action: {
-                        toggleSidebar()
-                    }, label: {
-                        IconProvider.sidePanelLeft
-                            .resizable()
-                            .foregroundColor(Color(.text, .weak))
-                            .frame(.square(.themeSpacing16))
-                    })
-                }
-            }
-        }
+        )
+        .frame(minWidth: 860, minHeight: 600)
+    }
 
-        private func toggleSidebar() {
-            if sidebarActive { // changing to hidden sidebar
-                backgroundActive.toggle() // show the background immediately when it starts to hide
-            } else { // hide the background after the showing animation finishes
-                withAnimation(.easeIn(duration: 0.7)) { // 0.7 instead of 0.3 to prevent the view behind from seeing through the app window.
-                    backgroundActive.toggle()
-                }
-            }
-            withAnimation(.easeOut(duration: 0.3)) {
-                sidebarActive.toggle()
+    private var widgets: [QuickSettingWidget] {
+        QuickSettingWidget.allCases.filter { widget in
+            switch widget {
+            case .netShield: countriesViewModel.isNetShieldEnabled
+            case .portForwarding: VPNFeatureFlagType.portForwarding.enabled
+            case .killSwitch, .secureCore: true
             }
         }
     }
 
-    struct SideBarView_Previews: PreviewProvider {
-        @Dependency(\.initialStateProvider) static var initialStateProvider
-        static var previews: some View {
-            SideBarView(store: .init(
-                initialState: initialStateProvider.initialState,
-                reducer: { SidebarReducer() }
-            ))
+    private func isOn(_ widget: QuickSettingWidget) -> Bool {
+        switch widget {
+        case .netShield: netShieldPropertyProvider.getNetShieldType() != .off
+        case .killSwitch: DaemonFirewall.mode != .off
+        case .portForwarding: portForwardingPropertyProvider.getPortForwarding() ?? false
+        case .secureCore: propertiesManager.secureCoreToggle
         }
     }
+}
 
-#endif
+extension MainView {
+    /// 홈 화면 스토어를 만들고, 한 번만 보내야 하는 시작 액션들을 전달함
+    static func makeHomeStore() -> StoreOf<HomeFeature> {
+        // 빠른 연결은 항상 가장 최근에 연결한 곳으로 함 (기록이 없으면 가장 빠른 서버)
+        @Shared(.defaultConnectionPreference) var defaultConnectionPreference
+        $defaultConnectionPreference.withLock { $0 = .mostRecent }
+
+        let store = StoreOf<HomeFeature>(initialState: .init()) {
+            HomeFeature()
+        }
+        store.send(.onStart)
+        store.send(.sharedProperties(.listen))
+        store.send(.map(.observeConnectionState))
+        // 최근 탭을 열지 않아도 연결 기록이 쌓이도록 처음부터 지켜봄
+        store.send(.recents(.watchConnectionStatus))
+        return store
+    }
+}
