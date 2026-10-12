@@ -95,6 +95,8 @@ extension VPNServerFilter {
             return info.protocolSupport.contains(vpnProtocol)
         case .isNotUnderMaintenance:
             return !info.logical.isUnderMaintenance
+        case let .virtual(isVirtual):
+            return info.logical.isVirtual == isVirtual
         default:
             reportIssue("The filter \(self) should either be used through GRDB or have an explicit case defined.")
             log.assertionFailure("Unexpected filter \(self)")

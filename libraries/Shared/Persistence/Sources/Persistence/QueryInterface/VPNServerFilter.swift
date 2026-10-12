@@ -25,6 +25,9 @@ public enum VPNServerFilter {
     /// Filter by logical ID
     case logicalID(String)
 
+    /// 가상 서버(실제 위치가 표시 국가와 다른 서버)만, 또는 물리 서버만 고름
+    case virtual(Bool)
+
     /// Filter by endpoint ID (ProTUN Peer ID)
     case endpointID(String)
 
@@ -172,6 +175,8 @@ extension VPNServerFilter: CustomStringConvertible {
         switch self {
         case let .logicalID(logicalID):
             "|logical=\(logicalID)"
+        case let .virtual(isVirtual):
+            "|virtual=\(isVirtual)"
         case let .endpointID(endpointID):
             "|endpoint=\(endpointID)"
         case let .entryCountryCode(code):

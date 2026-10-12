@@ -31,6 +31,12 @@ extension VPNServerFilter {
         case let .logicalID(id):
             return logical[Logical.Columns.id] == id
 
+        case let .virtual(isVirtual):
+            // LogicalQueries 의 isVirtual 과 같은 기준: 호스트 국가가 있고 출구 국가와 다르면 가상 서버
+            let hostCountry = logical[Logical.Columns.hostCountry]
+            let virtualExpression = hostCountry != nil && hostCountry != logical[Logical.Columns.exitCountryCode]
+            return isVirtual ? virtualExpression : !virtualExpression
+
         case let .endpointID(id):
             return endpoint[Endpoint.Columns.id] == id
 

@@ -31,7 +31,7 @@ public enum ServerRepositoryKey: DependencyKey {
         let dbWriter = DatabaseQueue.from(databaseConfiguration: config)
         let executor = config.executor
 
-        return ServerRepository(
+        let repository = ServerRepository(
             serverCount: {
                 executor.read(dbWriter: dbWriter) { db in
                     try Logical.fetchCount(db)
@@ -191,5 +191,6 @@ public enum ServerRepositoryKey: DependencyKey {
             },
             closeConnection: { try dbWriter.close() }
         )
+        return repository.applyingVirtualServerPolicy()
     }
 }
