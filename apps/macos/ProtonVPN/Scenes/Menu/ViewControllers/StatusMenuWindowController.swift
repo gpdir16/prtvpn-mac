@@ -21,7 +21,12 @@
 //
 
 import AppKit
+import Dependencies
+import Domain
+import LegacyCommon
+import Strings
 import Theme
+import VPNAppCore
 
 class StatusWindow: NSPanel {
     override var canBecomeKey: Bool {
@@ -77,8 +82,6 @@ final class StatusMenuWindowController: WindowController {
     func update(with windowModel: StatusMenuWindowModel) {
         self.windowModel = windowModel
 
-        contentViewController = windowModel.statusMenuViewController
-
         setupIcon()
 
         self.windowModel?.contentChanged = { [weak self] in
@@ -87,26 +90,105 @@ final class StatusMenuWindowController: WindowController {
             }
         }
 
-        eventsMonitor = NSEvent.addLocalMonitorForEvents(matching: [.leftMouseDown, .keyDown]) { [weak self] event in
-            switch event.type {
-            case .leftMouseDown:
-                if event.isStatusItemClicked(event: event) == self?.statusItem {
-                    self?.togglePopover()
-                }
-            case .keyDown where event.keyCode == KeyCode.escape.rawValue:
-                self?.dismissPopover()
-            default:
-                break
-            }
-
-            return event
-        }
+        // 메뉴 막대 아이콘은 작은 창을 띄우지 않고 메인 창을 앞으로 가져옴.
+        // 버튼 액션으로 받아야 마우스뿐 아니라 손쉬운 사용(키보드, VoiceOver)으로 눌러도 동작함.
+        statusItem.button?.target = self
+        statusItem.button?.action = #selector(statusItemClicked)
+        // 오른쪽 클릭으로는 메뉴를 엶
+        statusItem.button?.sendAction(on: [.leftMouseUp, .rightMouseUp])
     }
 
     private func setupIcon() {
         iconManager.setImage(windowModel?.statusIcon ?? .unknown)
         iconManager.isBlinking = windowModel?.isStatusIconBlinking ?? false
         NSApp.applicationIconImage = (windowModel?.appIcon ?? .active).image
+    }
+
+    @objc
+    private func statusItemClicked() {
+        let event = NSApp.currentEvent
+        if event?.type == .rightMouseUp || event?.modifierFlags.contains(.control) == true {
+            showContextMenu()
+        } else {
+            showMainWindow()
+        }
+    }
+
+    /// 메뉴 막대 아이콘을 오른쪽 클릭했을 때의 메뉴
+    private func showContextMenu() {
+        guard let container = Container.sharedContainer as? DependencyContainer else { return }
+        let isLoggedIn = container.makeAppSessionManager().sessionStatus == .established
+        let state = container.makeAppStateManager().state
+        let menu = NSMenu()
+
+        if isLoggedIn {
+            let status = NSMenuItem(
+                title: state.isConnected ? Localizable.connectionStatusProtected : Localizable.connectionStatusUnprotected,
+                action: nil,
+                keyEquivalent: ""
+            )
+            status.isEnabled = false
+            menu.addItem(status)
+            menu.addItem(.separator())
+        }
+
+        menu.addItem(menuItem(Localizable.statusItemOpen, #selector(showMainWindow)))
+        if isLoggedIn {
+            if state.isDisconnected {
+                menu.addItem(menuItem(Localizable.connect, #selector(connectFromMenu)))
+            } else {
+                menu.addItem(menuItem(Localizable.disconnect, #selector(disconnectFromMenu)))
+            }
+            menu.addItem(.separator())
+            menu.addItem(menuItem(Localizable.statusItemSettings, #selector(openSettingsFromMenu)))
+        }
+        menu.addItem(.separator())
+        menu.addItem(menuItem(Localizable.statusItemQuit, #selector(quitFromMenu)))
+
+        // 메뉴를 상시로 달아 두면 왼쪽 클릭에도 열리므로, 보여 주는 동안에만 달았다가 뗌
+        statusItem.menu = menu
+        statusItem.button?.performClick(nil)
+        statusItem.menu = nil
+    }
+
+    private func menuItem(_ title: String, _ action: Selector) -> NSMenuItem {
+        let item = NSMenuItem(title: title, action: action, keyEquivalent: "")
+        item.target = self
+        return item
+    }
+
+    @objc
+    private func connectFromMenu() {
+        (Container.sharedContainer as? VpnGatewayFactory)?.makeVpnGateway().quickConnect(trigger: .tray)
+    }
+
+    @objc
+    private func disconnectFromMenu() {
+        // 사용자가 직접 끊는 것이므로 자동 전환 방화벽이 풀리는 경로로 끊음
+        Task {
+            @Dependency(\.disconnectVPN) var disconnectVPN
+            try? await disconnectVPN(.tray)
+        }
+    }
+
+    @objc
+    private func openSettingsFromMenu() {
+        (Container.sharedContainer as? NavigationServiceFactory)?.makeNavigationService().openSettings(to: .general)
+    }
+
+    @objc
+    private func quitFromMenu() {
+        NSApp.terminate(nil)
+    }
+
+    @objc
+    private func showMainWindow() {
+        NSApp.setActivationPolicy(.regular)
+        (Container.sharedContainer as? NavigationServiceFactory)?.makeNavigationService().showApplication()
+        NSApp.activate(ignoringOtherApps: true)
+        DispatchQueue.main.async { [weak self] in
+            self?.statusItem.button?.isHighlighted = false
+        }
     }
 
     private func togglePopover() {
@@ -180,12 +262,6 @@ extension StatusMenuWindowController {
 
     func windowDidResignKey(_: Notification) {
         dismissPopover()
-    }
-}
-
-extension NSStatusBarButton {
-    override open func mouseDown(with _: NSEvent) {
-        // allow StatusMenuController to manage the behavour of clicking
     }
 }
 
