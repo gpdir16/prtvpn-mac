@@ -38,6 +38,11 @@ final class HelpMenuController: NSObject {
         $0.target = self
     }
 
+    lazy var daemonLogItem: NSMenuItem = .init(title: Localizable.daemonLog, action: #selector(openDaemonLogAction), keyEquivalent: "").with {
+        $0.isEnabled = true
+        $0.target = self
+    }
+
     lazy var logsWGItem: NSMenuItem = .init(title: Localizable.wireguardLogs, action: #selector(openWGLogsAction), keyEquivalent: "").with {
         $0.isEnabled = true
         $0.target = self
@@ -70,13 +75,12 @@ final class HelpMenuController: NSObject {
     }
 
     lazy var helpMenu: NSMenu = .init(title: Localizable.help).with {
+        // 이 포크는 시스템 확장을 쓰지 않으므로 확장 로그, 튜토리얼 항목은 넣지 않음.
+        // 문제 제보도 Proton 지원팀으로 전송되므로 넣지 않음(포크의 문제를 Proton 에 보내면 안 됨).
         $0.items = [
-            reportAnIssueItem,
             logsItem,
-            logsWGItem,
-            logsPlutoniumItem,
+            daemonLogItem,
             clearApplicationDataItem,
-            systemExtensionTutorialItem,
             helpItem,
         ]
         #if DEBUG
@@ -101,6 +105,11 @@ final class HelpMenuController: NSObject {
     @objc
     private func logsAction() {
         viewModel.openLogsFolderAction()
+    }
+
+    @objc
+    private func openDaemonLogAction() {
+        NSWorkspace.shared.activateFileViewerSelecting([URL(fileURLWithPath: "/var/log/prtvpn-daemon.log")])
     }
 
     @objc

@@ -24,6 +24,7 @@
     import Home
     import LegacyCommon
     import Logging
+    import Strings
     import SwiftUI
     import Theme
     import VPNAppCore
@@ -122,42 +123,21 @@
         func appCommands(appDelegate: AppDelegate, store: StoreOf<AppReducer>) -> some Scene {
             commands {
                 CommandGroup(after: .appInfo) {
-                    Button("Check for updates") {
-                        appDelegate.navigationService.checkForUpdates()
-                    }
-                    Divider()
-                    Button("Settings...") { // TODO: add translation
+                    Button(Localizable.statusItemSettings) {
                         appDelegate.navigationService.openSettings(to: .general)
                     }.keyboardShortcut(",", modifiers: [.command])
                 }
                 CommandGroup(before: .appTermination) {
-                    Button("Sign out") {
+                    Button(Localizable.logOut) {
                         appDelegate.navigationService.logOutRequested()
                     }.keyboardShortcut("w", modifiers: [.command, .shift])
                 }
-                CommandGroup(before: .toolbar) {
-                    Button("Toggle Connection Details") {
-                        store.send(.app(.home(.showConnectionDetails)))
-                    }
-                }
                 CommandGroup(before: .help) {
-                    Button("Report an Issue...") {
+                    Button(Localizable.reportAnIssue) {
                         appDelegate.navigationService.showReportBug()
                     }
-
-                    Button("View Logs") {}
-                    Button("OpenVPN Logs") {}
-                    Button("WireGuard Logs") {}
-                    Button("Clear Application Data") {}
-                    Button("System Extension Tutorial") {}
                 }
                 CommandGroup(replacing: .newItem, addition: {}) // block user from opening multiple windows
-                CommandMenu("Custom Menu") {
-                    Button("Say Hello") {
-                        log.debug("Hello")
-                    }
-                    .keyboardShortcut("h", modifiers: [.command])
-                }
             }
         }
     }
@@ -186,7 +166,7 @@
         }
 
         func configureForWindowType() {
-            window?.title = "Proton VPN"
+            window?.title = "prtvpn"
             window?.centerWindowOnScreen()
             switch windowType {
             case .app:
