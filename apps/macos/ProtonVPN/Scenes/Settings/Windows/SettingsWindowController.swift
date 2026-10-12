@@ -24,27 +24,31 @@ import Cocoa
 import LegacyCommon
 import Strings
 
+/// 설정 창. macOS 관례대로 도구 막대에 탭 아이콘이 놓이고, 탭마다 창 크기가 내용에 맞춰짐.
 final class SettingsWindowController: WindowController {
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("Unsupported initializer")
     }
 
-    required init(viewController: SettingsContainerViewController) {
-        let window = NSWindow(contentViewController: viewController)
-        window.styleMask = [.titled, .closable, .miniaturizable]
-        super.init(window: window)
-        setupWindow()
-        monitorsKeyEvents = true
-    }
-
-    private func setupWindow() {
-        guard let window else {
-            return
+    /// - Parameter panes: 탭 순서대로 (제목, SF Symbol 이름, 내용)
+    required init(panes: [(title: String, symbol: String, viewController: NSViewController)], selectedIndex: Int) {
+        let tabViewController = NSTabViewController()
+        tabViewController.tabStyle = .toolbar
+        for pane in panes {
+            let item = NSTabViewItem(viewController: pane.viewController)
+            item.label = pane.title
+            item.image = NSImage(systemSymbolName: pane.symbol, accessibilityDescription: pane.title)
+            pane.viewController.title = pane.title
+            tabViewController.addTabViewItem(item)
         }
-        window.title = Localizable.preferences
-        window.titlebarAppearsTransparent = true
+        tabViewController.selectedTabViewItemIndex = selectedIndex
+
+        let window = NSWindow(contentViewController: tabViewController)
+        window.styleMask = [.titled, .closable, .miniaturizable]
+        window.toolbarStyle = .preference
         window.appearance = NSAppearance(named: .darkAqua)
-        window.backgroundColor = .color(.background, .weak)
+        super.init(window: window)
+        monitorsKeyEvents = true
     }
 }
