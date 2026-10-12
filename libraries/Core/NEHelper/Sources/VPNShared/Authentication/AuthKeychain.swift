@@ -108,7 +108,7 @@ public final class AuthKeychain {
     public static let `default`: AuthKeychainHandle = AuthKeychain()
 
     static let dispatchQueue = DispatchQueue(
-        label: "ch.protonvpn.VPNShared.AuthKeychain",
+        label: "app.prtvpn.VPNShared.AuthKeychain",
         attributes: .concurrent
     )
     @ConcurrentlyReadable(queue: AuthKeychain.dispatchQueue)

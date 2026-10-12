@@ -23,19 +23,28 @@ import KeychainAccess
 /// of the async keychain changes that caused multiple fires in production. The class was left here as
 /// an easy way of resuming the work in the future.
 public class KeychainActor {
-    private let keychain: KeychainAccess.Keychain
+    #if os(macOS)
+        // macOS 에서는 값마다 키체인 항목을 만들지 않고 암호화한 파일에 둠. `EncryptedVault` 참고.
+        private let keychain = EncryptedVault(namespace: KeychainConstants.appKeychain)
 
-    public init(accessGroup: String) {
-        self.keychain =
-            .init(service: KeychainConstants.appKeychain, accessGroup: accessGroup)
-                .accessibility(.afterFirstUnlockThisDeviceOnly)
-    }
+        public init(accessGroup _: String) {}
 
-    public init() {
-        self.keychain =
-            .init(service: KeychainConstants.appKeychain)
-                .accessibility(.afterFirstUnlockThisDeviceOnly)
-    }
+        public init() {}
+    #else
+        private let keychain: KeychainAccess.Keychain
+
+        public init(accessGroup: String) {
+            self.keychain =
+                .init(service: KeychainConstants.appKeychain, accessGroup: accessGroup)
+                    .accessibility(.afterFirstUnlockThisDeviceOnly)
+        }
+
+        public init() {
+            self.keychain =
+                .init(service: KeychainConstants.appKeychain)
+                    .accessibility(.afterFirstUnlockThisDeviceOnly)
+        }
+    #endif
 
     public func getData(_ key: String, ignoringAttributeSynchronizable: Bool = true) throws -> Data? {
         try keychain.getData(key, ignoringAttributeSynchronizable: ignoringAttributeSynchronizable)

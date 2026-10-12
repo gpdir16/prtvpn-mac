@@ -40,25 +40,66 @@ public enum TunnelKeychainImplementationError: Error {
 
 public struct TunnelKeychainImplementation {
     private enum StorageKey {
-        static let wireguardSettings = "ProtonVPN_wg_settings"
+        // 공식 Proton VPN 앱의 키체인 항목과 섞이지 않도록 macOS에서는 별도 이름을 씀
+        #if os(macOS)
+            static let wireguardSettings = "prtvpn_wg_settings"
+        #else
+            static let wireguardSettings = "ProtonVPN_wg_settings"
+        #endif
     }
 
     private let encoder = JSONEncoder()
 
     public init() {}
 
-    public func store(_ configData: Data) throws -> Data {
-        try setPassword(configData, forKey: StorageKey.wireguardSettings)
-        return try fetchWireguardConfigurationReference()
-    }
+    #if os(macOS)
+        // macOS 에서는 터널을 데몬이 올리므로 확장에 넘길 키체인 항목이 필요 없음.
+        // 키체인을 건드리면 암호 창이 뜨기 때문에 설정은 메모리에만 둠.
+        private static let memory = MemoryStore()
 
-    public func loadWireguardConfig() throws -> Data? {
-        try getPasswordData(forKey: StorageKey.wireguardSettings)
-    }
+        private final class MemoryStore: @unchecked Sendable {
+            private let lock = NSLock()
+            private var data: Data?
 
-    public func clear() throws {
-        try clearPassword(forKey: StorageKey.wireguardSettings)
-    }
+            func get() -> Data? {
+                lock.lock()
+                defer { lock.unlock() }
+                return data
+            }
+
+            func set(_ newValue: Data?) {
+                lock.lock()
+                defer { lock.unlock() }
+                data = newValue
+            }
+        }
+
+        public func store(_ configData: Data) throws -> Data {
+            Self.memory.set(configData)
+            return Data(StorageKey.wireguardSettings.utf8)
+        }
+
+        public func loadWireguardConfig() throws -> Data? {
+            Self.memory.get()
+        }
+
+        public func clear() throws {
+            Self.memory.set(nil)
+        }
+    #else
+        public func store(_ configData: Data) throws -> Data {
+            try setPassword(configData, forKey: StorageKey.wireguardSettings)
+            return try fetchWireguardConfigurationReference()
+        }
+
+        public func loadWireguardConfig() throws -> Data? {
+            try getPasswordData(forKey: StorageKey.wireguardSettings)
+        }
+
+        public func clear() throws {
+            try clearPassword(forKey: StorageKey.wireguardSettings)
+        }
+    #endif
 
     // Password is set and retrieved without using the library because NEVPNProtocol requires it to be
     // a "persistent keychain reference to a keychain item containing the password component of the

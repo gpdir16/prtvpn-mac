@@ -87,7 +87,7 @@ public enum VPNAuthenticationStorageConfigKey: DependencyKey {
         #if os(iOS) || os(tvOS)
             "\(DomainConstants.appIdentifierPrefix)prt.ProtonVPN"
         #elseif os(macOS)
-            "\(DomainConstants.appIdentifierPrefix)ch.protonvpn.macos"
+            "\(DomainConstants.appIdentifierPrefix)app.prtvpn.macos"
         #else
             "\(DomainConstants.appIdentifierPrefix)prt.ProtonVPN"
         #endif
