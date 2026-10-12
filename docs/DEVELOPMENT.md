@@ -21,7 +21,7 @@ The fork is based on the `develop` branch of [ProtonVPN/ios-mac-app](https://git
 
 - macOS with a recent Xcode. Upstream CI builds with Xcode 26.2 on macOS 15.6. This fork is built with Xcode 27 (Swift 6.4), which required pinning `swift-composable-architecture` to 1.26.0 and `swift-sharing` to 2.9.1 in the workspace `Package.resolved`; the versions upstream pins do not build with Swift 6.4.
 - Deployment targets: macOS 14.0, iOS 17.0, tvOS 17.0.
-- [Homebrew](https://brew.sh), for `go` (required to build the tunnel daemon and WireGuardKitGo), `mint`, `imagemagick` and `jq`.
+- [Homebrew](https://brew.sh), for `go` (required to build the tunnel daemon and WireGuardKitGo), `imagemagick` and `jq`.
 - No Apple Developer account. The app does not use Network Extension or System Extension entitlements. See [How the VPN works](#how-the-vpn-works).
 
 Git LFS is not used by this repository.
@@ -79,7 +79,7 @@ The fork has its own version number (`MARKETING_VERSION` in `apps/macos/Version.
 | `external/protoncore`      | `40e92cbe` (tag `36.0.3`)         | <https://github.com/ProtonMail/protoncore_ios> | Most local packages                                                                             |
 | `external/wireguard-apple` | `5742d286` (branch `release/ios`) | <https://github.com/ProtonVPN/wireguard-apple> | WireGuard extensions (`WireGuardKitGo`)                                                         |
 | `external/apple-fusion`    | `5f680d98` (tag `2.1.2`)          | <https://github.com/ProtonMail/apple-fusion>   | `UITestsHelpers` (UI tests only)                                                                |
-| `external/swift-cargo`     | `a5c3cf9c`                        | None found                                     | Listed in the workspace and `Mintfile` only; no package manifest or Xcode project depends on it |
+| `external/swift-cargo`     | `a5c3cf9c`                        | None found                                     | Listed in the workspace only; no package manifest or Xcode project depends on it |
 
 To point the submodules at the public mirrors without modifying `.gitmodules`:
 
@@ -152,9 +152,7 @@ Adding new code to `LegacyCommon` and `NEHelper` should be avoided if possible. 
 
 The Xcode targets run [SwiftLint](https://github.com/realm/SwiftLint) with the root `.swiftlint.yml` as a build phase, and skip it when `swiftlint` is not installed. Formatting rules for [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) are in `.swiftformat`.
 
-Tool versions are pinned in `Mintfile`. Note that `mint bootstrap` fails in this fork, because the `Mintfile` also lists two tools hosted on Proton's internal GitLab (`git-lhc`, `swift-cargo`). Install the public tools individually, for example `mint install realm/SwiftLint@0.53.0`.
-
-`git-hooks/pre-commit` is upstream's pre-commit hook. It formats staged Swift files and regenerates `Version.xcconfig` using `git-lhc`, so it does not work here without changes.
+Install SwiftLint with `brew install swiftlint` if you want the lint build phase to run.
 
 ### Localization
 
