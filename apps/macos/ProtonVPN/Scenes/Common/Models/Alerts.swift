@@ -54,14 +54,16 @@ public class ActiveSessionWarningAlert: SystemAlert {
 }
 
 public class QuitWarningAlert: SystemAlert {
-    public var title: String? = Localizable.vpnConnectionActive
-    public var message: String? = Localizable.quitWarning
+    public var title: String? = Localizable.quitAlertTitle
+    public var message: String?
     public var actions = [AlertAction]()
     public let isError: Bool = false
     public var dismiss: (() -> Void)?
 
-    public init(confirmHandler: @escaping () -> Void, cancelHandler: @escaping () -> Void) {
-        actions.append(AlertAction(title: Localizable.continue, style: .confirmative, handler: confirmHandler))
+    /// - Parameter message: 종료하면 VPN 과 방화벽이 어떻게 되는지에 대한 안내
+    public init(message: String, confirmHandler: @escaping () -> Void, cancelHandler: @escaping () -> Void) {
+        self.message = message
+        actions.append(AlertAction(title: Localizable.quitAlertConfirm, style: .confirmative, handler: confirmHandler))
         actions.append(AlertAction(title: Localizable.cancel, style: .cancel, handler: cancelHandler))
     }
 }

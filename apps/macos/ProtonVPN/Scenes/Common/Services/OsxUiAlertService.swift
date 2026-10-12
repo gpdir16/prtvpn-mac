@@ -22,6 +22,7 @@
 
 import AppKit
 import Domain
+import Ergonomics
 import Foundation
 import LegacyCommon
 import VPNAppCore
@@ -74,23 +75,67 @@ final class OsxUiAlertService: UIAlertService {
             alert.dismiss = { [weak expandableViewModel] in expandableViewModel?.close() }
             modalVC = ExpandableContentPopupViewController(viewModel: expandableViewModel)
         default:
-            let popUp = PopUpViewModel(
-                alert: alert,
-                inAppLinkManager: InAppLinkManager(navigationService: navigationService)
-            )
-            popUp.dismissCompletion = { [weak self] in self?.dismissCompletion(alert) }
-            alert.dismiss = { [weak popUp] in popUp?.close() }
+            // 제목, 본문, 버튼뿐인 일반 알림은 직접 그린 팝업 대신 시스템 알림으로 보여 줌
             if alert.canDismissAutomaticallyOnConnection {
                 AppEvent.appStateManagerDisplayStateChange.unsubscribe(self)
                 AppEvent.appStateManagerDisplayStateChange.subscribe(self, selector: #selector(appDisplayStateChanged))
             }
-            modalVC = PopUpViewController(viewModel: popUp)
+            presentNative(alert)
+            return
         }
 
         if alert.displayOnActiveScreen, UserDefaults.standard.bool(forKey: AppConstants.UserDefaults.displayAlertsOnActiveScreen) {
             windowService.presentKeyModalOnActiveScreen(viewController: modalVC, activatingApp: alert.activatingApp)
         } else {
             windowService.presentKeyModal(viewController: modalVC, activatingApp: alert.activatingApp)
+        }
+    }
+
+    /// 시스템 알림(NSAlert)으로 보여 줌. 메인 창이 보이면 그 창의 시트로, 아니면 독립된 알림 창으로 띄움.
+    private func presentNative(_ alert: SystemAlert) {
+        executeOnUIThread { [weak self] in
+            guard let self else { return }
+            let nsAlert = NSAlert()
+            nsAlert.alertStyle = alert.isError ? .warning : .informational
+            if let title = alert.title, !title.isEmpty {
+                nsAlert.messageText = title
+                nsAlert.informativeText = alert.message ?? ""
+            } else {
+                nsAlert.messageText = alert.message ?? ""
+            }
+            for action in alert.actions {
+                let button = nsAlert.addButton(withTitle: action.title)
+                switch action.style {
+                case .destructive: button.hasDestructiveAction = true
+                case .cancel: button.keyEquivalent = "\u{1b}"
+                case .confirmative, .secondary: break
+                }
+            }
+
+            // 같은 알림이 다시 들어오면 동작만 바뀔 수 있으므로, 버튼을 눌렀을 때의 동작을 그때 읽음
+            let finish: (NSApplication.ModalResponse) -> Void = { [weak self] response in
+                self?.dismissCompletion(alert)
+                let index = response.rawValue - NSApplication.ModalResponse.alertFirstButtonReturn.rawValue
+                guard alert.actions.indices.contains(index) else { return }
+                alert.actions[index].handler?()
+            }
+
+            let parent = NSApp.windows.first { $0.isVisible && $0.canBecomeMain && $0.attachedSheet == nil && !($0 is NSPanel) }
+            if let parent {
+                alert.dismiss = { [weak parent, weak nsAlert] in
+                    guard let parent, let sheet = nsAlert?.window, parent.attachedSheet == sheet else { return }
+                    // 버튼 번호가 아닌 값으로 닫아 어떤 동작도 실행되지 않게 함
+                    parent.endSheet(sheet, returnCode: .abort)
+                }
+                if alert.activatingApp {
+                    NSRunningApplication.current.activate(options: [.activateAllWindows])
+                }
+                nsAlert.beginSheetModal(for: parent, completionHandler: finish)
+            } else {
+                alert.dismiss = { NSApp.abortModal() }
+                NSApp.activate(ignoringOtherApps: true)
+                finish(nsAlert.runModal())
+            }
         }
     }
 

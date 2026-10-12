@@ -378,84 +378,34 @@ extension MacAlertService: CoreAlertService {
         windowService.presentKeyModal(viewController: connectionTroubleshootingAlert, activatingApp: false)
     }
 
-    private func showWelcomeScreen(alert: UpsellAlert, welcomeScreenAlert: WelcomeScreenAlert) {
-        let modalType: ModalType = switch welcomeScreenAlert.plan {
-        case .fallback:
-            .welcomeFallback
-        case .unlimited:
-            .welcomeUnlimited
-        case let .plus(numberOfServers, numberOfDevices, numberOfCountries):
-            .welcomePlus(
-                numberOfServers: numberOfServers,
-                numberOfDevices: numberOfDevices,
-                numberOfCountries: numberOfCountries
-            )
-        }
-
-        let modalSource = alert.modalSource
-
-        let upgradeAction: (() -> Void) = { [weak self] in
-            Task { [weak self] in
-                guard let url = await self?.sessionService.getPlanSession(mode: .upgrade) else {
-                    return
-                }
-                AppEvent.userEngagedWithUpsellAlert.post(modalSource)
-                self?.linkOpener.open(url)
-            }
-        }
-
-        AppEvent.upsellAlertWasDisplayed.post(modalSource)
-
-        let viewController = ModalsFactory.modalViewController(
-            modalType: modalType,
-            upgradeAction: upgradeAction,
-            continueAction: alert.continueAction
-        )
-
-        windowService.presentKeyModal(viewController: viewController, activatingApp: alert.activatingApp)
+    private func showWelcomeScreen(alert _: UpsellAlert, welcomeScreenAlert _: WelcomeScreenAlert) {
+        // 요금제를 홍보하는 환영 화면은 보여 주지 않음
     }
 
+    /// 요금제에 없는 기능을 눌렀을 때. 구매를 권하는 화면 대신 이유만 알려 줌.
     @MainActor
     private func show(alert: UpsellAlert, upsellModalType: UpsellModalType) {
-        let modalSource = alert.modalSource
-
-        let upgradeAction: (() -> Void) = { [weak self] in
-            Task { [weak self] in
-                guard let url = await self?.sessionService.getPlanSession(mode: .upgrade) else {
-                    return
-                }
-                AppEvent.userEngagedWithUpsellAlert.post(modalSource)
-                self?.linkOpener.open(url)
-            }
+        let title: String
+        let message: String
+        if case let .cantSkip(until, _, _) = upsellModalType {
+            title = Localizable.serverChangeWaitTitle
+            message = Localizable.serverChangeWaitMessage(until.formatted(date: .omitted, time: .shortened))
+        } else {
+            title = Localizable.planNoticeTitle
+            message = Localizable.planNoticeMessage
         }
-
-        AppEvent.upsellAlertWasDisplayed.post(modalSource)
-
-        let upsellViewController = LegacyUpsellFactory.upsellViewController(
-            upsellModalType: upsellModalType,
-            upgradeAction: upgradeAction,
-            continueAction: alert.continueAction
-        )
-
-        windowService.presentKeyModal(viewController: upsellViewController, activatingApp: alert.activatingApp)
+        showPlainAlert(title: title, message: message, actions: [
+            AlertAction(title: Localizable.ok, style: .confirmative) { alert.continueAction() },
+        ])
     }
 
-    private func show(_ alert: AnnouncementOfferAlert) {
-        guard let panelMode = alert.data.panelMode() else {
-            log.warning("Couldn't determine panelMode from: \(alert.data)")
-            return
-        }
-        let vc: NSViewController = switch panelMode {
-        case let .legacy(legacyPanel):
-            AnnouncementDetailViewController(legacyPanel)
-        case let .image(imagePanel):
-            AnnouncementImageViewController(
-                data: imagePanel,
-                offerReference: alert.offerReference
-            )
-        }
+    /// 전용 화면 대신 쓰는 제목, 본문, 버튼만 있는 알림
+    private func showPlainAlert(title: String, message: String, actions: [AlertAction]) {
+        uiAlertService.displayAlert(PlainAlert(title: title, message: message, actions: actions))
+    }
 
-        windowService.presentKeyModal(viewController: vc, activatingApp: alert.activatingApp)
+    private func show(_: AnnouncementOfferAlert) {
+        // 할인, 프로모션 공지는 보여 주지 않음
     }
 
     private func show(_ alert: SubuserWithoutConnectionsAlert) {
@@ -463,18 +413,26 @@ extension MacAlertService: CoreAlertService {
     }
 
     private func show(_ alert: DiscourageSecureCoreAlert) {
-        let viewController = ModalsFactory.discourageSecureCoreViewController(onDontShowAgain: alert.onDontShowAgain, onActivate: alert.onActivate, onCancel: alert.dismiss, onLearnMore: alert.onLearnMore)
-        windowService.presentKeyModal(viewController: viewController, activatingApp: alert.activatingApp)
+        showPlainAlert(
+            title: Localizable.modalsDiscourageSecureCoreTitle,
+            message: Localizable.modalsDiscourageSecureCoreSubtitle,
+            actions: [
+                AlertAction(title: Localizable.modalsDiscourageSecureCoreActivate, style: .confirmative) { alert.onActivate?() },
+                AlertAction(title: Localizable.cancel, style: .cancel) { alert.dismiss?() },
+                AlertAction(title: Localizable.secureCoreActivateDontShow, style: .secondary) {
+                    alert.onDontShowAgain?(true)
+                    alert.onActivate?()
+                },
+            ]
+        )
     }
 
     private func show(_ alert: ProtocolDeprecatedAlert) {
-        let vc = ProtocolDeprecatedViewController(viewModel: WarningPopupViewModel(alert: alert))
-        windowService.presentKeyModal(viewController: vc, activatingApp: alert.activatingApp)
+        showDefaultSystemAlert(alert)
     }
 
     private func show(_ alert: IkeDeprecatedAlert) {
-        let vc = ProtocolDeprecatedViewController(viewModel: WarningPopupViewModel(alert: alert))
-        windowService.presentKeyModal(viewController: vc, activatingApp: alert.activatingApp)
+        showDefaultSystemAlert(alert)
     }
 
     private func show(_ alert: IKEv2PlutoniumConflictAlert) {
@@ -482,16 +440,22 @@ extension MacAlertService: CoreAlertService {
         windowService.presentKeyModal(viewController: vc, activatingApp: alert.activatingApp)
     }
 
-    private func show(_ alert: FreeConnectionsAlert) {
-        let upgradeAction: (() -> Void) = { [weak self] in
-            Task { [weak self] in
-                guard let url = await self?.sessionService.getPlanSession(mode: .upgrade) else {
-                    return
-                }
-                self?.linkOpener.open(url)
-            }
-        }
-        let upsellViewController = ModalsFactory.freeConnectionsViewController(countries: alert.countries, upgradeAction: upgradeAction)
-        windowService.presentKeyModal(viewController: upsellViewController, activatingApp: alert.activatingApp)
+    private func show(_: FreeConnectionsAlert) {
+        showPlainAlert(title: Localizable.planNoticeTitle, message: Localizable.planNoticeMessage, actions: [])
+    }
+}
+
+/// 전용 화면 대신 쓰는 제목, 본문, 버튼만 있는 알림
+private final class PlainAlert: SystemAlert {
+    var title: String?
+    var message: String?
+    var actions: [AlertAction]
+    let isError = false
+    var dismiss: (() -> Void)?
+
+    init(title: String, message: String, actions: [AlertAction]) {
+        self.title = title
+        self.message = message
+        self.actions = actions
     }
 }

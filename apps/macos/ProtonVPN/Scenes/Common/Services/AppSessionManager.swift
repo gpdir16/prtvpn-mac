@@ -31,6 +31,7 @@ import ProtonCoreUtilities
 import Announcement
 import CommonNetworking
 import LegacyCommon
+import Strings
 import Telemetry
 import VPNAppCore // UnauthKeychain
 import VPNShared
@@ -208,11 +209,7 @@ final class AppSessionManagerImplementation: AppSessionRefresherImplementation, 
             propertiesManager.streamingServices = streamingServices.streamingServices
             propertiesManager.streamingResourcesUrl = streamingServices.resourceBaseURL
         }
-        if propertiesManager.featureFlags.pollNotificationAPI {
-            Task { @MainActor in
-                self.announcementRefresher.tryRefreshing()
-            }
-        }
+        // 프로모션 공지는 보여 주지 않으므로 받아 오지도 않음
 
         do {
             try await resolveActiveSession()
@@ -380,12 +377,37 @@ final class AppSessionManagerImplementation: AppSessionRefresherImplementation, 
             _ = sysexManager.uninstallAll(userInitiated: false)
         }
 
-        guard sessionStatus == .established, !appStateManager.state.isSafeToEnd, !propertiesManager.rememberLoginAfterUpdate else {
+        guard sessionStatus == .established, !propertiesManager.rememberLoginAfterUpdate else {
+            NSApp.reply(toApplicationShouldTerminate: true)
+            return
+        }
+
+        // 종료하면 VPN 과 방화벽이 어떻게 되는지에 따라 안내가 달라짐.
+        // 방화벽은 앱이 아니라 데몬이 걸기 때문에, 켜져 있으면 앱을 종료한 뒤에도 인터넷이 막힌 채로 남음.
+        let isConnected = !appStateManager.state.isSafeToEnd
+        let armed = DaemonFirewall.isArmed
+        let mode: FirewallMode = armed == nil ? .off : DaemonFirewall.mode
+        let message: String
+        switch (isConnected, mode) {
+        case (_, .lockdown): message = Localizable.quitAlertFirewallLockdown
+        case (true, .off): message = Localizable.quitAlertConnectedFirewallOff
+        case (true, .auto): message = Localizable.quitAlertConnectedFirewallAuto
+        case (true, .on): message = Localizable.quitAlertConnectedFirewallOn
+        case (false, .on): message = Localizable.quitAlertFirewallOn
+        case (false, .auto) where armed == true: message = Localizable.quitAlertFirewallArmed
+        case (false, _):
+            // 연결도 없고 방화벽도 막고 있지 않으면 물어볼 것이 없음
             NSApp.reply(toApplicationShouldTerminate: true)
             return
         }
 
         let confirmationClosure: () -> Void = { [weak self] in
+            guard isConnected else {
+                NSApp.reply(toApplicationShouldTerminate: true)
+                return
+            }
+            // 안내를 보고 종료를 고른 것이므로 사용자가 직접 끊은 것으로 봄(자동 전환 방화벽이 풀림)
+            DaemonFirewall.userWillDisconnect()
             self?.appStateManager.disconnect {
                 DispatchQueue.main.async {
                     NSApp.reply(toApplicationShouldTerminate: true)
@@ -402,7 +424,7 @@ final class AppSessionManagerImplementation: AppSessionRefresherImplementation, 
 
         let cancellationClosure: () -> Void = { NSApp.reply(toApplicationShouldTerminate: false) }
 
-        let alert = QuitWarningAlert(confirmHandler: confirmationClosure, cancelHandler: cancellationClosure)
+        let alert = QuitWarningAlert(message: message, confirmHandler: confirmationClosure, cancelHandler: cancellationClosure)
         alertService.push(alert: alert)
     }
 
