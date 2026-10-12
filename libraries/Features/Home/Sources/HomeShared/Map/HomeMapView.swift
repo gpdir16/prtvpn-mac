@@ -51,7 +51,21 @@ public struct HomeMapView: View {
         .scaleEffect(mapScale())
         .offset(mapOffset())
         .environment(\.layoutDirection, .leftToRight)
+        #if os(macOS)
+            // 스토어가 보내는 애니메이션에만 기대면 연결할 때나 사이드바를 열 때처럼 배치가 한 번에 바뀌는 경우
+            // 지도가 뚝 끊겨 움직임. 배율과 위치가 바뀌면 방향에 상관없이 항상 부드럽게 옮김.
+            .animation(reduceMotion ? nil : .smooth(duration: 0.5), value: Placement(scale: mapScale(), offset: mapOffset()))
+        #endif
     }
+
+    #if os(macOS)
+        @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+        private struct Placement: Equatable {
+            let scale: CGFloat
+            let offset: CGSize
+        }
+    #endif
 
     private func mapOffset() -> CGSize {
         guard let code = (store.mapState.code ?? store.userCountry)?.lowercased(),
@@ -60,9 +74,15 @@ public struct HomeMapView: View {
         }
 
         let scale = mapScale()
+        #if os(macOS)
+            // 핀(서버 위치)이 있으면 국가 외곽의 중심이 아니라 핀을 빈 영역의 정중앙에 둠
+            if store.shouldShowPin, store.pinMode != .invisible, store.pinOffset != .zero {
+                return .init(width: -store.pinOffset.width * scale, height: -store.pinOffset.height * scale)
+            }
+        #endif
         return .init(
             width: (mapBounds.midX - node.bounds().midX) * scale,
-            height: 40 + (mapBounds.midY - node.bounds().midY) * scale
+            height: Self.verticalShift + (mapBounds.midY - node.bounds().midY) * scale
         ) // move the map 40 points down to avoid connection status and netshield stats
     }
 
@@ -72,14 +92,28 @@ public struct HomeMapView: View {
             return wholeMapScale()
         }
         let scaleX = (availableWidth - 40) / node.bounds().width // 40 is the horizontal padding
-        let scaleY = (availableHeight - 150) / node.bounds().height // 150 is the vertical padding. We need it for connection status and netshield stats
+        let scaleY = (availableHeight - Self.verticalPadding) / node.bounds().height // 150 is the vertical padding. We need it for connection status and netshield stats
 
         return min(min(scaleX, scaleY), 4) // max scale, useful for small countries
     }
 
+    // macOS는 연결 패널을 뺀 빈 영역을 그대로 넘겨받으므로 따로 밀거나 크게 비울 필요가 없음
+    #if os(macOS)
+        private static let verticalShift: CGFloat = 0
+        private static let verticalPadding: CGFloat = 80
+    #else
+        private static let verticalShift: CGFloat = 40
+        private static let verticalPadding: CGFloat = 150
+    #endif
+
     private func wholeMapScale() -> CGFloat {
         let scaleX = availableWidth / mapBounds.width
         let scaleY = availableHeight / mapBounds.height
-        return min(scaleX, scaleY)
+        #if os(macOS)
+            // 세계 지도는 빈 영역보다 조금 크게 그려 사이드바 유리 아래까지 이어지게 함
+            return min(scaleX * 1.4, scaleY)
+        #else
+            return min(scaleX, scaleY)
+        #endif
     }
 }

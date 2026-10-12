@@ -167,8 +167,10 @@ public struct ConnectionStatusView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .navigationBar)
+        #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(.hidden, for: .navigationBar)
+        #endif
         .task { await store.send(.watchConnectionStatus).finish() }
     }
 }

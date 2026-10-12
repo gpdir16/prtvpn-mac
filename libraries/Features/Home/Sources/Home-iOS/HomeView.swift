@@ -209,7 +209,7 @@ public struct HomeView: View {
 }
 
 // This extension helps the compiler to typecheck in a reasonable amount of time
-private extension View {
+extension View {
     func connectionDetailsSheet(store: Bindable<StoreOf<HomeFeature>>) -> some View {
         sheet(
             item: store.scope(state: \.destination?.connectionDetails, action: \.destination.connectionDetails)
@@ -276,7 +276,7 @@ private struct ViewHeightPreferenceKey: PreferenceKey {
 }
 
 #if DEBUG && compiler(>=6)
-    @available(iOS 18, *)
+    @available(iOS 18, macOS 15, *)
     #Preview(traits: .dependencies { $0.recentsStorage = .previewValue }) {
         HomeView(store: .init(initialState: .init(), reducer: {
             HomeFeature()

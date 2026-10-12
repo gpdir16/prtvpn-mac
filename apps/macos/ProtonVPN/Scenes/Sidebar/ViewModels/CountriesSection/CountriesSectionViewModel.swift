@@ -71,18 +71,15 @@ protocol CountriesSettingsDelegate: AnyObject {
 class CountriesSectionViewModel {
     @Dependency(\.serverRepository) var repository
 
-    lazy var store: StoreOf<CountriesListFeature> = {
-        var feature = CountriesListFeature()
-        feature.displayPremiumServices = { [weak self] in self?.displayPremiumServices?() }
-        feature.displayGatewaysServices = { [weak self] in self?.displayGatewaysServices?() }
-        feature.displayUpsellModal = { [weak self] in self?.displayUpgradeMessage(nil) }
-        feature.displayFreeConnectionsInfo = { [weak self] in self?.displayFreeServices() }
-
-        let reducer = StoreOf<CountriesListFeature>(initialState: .init(), reducer: {
-            feature
-        })
-        reducer.send(.listenForSecureCoreUpdates)
-        return reducer
+    @MainActor
+    lazy var listModel: LocationListModel = {
+        let model = LocationListModel()
+        model.displayPremiumServices = { [weak self] in self?.displayPremiumServices?() }
+        model.displayGatewaysServices = { [weak self] in self?.displayGatewaysServices?() }
+        model.displayUpsellModal = { [weak self] in self?.displayUpgradeMessage(nil) }
+        model.displayFreeConnectionsInfo = { [weak self] in self?.displayFreeServices() }
+        model.start()
+        return model
     }()
 
     private let vpnGateway: VpnGatewayProtocol
@@ -279,7 +276,7 @@ class CountriesSectionViewModel {
     func filterContent(forQuery query: String) {
         currentQuery = query
         updateState()
-        store.send(.searchText(query))
+        Task { @MainActor in listModel.search(query) }
     }
 
     func showStreamingServices(server: ServerItemViewModel) {

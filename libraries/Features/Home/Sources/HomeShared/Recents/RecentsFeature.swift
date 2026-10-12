@@ -26,6 +26,13 @@ import VPNShared
 
 @Reducer
 public struct RecentsFeature {
+    /// 최근 목록에 남길 개수를 담는 UserDefaults 키 (macOS 설정 화면에서 바꿈)
+    public static let limitKey = "RecentsLimit"
+    public static let defaultLimit = 5
+    public static var limit: Int {
+        UserDefaults.standard.object(forKey: limitKey) as? Int ?? defaultLimit
+    }
+
     public typealias ActionSender = (Action) -> Void
 
     @ObservableState
@@ -58,6 +65,7 @@ public struct RecentsFeature {
         case pin(RecentConnection)
         case unpin(RecentConnection)
         case remove(RecentConnection)
+        case clear
         case watchConnectionStatus
         case newConnectionStatus(VPNConnectionStatus)
         case upsellTapped(BannerType)
@@ -92,7 +100,7 @@ public struct RecentsFeature {
                         .receive(on: UIScheduler.shared)
                         .map(Action.newConnectionStatus)
                 }
-                .cancellable(id: CancelId.watchConnectionStatus)
+                .cancellable(id: CancelId.watchConnectionStatus, cancelInFlight: true)
 
             case let .upsellTapped(type):
                 switch type {
@@ -128,10 +136,30 @@ public struct RecentsFeature {
 
             case let .connectionEstablished(spec):
                 withAnimation {
-                    state.$recents.withLock { $0.updateList(with: spec) }
+                    state.$recents.withLock {
+                        $0.updateList(with: spec)
+                        #if os(macOS)
+                            // 설정한 개수까지만 남김. 고정한 항목은 마지막까지 남김.
+                            let limit = RecentsFeature.limit
+                            while $0.count > limit {
+                                if let index = $0.lastIndex(where: { !$0.pinned }) {
+                                    $0.remove(at: index)
+                                } else {
+                                    $0.removeLast()
+                                }
+                            }
+                        #endif
+                    }
                 }
                 recentsStorage.saveToStorage(state.recents)
 
+                return .none
+
+            case .clear:
+                withAnimation {
+                    state.$recents.withLock { $0.removeAll() }
+                }
+                recentsStorage.saveToStorage(state.recents)
                 return .none
 
             case let .pin(recent):

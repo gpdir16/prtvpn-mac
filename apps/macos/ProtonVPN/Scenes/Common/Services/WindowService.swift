@@ -24,7 +24,9 @@ import AppKit
 import Cocoa
 import SwiftUI
 
+import ComposableArchitecture
 import Dependencies
+import Home
 
 import PMLogger
 
@@ -104,6 +106,8 @@ final class WindowServiceImplementation: WindowService {
     @Dependency(\.propertiesManager) private var propertiesManager
 
     fileprivate var mainWindowController: WindowController?
+    /// 설정 창에서 최근 목록을 지울 수 있도록 메인 화면의 스토어를 들고 있음
+    private var homeStore: StoreOf<HomeFeature>?
     fileprivate var statusMenuWindowController: StatusMenuWindowController?
     fileprivate var activeWindowControllers = Set<WindowController>()
 
@@ -159,12 +163,25 @@ final class WindowServiceImplementation: WindowService {
                 windowController.close()
             }
 
-            let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-            let viewController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Sidebar")) as! SidebarViewController
-            viewController.appStateManager = appStateManager
-            viewController.vpnGateway = vpnGateway
-            viewController.navService = navService
-            viewController.factory = factory
+            let countriesViewModel = factory.makeCountriesSectionViewModel()
+            let homeStore = MainView.makeHomeStore()
+            self.homeStore = homeStore
+            let mainView = MainView(
+                homeStore: homeStore,
+                countriesViewModel: countriesViewModel,
+                openSettings: { [navService] in navService.openSettings(to: .general) }
+            )
+            let viewController = NSHostingController(rootView: mainView)
+            // SwiftUI 쪽에서 선언한 도구 막대를 창에 그대로 올림
+            viewController.sceneBridgingOptions = [.toolbars]
+
+            // 목록 머리글의 정보 버튼은 기존 안내 화면을 메인 창의 시트로 띄움
+            countriesViewModel.displayPremiumServices = { [weak viewController] in
+                viewController?.presentAsSheet(FeaturesOverlayViewController(viewModel: PremiumFeaturesOverlayViewModel()))
+            }
+            countriesViewModel.displayGatewaysServices = { [weak viewController] in
+                viewController?.presentAsSheet(FeaturesOverlayViewController(viewModel: GatewayFeaturesOverlayViewModel()))
+            }
 
             let windowController = SidebarWindowController(viewController: viewController)
             windowController.delegate = self
@@ -172,6 +189,8 @@ final class WindowServiceImplementation: WindowService {
             windowController.window?.makeMain()
 
             mainWindowController = windowController
+            // 기존 사이드바가 표시될 때 하던 것과 같이, 현재 연결 상태를 한 번 알려 화면들이 초기 상태를 받게 함
+            vpnGateway.postConnectionInformation()
             showInitialModals()
         }
 
@@ -208,8 +227,33 @@ final class WindowServiceImplementation: WindowService {
     func openSettingsWindow(viewModel: SettingsContainerViewModel, tabBarViewModel: SettingsTabBarViewModel, accountViewModel: AccountViewModel) {
         NSApp.setActivationPolicy(.regular)
 
-        let viewController = SettingsContainerViewController(viewModel: viewModel, tabBarViewModel: tabBarViewModel, accountViewModel: accountViewModel)
-        let windowController = SettingsWindowController(viewController: viewController)
+        let general = viewModel.generalSettingsViewModel
+        let connection = viewModel.connectionSettingsViewModel
+        let advanced = viewModel.advancedSettingsViewModel
+        func pane(_ tab: SettingsTab, _ title: String, _ symbol: String) -> (title: String, symbol: String, viewController: NSViewController) {
+            let view = NativeSettingsView(
+                general: general,
+                connection: connection,
+                advanced: advanced,
+                account: accountViewModel,
+                clearRecents: { [weak self] in self?.homeStore?.send(.recents(.clear)) },
+                signOut: { [navService] in navService.logOutRequested() },
+                tab: tab
+            )
+            let controller = NSHostingController(rootView: view)
+            // 탭을 바꾸면 창이 그 탭의 내용 크기로 맞춰지도록 함
+            controller.sizingOptions = [.preferredContentSize]
+            return (title, symbol, controller)
+        }
+        let windowController = SettingsWindowController(
+            panes: [
+                pane(.general, Localizable.general, "gearshape"),
+                pane(.connection, Localizable.connection, "network"),
+                pane(.advanced, Localizable.advanced, "slider.horizontal.3"),
+                pane(.account, Localizable.account, "person.crop.circle"),
+            ],
+            selectedIndex: tabBarViewModel.activeTab.rawValue
+        )
         windowController.delegate = self
         activeWindowControllers.insert(windowController)
         windowController.showWindow(self)

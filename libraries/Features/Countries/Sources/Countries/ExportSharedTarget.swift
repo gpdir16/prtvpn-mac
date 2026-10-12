@@ -25,11 +25,8 @@ public typealias CityStateListType = CountriesShared.CityStateListType
 
     import Countries_macOS
 
-    public typealias CityStateListFeature = Countries_macOS.CityStateListFeature
-    public typealias CityStateListView = Countries_macOS.CityStateListView
-
-    public typealias CountriesListFeature = Countries_macOS.CountriesListFeature
-    public typealias CountriesListView = Countries_macOS.CountriesListView
+    public typealias LocationListModel = Countries_macOS.LocationListModel
+    public typealias LocationListView = Countries_macOS.LocationListView
 
 #endif
 

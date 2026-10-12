@@ -19,7 +19,9 @@
 import Foundation
 
 import ComposableArchitecture
-import UIKit
+#if canImport(UIKit)
+    import UIKit
+#endif
 
 @Reducer
 public struct WhatsNewCheckerFeature {

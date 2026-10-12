@@ -53,8 +53,8 @@ let package = Package(
         .target(
             name: "Home",
             dependencies: [
-                .target(name: "Home-iOS", condition: .when(platforms: [.iOS])),
-                .target(name: "Home-macOS", condition: .when(platforms: [.macOS])),
+                // Home-iOS의 뷰는 macOS에서도 그대로 씀 (이름과 달리 두 플랫폼 공용)
+                .target(name: "Home-iOS", condition: .when(platforms: [.iOS, .macOS])),
             ]
         ),
         .target(
@@ -105,13 +105,6 @@ let package = Package(
             dependencies: [
                 "HomeShared",
             ]
-        ),
-        .target(
-            name: "Home-macOS",
-            dependencies: [
-                "HomeShared",
-            ],
-            resources: []
         ),
         .testTarget(
             name: "HomeTests",

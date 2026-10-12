@@ -180,7 +180,7 @@ struct HomeConnectionCardView: View {
     }
 }
 
-private extension VPNConnectionStatus {
+extension VPNConnectionStatus {
     var connectionStatusAvailable: Bool {
         guard case .connected = self else { return false }
         return true
@@ -199,7 +199,7 @@ private extension VPNConnectionStatus {
 #if DEBUG
     #if targetEnvironment(simulator)
         #if compiler(>=6)
-            @available(iOS 18, *)
+            @available(iOS 18, macOS 15, *)
             #Preview("Change Server Available", traits: .sizeThatFitsLayout, .dependencies { $0.serverChangeAuthorizer = .availableValue }) {
                 @Shared(.userTier) var userTier
                 @Shared(.vpnConnectionStatus) var vpnConnectionStatus
@@ -212,7 +212,7 @@ private extension VPNConnectionStatus {
                 .preferredColorScheme(.dark)
             }
 
-            @available(iOS 18, *)
+            @available(iOS 18, macOS 15, *)
             #Preview("Change Server Unavailable", traits: .sizeThatFitsLayout, .dependencies { $0.serverChangeAuthorizer = .previewValue }) {
                 @Shared(.userTier) var userTier
                 @Shared(.vpnConnectionStatus) var vpnConnectionStatus

@@ -74,14 +74,20 @@ public struct MapPin: View {
 extension View {
     @ViewBuilder
     func withPhaseAnimation(reduceMotion: Bool) -> some View {
-        phaseAnimator(AnimationPhase.allCases) { content, phase in
-            content
-                .scaleEffect(phase.scaleEffect)
-                .rotationEffect(phase.rotationEffect)
-        } animation: {
-            guard !reduceMotion else { return nil }
-            return $0.animation
-        }
+        #if os(macOS)
+            // macOS 에서는 끝없이 반복되는 애니메이션이 메인 창 전체를 매 프레임 다시 계산하게 만들어
+            // 가만히 있어도 CPU 를 절반 가까이 씀. 후광은 움직이지 않게 둠.
+            self
+        #else
+            phaseAnimator(AnimationPhase.allCases) { content, phase in
+                content
+                    .scaleEffect(phase.scaleEffect)
+                    .rotationEffect(phase.rotationEffect)
+            } animation: {
+                guard !reduceMotion else { return nil }
+                return $0.animation
+            }
+        #endif
     }
 }
 

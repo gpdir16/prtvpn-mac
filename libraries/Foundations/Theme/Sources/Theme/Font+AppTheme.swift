@@ -50,6 +50,43 @@ public extension AppTheme {
             /// - Parameter emphasised: When `true`, uses semibold weight; when `false`, uses regular weight
             case footnote(emphasised: Bool = false)
 
+            // iOS와 공유하는 뷰가 macOS에서도 같은 이름으로 쓰는 스타일.
+            // 데스크톱 밀도에 맞춰 iOS보다 한 단계 작은 크기를 씀.
+
+            /// Shared with iOS views. Bold weight and size 24
+            case hero
+            /// Shared with iOS views. Configurable weight and size 15
+            case body1(Weight = .regular)
+            /// Shared with iOS views. Size 13
+            /// - Parameter emphasised: When `true`, uses semibold weight; when `false`, uses regular weight
+            case body2(emphasised: Bool = false)
+            /// Shared with iOS views. Size 12
+            /// - Parameter emphasised: When `true`, uses semibold weight; when `false`, uses regular weight
+            case body3(emphasised: Bool = false)
+            /// Shared with iOS views. Size 11
+            /// - Parameter emphasised: When `true`, uses semibold weight; when `false`, uses regular weight
+            case caption(emphasised: Bool = false)
+            /// Shared with iOS views. Size 10
+            /// - Parameter emphasised: When `true`, uses semibold weight; when `false`, uses regular weight
+            case overline(emphasised: Bool = false)
+
+            public enum Weight {
+                case regular
+                case semibold
+                case bold
+
+                var rawValue: Font.Weight {
+                    switch self {
+                    case .regular:
+                        .regular
+                    case .semibold:
+                        .semibold
+                    case .bold:
+                        .bold
+                    }
+                }
+            }
+
             public static let `default`: Self = .title3()
 
         #elseif canImport(UIKit)
@@ -120,6 +157,18 @@ public extension Font {
                 return .callout.weight(emphasised ? .semibold : .regular)
             case let .footnote(emphasised): // 10
                 return .footnote.weight(emphasised ? .semibold : .regular)
+            case .hero: // 24
+                return .system(size: 24, weight: .bold)
+            case let .body1(weight): // 15
+                return .system(size: 15, weight: weight.rawValue)
+            case let .body2(emphasised): // 13
+                return .system(size: 13, weight: emphasised ? .semibold : .regular)
+            case let .body3(emphasised): // 12
+                return .system(size: 12, weight: emphasised ? .semibold : .regular)
+            case let .caption(emphasised): // 11
+                return .system(size: 11, weight: emphasised ? .semibold : .regular)
+            case let .overline(emphasised): // 10
+                return .system(size: 10, weight: emphasised ? .semibold : .regular)
 
         #elseif canImport(UIKit)
             // https://developer.apple.com/design/human-interface-guidelines/typography#Specifications

@@ -40,8 +40,7 @@ let package = Package(
         .target(
             name: "ConnectionDetails",
             dependencies: [
-                .target(name: "ConnectionDetails-iOS", condition: .when(platforms: [.iOS])),
-                .target(name: "ConnectionDetails-macOS", condition: .when(platforms: [.macOS])),
+                .target(name: "ConnectionDetails-iOS", condition: .when(platforms: [.iOS, .macOS])),
             ]
         ),
         .target(

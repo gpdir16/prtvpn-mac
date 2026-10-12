@@ -38,10 +38,13 @@ struct ConnectionStatusBanner: View {
                 NetShieldStatsView(viewModel: netShield)
             }
         case .unprotected, .protecting, .resolving:
-            locationText()
-                .padding(.horizontal, .themeSpacing8)
-                .padding(.vertical, .themeSpacing4)
-                .accessibilityIdentifier(AccessibilityIdentifiers.locationText)
+            // 표시할 글자가 없으면 여백만 남아 빈 배경이 점처럼 그려지므로 아예 그리지 않음
+            if let text = locationText() {
+                text
+                    .padding(.horizontal, .themeSpacing8)
+                    .padding(.vertical, .themeSpacing4)
+                    .accessibilityIdentifier(AccessibilityIdentifiers.locationText)
+            }
         }
     }
 
@@ -61,7 +64,7 @@ struct ConnectionStatusBanner: View {
             displayCountry = country
             displayIP = ip
         }
-        guard let displayIP, let displayCountry else { return nil }
+        guard let displayIP, let displayCountry, !displayIP.isEmpty, !displayCountry.isEmpty else { return nil }
         return Text(displayCountry)
             .font(.themeFont(.body2()))
             .foregroundColor(Color(.text))

@@ -173,7 +173,12 @@ public struct HomeMapFeature {
             case let .connectionStateUpdated(connectionStatus):
                 let mapState = MapState(connectionStatus)
                 let pinOffset = mapState.pinOffset(userCountry: state.userCountry)
-                let animation: Animation? = UIAccessibility.isReduceMotionEnabled ? nil : .default
+                #if canImport(UIKit)
+                    let isReduceMotionEnabled = UIAccessibility.isReduceMotionEnabled
+                #else
+                    let isReduceMotionEnabled = NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+                #endif
+                let animation: Animation? = isReduceMotionEnabled ? nil : .default
                 let effect: Effect<Action> = .merge(
                     .send(.newMapState(mapState), animation: animation),
                     .send(.newPinOffset(pinOffset), animation: nil)

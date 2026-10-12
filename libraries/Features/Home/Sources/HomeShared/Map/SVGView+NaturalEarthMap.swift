@@ -19,6 +19,8 @@
 import Domain
 import Foundation
 import SVGView
+// macOS에서는 Foundation.XMLElement와 이름이 겹치므로 SVGView의 타입을 명시적으로 가져옴
+import class SVGView.XMLElement
 import SwiftUI
 
 extension SVGView {

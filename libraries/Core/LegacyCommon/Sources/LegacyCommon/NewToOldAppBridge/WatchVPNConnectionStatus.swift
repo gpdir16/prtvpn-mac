@@ -30,14 +30,17 @@ private let appStateManager: AppStateManager = Container.sharedContainer.makeApp
 extension VPNConnectionStatusPublisherKey: @retroactive DependencyKey {
     public static let displayStateStream: () -> AsyncStream<VPNConnectionStatus> = {
         NotificationCenter.default
-            .notifications(named: AppEvent.appStateManagerStateChange.name)
-            .map {
+            // 이 알림의 object 가 `AppDisplayState` 다. `appStateManagerStateChange` 는 `AppState` 를 실어 보내므로
+            // 그쪽을 구독하면 아래 캐스팅에서 앱이 죽음.
+            .notifications(named: AppEvent.appStateManagerDisplayStateChange.name)
+            .compactMap { $0.object as? AppDisplayState }
+            .map { displayState in
                 let appStateManager = Container.sharedContainer.makeAppStateManager()
 
                 @Dependency(\.propertiesManager) var propertiesManager
                 let connectedDate = await Container.sharedContainer.makeVpnManager().connectedDate()
 
-                return ($0.object as! AppDisplayState)
+                return displayState
                     .vpnConnectionStatus(
                         appStateManager.activeConnection(),
                         lastPreparedServer: propertiesManager.lastPreparedServer,

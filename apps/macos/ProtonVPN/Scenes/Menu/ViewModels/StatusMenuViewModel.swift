@@ -73,7 +73,8 @@ final class StatusMenuViewModel {
     var standardCountries: [ServerGroupInfo]?
     var secureCoreCountries: [ServerGroupInfo]?
 
-    var shouldShowProfileDropdown: Bool { profileAuthorizer.canUseProfiles }
+    // 프로필 기능은 이 앱에서 제공하지 않음
+    var shouldShowProfileDropdown: Bool { false }
     var shouldShowChangeServer: Bool {
         isConnected && credentials.tier.isFreeTier
     }

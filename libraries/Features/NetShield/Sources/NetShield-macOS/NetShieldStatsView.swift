@@ -34,7 +34,9 @@ public struct NetShieldStatsView: View {
             .fill(Color(.background, .weak)))
     }
 
-    public init() {}
+    public init(viewModel: NetShieldModel? = nil) {
+        self.viewModel = viewModel ?? .zero(enabled: false)
+    }
 }
 
 struct StatsView: View {

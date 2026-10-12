@@ -110,7 +110,7 @@ final class CountriesSectionViewController: NSViewController {
     }
 
     func setupCountriesListView() {
-        let countriesView = CountriesListView(store: viewModel.store)
+        let countriesView = LocationListView(model: viewModel.listModel) { EmptyView() }
         let hostingView = NSHostingView(rootView: countriesView)
         hostingView.translatesAutoresizingMaskIntoConstraints = false
         countriesListView.addSubview(hostingView)

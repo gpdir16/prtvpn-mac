@@ -83,7 +83,7 @@ public struct RecentsSectionView: View {
 }
 
 #if DEBUG && compiler(>=6)
-    @available(iOS 18, *)
+    @available(iOS 18, macOS 15, *)
     #Preview("Recents", traits: .dependencies { $0.recentsStorage = .previewValue }) {
         let store: StoreOf<RecentsFeature> = .init(
             initialState: .init(),
@@ -95,7 +95,7 @@ public struct RecentsSectionView: View {
         .background(Color(.background, .normal))
     }
 
-    @available(iOS 18, *)
+    @available(iOS 18, macOS 15, *)
     #Preview("No recents", traits: .dependencies { $0.recentsStorage = .withElements(array: []) }) {
         let store: StoreOf<RecentsFeature> = .init(
             initialState: .init(),

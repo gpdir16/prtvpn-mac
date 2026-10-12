@@ -19,7 +19,9 @@
 import ComposableArchitecture
 import Foundation
 import PMLogger
-import UIKit
+#if canImport(UIKit)
+    import UIKit
+#endif
 
 @DependencyClient
 struct WhatsNewEvaluatorClient {
@@ -113,7 +115,12 @@ extension WhatsNewEvaluatorClient: DependencyKey {
         @Dependency(\.appInfo) var appInfo
         return appInfo.bundleShortVersion
     } systemOSVersion: {
-        UIDevice.current.systemVersion
+        #if canImport(UIKit)
+            return UIDevice.current.systemVersion
+        #else
+            let version = ProcessInfo.processInfo.operatingSystemVersion
+            return "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
+        #endif
     } itemPresentationData: { item in
         @Shared(.whatsNew) var whatsNewData
         return whatsNewData?.items[item.id]

@@ -67,7 +67,7 @@ struct HomeConnectionCardHeader: View {
             Text(titleString)
                 .themeFont(.body3(emphasised: false))
             if shouldShowDropdownChevron {
-                IconProvider.chevronDownFilled
+                IconProvider.chevronDownFilled as Image
             }
         }
         .foregroundColor(Color(.text))

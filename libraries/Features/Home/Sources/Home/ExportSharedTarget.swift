@@ -21,6 +21,7 @@ import HomeShared
 public typealias ImageAsset = HomeShared.ImageAsset
 public typealias HomeAsset = HomeShared.HomeAsset
 public typealias HomeFeature = HomeShared.HomeFeature
+public typealias RecentsFeature = HomeShared.RecentsFeature
 
 #if canImport(Home_iOS)
     import Home_iOS
@@ -28,4 +29,9 @@ public typealias HomeFeature = HomeShared.HomeFeature
     public typealias HomeView = Home_iOS.HomeView
     public typealias WidgetSettingsView = Home_iOS.WidgetSettingsView
 
+#endif
+
+#if canImport(Home_iOS) && os(macOS)
+    public typealias HomeDesktopView = Home_iOS.HomeDesktopView
+    public typealias DesktopRecentsSection = Home_iOS.DesktopRecentsSection
 #endif

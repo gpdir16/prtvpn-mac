@@ -28,7 +28,7 @@ class SidebarWindowController: WindowController {
         fatalError("Unsupported initializer")
     }
 
-    required init(viewController: SidebarViewController) {
+    required init(viewController: NSViewController) {
         let window = NSWindow()
         window.appearance = NSAppearance(named: .darkAqua)
         window.contentViewController = viewController
@@ -45,10 +45,13 @@ class SidebarWindowController: WindowController {
             return
         }
 
-        window.titlebarAppearsTransparent = true
-        window.title = "Proton VPN"
+        // 사이드바와 지도가 도구 막대 아래까지 이어지는 표준 통합 도구 막대 창
+        window.styleMask.insert(.titled)
+        window.styleMask.insert(.fullSizeContentView)
+        window.titleVisibility = .hidden
+        window.toolbarStyle = .unified
+        window.title = "prtvpn"
         window.appearance = NSAppearance(named: .darkAqua)
-        window.backgroundColor = .color(.background, .weak)
         window.styleMask.insert(.resizable)
         window.styleMask.insert(.closable)
         window.styleMask.insert(.miniaturizable)
