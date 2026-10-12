@@ -6,6 +6,8 @@ This project is **not** affiliated with, endorsed by, or supported by Proton AG.
 
 You need a Proton account. The app talks to Proton's API and uses Proton's servers.
 
+<img width="928" height="720" alt="CleanShot 2026-10-12 at 5 47 40 PM" src="https://github.com/user-attachments/assets/d1e20e68-7638-49cc-9f6b-b3d1e0ffd293" />
+
 ## Differences from the official app
 
 - Build a tunnel based on the root daemon. Unlike official apps, it does not use Apple signatures and macOS system extensions with significant functional limitations. This is similar to MullvadVPN.
