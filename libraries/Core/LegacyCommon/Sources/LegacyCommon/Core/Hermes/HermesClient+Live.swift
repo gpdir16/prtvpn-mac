@@ -18,15 +18,25 @@
 
 import Dependencies
 import Domain
+import Foundation
 import Hermes
 import ProtonCoreFeatureFlags
 import Sharing
 
 private extension SharedKey where Self == FileStorageKey<[HermesResolver]>.Default {
     static var hermesResolvers: Self {
-        self[.fileStorage(.documentsDirectory.appending(component: HermesResolver.storagePathComponent)), default: []]
+        #if os(macOS)
+            self[.fileStorage(
+                .applicationSupportDirectory
+                    .appending(component: Bundle.main.bundleIdentifier ?? DomainConstants.BundleID.main, directoryHint: .isDirectory)
+                    .appending(component: HermesResolver.storagePathComponent)
+            ), default: []]
+        #else
+            self[.fileStorage(.documentsDirectory.appending(component: HermesResolver.storagePathComponent)), default: []]
+        #endif
     }
 }
+
 
 private extension SharedKey where Self == FeatureSharedKey<HermesFeature> {
     static var hermesEnabled: Self {

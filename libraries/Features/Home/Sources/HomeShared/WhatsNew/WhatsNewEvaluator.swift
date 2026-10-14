@@ -17,6 +17,7 @@
 //  along with ProtonVPN.  If not, see <https://www.gnu.org/licenses/>.
 
 import ComposableArchitecture
+import Domain
 import Foundation
 import PMLogger
 #if canImport(UIKit)
@@ -110,6 +111,37 @@ extension WhatsNew {
     }
 }
 
+#if os(macOS)
+    enum WhatsNewPresentationStorage {
+        static let url: URL = {
+            do {
+                return try prepare(
+                    documentsDirectory: .documentsDirectory,
+                    applicationSupportDirectory: .applicationSupportDirectory,
+                    bundleIdentifier: Bundle.main.bundleIdentifier ?? DomainConstants.BundleID.main
+                )
+            } catch {
+                fatalError("Failed to prepare What's New storage: \(error)")
+            }
+        }()
+
+        static func prepare(documentsDirectory: URL, applicationSupportDirectory: URL, bundleIdentifier: String) throws -> URL {
+            let fileManager = FileManager.default
+            let url = applicationSupportDirectory
+                .appending(component: bundleIdentifier, directoryHint: .isDirectory)
+                .appending(component: WhatsNew.PresentationData.storagePathComponent)
+            let legacyURL = documentsDirectory.appending(component: WhatsNew.PresentationData.storagePathComponent)
+
+            // 기존 표시 기록을 보존하고, 이미 옮긴 저장소는 덮어쓰지 않는다.
+            if !fileManager.fileExists(atPath: url.path), fileManager.fileExists(atPath: legacyURL.path) {
+                try fileManager.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+                try fileManager.moveItem(at: legacyURL, to: url)
+            }
+            return url
+        }
+    }
+#endif
+
 extension WhatsNewEvaluatorClient: DependencyKey {
     static let liveValue = WhatsNewEvaluatorClient {
         @Dependency(\.appInfo) var appInfo
@@ -147,6 +179,10 @@ extension DependencyValues {
 
 extension SharedKey where Self == FileStorageKey<WhatsNew.PresentationData?> {
     static var whatsNew: Self {
-        .fileStorage(.documentsDirectory.appending(component: WhatsNew.PresentationData.storagePathComponent))
+        #if os(macOS)
+            .fileStorage(WhatsNewPresentationStorage.url)
+        #else
+            .fileStorage(.documentsDirectory.appending(component: WhatsNew.PresentationData.storagePathComponent))
+        #endif
     }
 }
